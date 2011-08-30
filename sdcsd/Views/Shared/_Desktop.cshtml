@@ -1,6 +1,4 @@
 ﻿@{
-    ViewBag.Title = "Desktop";
-
     var model = new sdcsd.Models.DesktopModel()
     {
         Name = "Minutes2010.txt",
@@ -24,7 +22,6 @@
     var first = Models.First();
 }
 
-<h2>Desktop</h2>
 @foreach (var item in Models)
 {
 <div class="draggable" style="position: absolute; left: @item.LocX; top: @item.LocY; background-color: transparent">
