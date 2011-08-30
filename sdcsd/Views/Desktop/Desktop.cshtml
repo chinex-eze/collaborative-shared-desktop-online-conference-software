@@ -8,7 +8,13 @@
 <h2>Desktop</h2>
 @foreach (var item in Model)
 {
-<div style="position: absolute; left: @item.LocX; top: @item.LocY;">
+<div class="draggable" style="position: absolute; left: @item.LocX; top: @item.LocY; background-color: transparent">
    <img src="@item.Icon" alt="@item.Name" />
-</div>
+</div>    
 }
+
+<script type="text/javascript">
+    $(function () {
+	    $(".draggable").draggable();
+	});
+</script>
