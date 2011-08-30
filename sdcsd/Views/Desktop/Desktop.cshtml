@@ -1,20 +1,13 @@
 ﻿@model IEnumerable<sdcsd.Models.DesktopModel>
-           
-@{
-    ViewBag.Title = "Desktop";
-    var first = Model.First();
-}
 
-<h2>Desktop</h2>
-@foreach (var item in Model)
-{
-<div class="draggable" style="position: absolute; left: @item.LocX; top: @item.LocY; background-color: transparent">
-   <img src="@item.Icon" alt="@item.Name" />
-</div>    
+@foreach (var item in Model) {
+    <div class="draggable" style="position: absolute; left: @item.LocX; top: @item.LocY; background-color: transparent">
+        <img src="@item.Icon" alt="@item.Name" />
+    </div>    
 }
 
 <script type="text/javascript">
     $(function () {
-	    $(".draggable").draggable();
-	});
+        $(".draggable").draggable();
+    });
 </script>

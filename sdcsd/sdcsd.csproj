@@ -71,6 +71,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\DesktopDB.cs" />
     <Compile Include="Models\DesktopModel.cs" />
     <Compile Include="Models\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -174,10 +175,13 @@
     <Content Include="Views\Topics\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Desktop\Desktop.cshtml" />
+    <Content Include="Views\Desktop\Desktop3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Desktop\Desktop.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

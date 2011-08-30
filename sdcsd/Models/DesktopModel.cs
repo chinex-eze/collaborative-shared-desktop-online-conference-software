@@ -13,6 +13,5 @@ namespace sdcsd.Models
         public String Type { get; set; }
         public String LocX { get; set; }
         public String LocY { get; set; }
-        //public bool Hide { get; set; }
     }
 }

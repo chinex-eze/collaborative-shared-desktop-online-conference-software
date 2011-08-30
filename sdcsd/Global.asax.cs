@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Data.Entity;
+using sdcsd.Models;
 
 namespace sdcsd
 {
@@ -31,10 +33,40 @@ namespace sdcsd
 
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            Database.SetInitializer(new DesktopDBInitializer());
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+        }
+    }
+
+    public class DesktopDBInitializer : DropCreateDatabaseIfModelChanges<DesktopDB>
+    {
+        protected override void Seed(DesktopDB context)
+        {
+            base.Seed(context);
+
+            context.DesktopModels.Add(new DesktopModel
+            {
+                ID = 1,
+                Name = "Minutes2010.txt",
+                Icon = "/../../Content/icons/48px_txt.png",
+                Type = "txt",
+                LocX = "100px",
+                LocY = "250px"
+            });
+
+            context.DesktopModels.Add(new DesktopModel
+            {
+                ID = 2,
+                Name = "CorporateInfo.txt",
+                Icon = "/../../Content/icons/48px_document.png",
+                Type = "document",
+                LocX = "150px",
+                LocY = "300px"
+            });
+
+            context.SaveChanges();
         }
     }
 }
