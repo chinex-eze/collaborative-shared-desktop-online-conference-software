@@ -8,32 +8,12 @@
 
 <body>
     <div class="page">
-
-        <div id="header">
-            <div id="title">
-                <h1>My MVC Application</h1>
-            </div>
-
-            <div id="logindisplay">
-                @Html.Partial("_LogOnPartial")
-            </div>
-
-            <div id="menucontainer">
-
-                <ul id="menu">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Page", "Page", "Home")</li>
-                </ul>
-
-            </div>
-        </div>
-
-        <div id="main">
-            @RenderBody()
-            <div id="footer">
-            </div>
-        </div>
+        <div class="header">Header</div>
+        <div class="desktop">Desktop</div>
+        <div class="topic-container">Topics</div>
+        <div class="chat-container">Chat</div>
+        <div class="desktop-list">Desktop list</div>
+        <div class="user-list">User list</div>
     </div>
 </body>
 </html>
