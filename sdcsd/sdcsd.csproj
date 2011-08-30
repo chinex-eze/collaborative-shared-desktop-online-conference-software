@@ -83,6 +83,7 @@
     <Content Include="Content\icons\48px_sound.png" />
     <Content Include="Content\icons\48px_txt.png" />
     <Content Include="Content\icons\48px_video.png" />
+    <Content Include="Content\images\carbon.png" />
     <Content Include="Content\Main.css" />
     <Content Include="Global.asax" />
     <Content Include="obj\Debug\sdcsd.csproj.FileListAbsolute.txt" />
