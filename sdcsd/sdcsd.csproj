@@ -175,9 +175,6 @@
     <Content Include="Views\Topics\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Desktop\Desktop3.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
