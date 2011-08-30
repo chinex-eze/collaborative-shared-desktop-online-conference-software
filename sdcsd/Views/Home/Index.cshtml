@@ -1,10 +1,26 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿
+<div id="header-container">
+    @{Html.RenderPartial("_Header");}
+    <script type="text/javascript">
+        var refreshId = setInterval(function () {
+            $.post("_Header/Update", function (data) {
+                $('#header-container').html(data);
+            });
+        }, 5000);
+    </script>
+</div>
 
-<div class="header">@ViewBag.Message</div>
-<div class="desktop">Desktop</div>
-<div class="topic-container">Topics</div>
-<div class="chat-container">Chat</div>
-<div class="desktop-list">Desktop list</div>
-<div class="user-list">User list</div>
+<div id="desktop-container">
+    @{Html.RenderPartial("_Desktop");}
+</div>
+<div id="users-container">
+    @{Html.RenderPartial("_Users");}
+</div>
+
+<div id="topics-container">
+    @{Html.RenderPartial("_Topics");}
+</div>
+
+<div id="chat-container">
+    @{Html.RenderPartial("_Chat");}
+</div>

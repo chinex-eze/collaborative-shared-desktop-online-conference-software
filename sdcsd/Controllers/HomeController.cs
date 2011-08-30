@@ -10,19 +10,18 @@ namespace sdcsd.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
-
             return View();
         }
 
         public ActionResult About()
         {
+            ViewBag.Message = "About!";
             return View();
         }
 
         public ActionResult Page()
         {
-            ViewBag.Message = "This is an empty page";
+            ViewBag.Message = "Page";
             return View();
         }
     }

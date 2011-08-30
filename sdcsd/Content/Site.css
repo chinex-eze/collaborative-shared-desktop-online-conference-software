@@ -1,42 +1,36 @@
 ﻿/*----------------------------------------------------------
-The base color for this template is #5c87b2. If you'd like
-to use a different color start by replacing all instances of
-#5c87b2 with your new color.
 ----------------------------------------------------------*/
 body
 {
-    background-color: #5c87b2;
-    font-size: 75%;
-    font-family: Verdana, Tahoma, Arial, "Helvetica Neue", Helvetica, Sans-Serif;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
-    color: #696969;
+    overflow: hidden;
 }
 
 a:link
 {
-    color: #034af3;
-    text-decoration: underline;
+    color: #0000ff;
+    font-weight: bold;    
+    text-decoration: none;
+    border-bottom: 1px #0000ff dotted;
 }
 a:visited
 {
-    color: #505abc;
+    color: #00aaaa;
 }
 a:hover
 {
-    color: #1d60ff;
-    text-decoration: none;
+    color: #0000aa;
+    border-bottom: 1px #0000aa solid;
+    
 }
 a:active
 {
-    color: #12eb87;
+    color: #008080;
+    border-bottom: 0;
 }
 
-p, ul
-{
-    margin-bottom: 20px;
-    line-height: 1.6em;
-}
 
 /* HEADINGS   
 ----------------------------------------------------------*/
@@ -54,7 +48,7 @@ h1
 }
 h2
 {
-    padding: 0 0 10px 0;
+    font-size: 1.5em;
 }
 h3
 {
