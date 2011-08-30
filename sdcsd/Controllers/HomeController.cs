@@ -12,17 +12,5 @@ namespace sdcsd.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "About!";
-            return View();
-        }
-
-        public ActionResult Page()
-        {
-            ViewBag.Message = "Page";
-            return View();
-        }
     }
 } 
