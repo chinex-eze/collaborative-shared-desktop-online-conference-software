@@ -1,1 +1,39 @@
-﻿Desktop
+﻿@{
+    ViewBag.Title = "Desktop";
+
+    var model = new sdcsd.Models.DesktopModel()
+    {
+        Name = "Minutes2010.txt",
+        Icon = "/../../Content/icons/48px_txt.png",
+        Type = "txt",
+        LocX = "100px",
+        LocY = "250px"
+    };
+
+    var model2 = new sdcsd.Models.DesktopModel()
+    {
+        Name = "CorporateInfo.txt",
+        Icon = "/../../Content/icons/48px_document.png",
+        Type = "document",
+        LocX = "150px",
+        LocY = "300px"
+    };
+
+    HashSet<sdcsd.Models.DesktopModel> Models = new HashSet<sdcsd.Models.DesktopModel> { model, model2 }; 
+    
+    var first = Models.First();
+}
+
+<h2>Desktop</h2>
+@foreach (var item in Models)
+{
+<div class="draggable" style="position: absolute; left: @item.LocX; top: @item.LocY; background-color: transparent">
+   <img src="@item.Icon" alt="@item.Name" />
+</div>    
+}
+
+<script type="text/javascript">
+    $(function () {
+        $(".draggable").draggable();
+    });
+</script>
