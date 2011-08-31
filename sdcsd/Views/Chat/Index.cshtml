@@ -4,11 +4,15 @@
     function my_toggle() { $('#chat-up-button').toggle('fast'); $('#chat-down-button').toggle('fast'); }
     $('#chat-up-button').click(function () {
         my_toggle();
-        $('#chat-container').css("top", "50%");
+        //$('#chat-container').css("top", "50%");
+        $('#chat-container').animate({ "top": "50%" }, 'fast');
     });
 
-    $('#chat-down-button').click(function () {
-        my_toggle();
-        $('#chat-container').css("top", "85%");
-    });
+        $('#chat-down-button').click(function () {
+            my_toggle();
+            //$('#chat-container').css("top", "85%");
+            $('#chat-container').animate({"top": "85%"}, 'fast');
+        });
+
+        function my_toggle() { $('#chat-up-button').toggle('fast'); $('#chat-down-button').toggle('fast'); }
   </script>

@@ -13,8 +13,57 @@ $('#topics-up-button').click(function () {
     $('#topics-container').css("top", "50%");
 });
 
-$('#topics-down-button').click(function () {
-    topics_toggle();
-    $('#topics-container').css("top", "85%");
-});
-</script>
+    $('#topics-up-button').click(function () {
+        my_toggleT();
+        //$('#topics-container').css("top", "50%"); 
+        $('#topics-container').animate({ "top": "50%" }, 'fast'); 
+    });
+
+    $('#topics-down-button').click(function () {
+        my_toggleT();
+        //$('#topics-container').css("top", "85%"); 
+        $('#topics-container').animate({ "top": "85%" }, 'fast'); 
+    });
+
+    function my_toggleT() { $('#topics-up-button').toggle('slow'); $('#topics-down-button').toggle('slow'); }
+  </script>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Author
+        </th>
+        <th>
+            Content
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Content)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
