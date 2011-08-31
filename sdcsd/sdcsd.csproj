@@ -92,7 +92,6 @@
       <DependentUpon>UsersDB.mdf</DependentUpon>
     </Content>
     <Content Include="Content\desktopFiles\CorporateInfo.txt" />
-    <Content Include="Content\images\kuva.png" />
     <Content Include="Content\desktopFiles\Minutes2010.txt" />
     <Content Include="Content\icons\48px_document.png" />
     <Content Include="Content\icons\48px_html.png" />
@@ -106,6 +105,8 @@
     <Content Include="Content\icons\archive.png" />
     <Content Include="Content\icons\audio.png" />
     <Content Include="Content\icons\document.png" />
+    <Content Include="Content\icons\down.png" />
+    <Content Include="Content\icons\down_small.png" />
     <Content Include="Content\icons\file.png" />
     <Content Include="Content\icons\image.png" />
     <Content Include="Content\icons\midi.png" />
@@ -114,6 +115,8 @@
     <Content Include="Content\icons\rtf.png" />
     <Content Include="Content\icons\script.png" />
     <Content Include="Content\icons\text.png" />
+    <Content Include="Content\icons\up.png" />
+    <Content Include="Content\icons\up_small.png" />
     <Content Include="Content\icons\url.png" />
     <Content Include="Content\icons\user.png" />
     <Content Include="Content\icons\vector.png" />
