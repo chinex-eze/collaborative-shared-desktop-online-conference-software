@@ -1,45 +1,17 @@
-﻿@{
-    ViewBag.Title = "Index";
-}
-<div id="topics-up-button" class="button-small"></div>
+﻿<div id="topics-up-button" class="button-small"></div>
 <div id="topics-down-button" class="button-small"></div>
 
 <script type="text/javascript">
-function topics_toggle() { $('#topics-up-button').toggle('fast'); $('#topics-down-button').toggle('fast'); }
-$('#topics-up-button').click(function () {
-    topics_toggle();
-    $('#topics-container').css("top", "50%");
-});
+
+    function topics_toggle() { $('#topics-up-button').toggle('fast'); $('#topics-down-button').toggle('fast'); }
 
     $('#topics-up-button').click(function () {
-        my_toggleT();
-        //$('#topics-container').css("top", "50%"); 
+        topics_toggle();
         $('#topics-container').animate({ "top": "50%" }, 'fast'); 
     });
 
     $('#topics-down-button').click(function () {
-        my_toggleT();
-        //$('#topics-container').css("top", "85%"); 
+        topics_toggle();
         $('#topics-container').animate({ "top": "85%" }, 'fast'); 
     });
-
-    function my_toggleT() { $('#topics-up-button').toggle('slow'); $('#topics-down-button').toggle('slow'); }
-  </script>
-
-<h2>Index</h2>
-
-<p>@Html.ActionLink("Create New", "Create")</p>
-
-<table>
-    <tr><th>Topic</th><th></th></tr>
-    
-    @using(Html.BeginForm("AddTopic", "Topic"))
-    {
-        <tr>
-            <td>@Html.TextBox("TopicAddTextBox")</td>
-            <td><input type="submit" value="add" /></td>
-        </tr>
-    }
-    
-    @Html.Partial("_Topics")
-</table>
+</script>

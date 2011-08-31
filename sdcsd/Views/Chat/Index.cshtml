@@ -1,18 +1,17 @@
 ﻿<div id="chat-up-button" class="button-small"></div>
 <div id="chat-down-button" class="button-small"></div>
 <script type="text/javascript">
-    function my_toggle() { $('#chat-up-button').toggle('fast'); $('#chat-down-button').toggle('fast'); }
+    function chat_toggle() { $('#chat-up-button').toggle('fast'); $('#chat-down-button').toggle('fast'); }
+
     $('#chat-up-button').click(function () {
-        my_toggle();
+        chat_toggle();
         //$('#chat-container').css("top", "50%");
         $('#chat-container').animate({ "top": "50%" }, 'fast');
     });
 
-        $('#chat-down-button').click(function () {
-            my_toggle();
-            //$('#chat-container').css("top", "85%");
-            $('#chat-container').animate({"top": "85%"}, 'fast');
-        });
-
-        function my_toggle() { $('#chat-up-button').toggle('fast'); $('#chat-down-button').toggle('fast'); }
-  </script>
+    $('#chat-down-button').click(function () {
+        chat_toggle();
+        //$('#chat-container').css("top", "85%");
+        $('#chat-container').animate({"top": "85%"}, 'fast');
+    });
+</script>

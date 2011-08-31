@@ -9,20 +9,24 @@
 
 #settings-button
 {
-    position: absolute;
     top: 0%;
     left: 0%;
     height: 64px;
     width: 64px;
-    background-image: url('/../../Content/icons/add.png');
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+    background-image: url('/../../Content/icons/user.png');
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 #add-item-button
 {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
     background-image: url(/../../Content/icons/add.png);
     float: left;
     margin-top: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 #header-container 
@@ -54,6 +58,7 @@
     top: 20%;
     margin: 0;
     
+    z-index: 15;
     background-color: #aaaaaa;
 }
 
@@ -66,6 +71,8 @@
     margin: 0;
     left: 0;
     
+    z-index: 10;
+    
     background-color: #aaaaaa;
 }
 
@@ -77,6 +84,8 @@
     top: 85%;
     margin: 0;
     right: 0;
+    
+    z-index: 10;
     
     background-color: #777777;
 }
@@ -131,4 +140,14 @@
     right: 0;
     background-image: url(/../../Content/icons/down_small.png);
     display: none;
+}
+
+#user-list-hover
+{
+    position: absolute;
+    width: 3%;
+    height: 100%;
+    right: 0;
+    background-color: Red;
+    z-index: 5;
 }
