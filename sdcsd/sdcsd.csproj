@@ -77,6 +77,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\desktopFiles\CorporateInfo.txt" />
+    <Content Include="Content\desktopFiles\Minutes2010.txt" />
     <Content Include="Content\icons\48px_document.png" />
     <Content Include="Content\icons\48px_html.png" />
     <Content Include="Content\icons\48px_image.png" />
@@ -142,7 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\desktopFiles\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Service References\" />
   </ItemGroup>
@@ -180,7 +181,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Desktop\Desktop.cshtml" />
+    <Content Include="Views\Desktop\_Desktop.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -8,6 +8,10 @@
 
 <script type="text/javascript">
     $(function () {
-        $(".draggable").draggable();
+        $(".draggable").draggable({
+            containment: '#desktop-container',
+            cursor: 'move',
+            snap: '#desktop-container'
+        });
     });
 </script>
