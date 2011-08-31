@@ -79,6 +79,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Topics.sdf" />
+    <Content Include="App_Data\UsersDB.mdf" />
+    <Content Include="App_Data\UsersDB_log.LDF">
+      <DependentUpon>UsersDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\desktopFiles\CorporateInfo.txt" />
     <Content Include="Content\desktopFiles\Minutes2010.txt" />
     <Content Include="Content\icons\48px_document.png" />
@@ -145,7 +150,6 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Service References\" />
   </ItemGroup>
