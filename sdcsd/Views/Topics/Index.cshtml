@@ -4,6 +4,25 @@
     ViewBag.Title = "Index";
 }
 
+
+<div id="topics-up-button"></div>
+<div id="topics-down-button"></div>
+<script type="text/javascript">
+    $('#topics-down-button').hide();
+
+    $('#topics-up-button').click(function () {
+        my_toggleT();
+        $('#topics-container').css("top", "50%");
+    });
+
+    $('#topics-down-button').click(function () {
+        my_toggleT();
+        $('#topics-container').css("top", "85%");
+    });
+
+    function my_toggleT() { $('#topics-up-button').toggle('slow'); $('#topics-down-button').toggle('slow'); }
+  </script>
+
 <h2>Index</h2>
 
 <p>

@@ -75,9 +75,18 @@
     background-color: #777777;
 }
 
-#chat-up-button 
+#chat-up-button, #chat-down-button, #topics-up-button, #topics-down-button   
 {
     width: 32px;
     height: 32px;
     background-color: Red;
 }
+
+/*
+#topics-up-button
+{
+    width: 32px;
+    height: 32px;
+    background-color: Red;
+}
+*/

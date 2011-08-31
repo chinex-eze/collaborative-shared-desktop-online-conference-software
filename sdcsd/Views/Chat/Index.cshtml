@@ -1,2 +1,17 @@
 ﻿<div id="chat-up-button"></div>
-<script type="text/javascript">    $('#chat-up-button').click(function () { $('#chat-container').css("top", "50%"); });</script>
+<div id="chat-down-button"></div>
+<script type="text/javascript">
+    $('#chat-down-button').hide();
+
+    $('#chat-up-button').click(function () {
+        my_toggle();
+        $('#chat-container').css("top", "50%");
+    });
+
+        $('#chat-down-button').click(function () {
+            my_toggle();
+            $('#chat-container').css("top", "85%");
+        });
+
+        function my_toggle() { $('#chat-up-button').toggle('slow'); $('#chat-down-button').toggle('slow'); }
+  </script>
