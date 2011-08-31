@@ -1,0 +1,22 @@
+﻿@model IEnumerable<sdcsd.Models.DesktopModel>
+
+@foreach (var item in Model) {
+    <div class="draggable" style="position: absolute; left: @item.LocX; top: @item.LocY; background-color: transparent">
+        <img src="@item.Icon" alt="@item.Name" />
+    </div>    
+}
+
+<script type="text/javascript">
+    $(function () {
+        $(".draggable").draggable({
+            containment: '#desktop-container',
+            cursor: 'move',
+            snap: '#desktop-container'
+        });
+    });
+    $(function () {
+        $('.draggable').dblclick(function () {
+            alert('Handler for .dblclick() called.');
+        });
+    });
+</script>

@@ -6,8 +6,11 @@ using System.Web.Mvc;
 
 namespace sdcsd.Controllers
 {
-    public class HeaderController : Controller
+    public class UserlistController : Controller
     {
+        //
+        // GET: /Userlist/
+
         public ActionResult Index()
         {
             return View();

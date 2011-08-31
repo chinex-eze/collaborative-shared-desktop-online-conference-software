@@ -1,29 +1,28 @@
-﻿
-<div id="header-container">
-    @{Html.RenderPartial("_Header");}
+﻿<div id="header-container">
+    @{Html.RenderAction("Index","Header");}
     <script type="text/javascript">
         var refreshId = setInterval(function () {
-            $.post("Header/Update", function (data) {
+            $.post("Header/Index", function (data) {
                 $('#header-container').html(data);
             });
-        }, 5000);
+        }, 1000);
     </script>
 </div>
 
 <div id="desktop-container">
-    @{Html.RenderPartial("_Desktop");}
+    @{Html.RenderAction("Index","Desktop");}
     <div id="desktop-plus-sign">
     </div>
 </div>
 
 <div id="users-container">
-    @{Html.RenderPartial("_Users");}
+    @{Html.RenderAction("Index","Userlist");}
 </div>
 
 <div id="topics-container">
-    @{Html.RenderPartial("_Topics");}
+    @{Html.RenderAction("Index","Topics");}
 </div>
 
 <div id="chat-container">
-    @{Html.RenderPartial("_Chat");}
+    @{Html.RenderAction("Index","Chat");}
 </div>

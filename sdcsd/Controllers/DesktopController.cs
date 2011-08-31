@@ -14,7 +14,7 @@ namespace sdcsd.Controllers
 
         DesktopDB _db = new DesktopDB(); 
 
-        public ViewResult _Desktop()
+        public ActionResult Index()
         {
             var model = _db.DesktopModels;
             return View(model);
