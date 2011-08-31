@@ -153,17 +153,17 @@
     background-image: url(/../../Content/icons/down_small.png);
     display: none;
     background-color: #cccccc;
-    border-bottom-left-radius: 4px;*/
+    border-bottom-left-radius: 4px;
 }
 
 #user-list-hover
 {
     position: absolute;
-    width: 3%;
+    width: 6%;
     height: 100%;
     right: 0;
-    background-color: red;
-    z-index: 5;
+    /*background-color: red;*/
+    z-index: 20;
 }
 
 #user-editor
