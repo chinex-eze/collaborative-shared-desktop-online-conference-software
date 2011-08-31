@@ -15,13 +15,5 @@ namespace sdcsd.Controllers
             var model = _db.DesktopModels;
             return View(model);
         }
-        /*
-        public ViewResult _Desktop()
-        {
-            DesktopDB _db = new DesktopDB();
-            var model = _db.DesktopModels;
-            return View(model);
-        }
-        */
     }
 } 
