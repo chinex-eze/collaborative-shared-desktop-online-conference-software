@@ -5,6 +5,8 @@
     top: 80px;
     bottom: 15%;
     margin: 0;
+    background-image: url(/../../Content/images/spaceinvader_100px.jpg);
+    background-repeat: repeat;
 }
 
 #settings-button
