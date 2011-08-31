@@ -3,11 +3,11 @@
 
 <script type="text/javascript">
 
-    function topics_toggle() { $('#topics-up-button').toggle('fast'); $('#topics-down-button').toggle('fast'); }
+    function topics_toggle() { $('#topics-up-button').toggle(); $('#topics-down-button').toggle()}
 
     $('#topics-up-button').click(function () {
         topics_toggle();
-        $('#topics-container').animate({ "top": "50%" }, 'fast'); 
+        $('#topics-container').animate({ "top": "40%" }, 'fast'); 
     });
 
     $('#topics-down-button').click(function () {
