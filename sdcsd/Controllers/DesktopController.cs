@@ -33,7 +33,7 @@ namespace sdcsd.Controllers
         }
 
         [HttpPost]
-        public ActionResult addItem() {
+        public ActionResult AddItem() {
             return View();
         }
 

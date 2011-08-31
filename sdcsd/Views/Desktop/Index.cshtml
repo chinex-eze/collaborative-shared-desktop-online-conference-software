@@ -27,14 +27,13 @@
     });
     $(function () {
         $('.draggable').dblclick(function () {
-            var fileName = this.title;
-            window.location.replace("/Desktop/GetFileFromDisk/"+fileName);
+            window.location.replace("/Desktop/GetFileFromDisk/"+this.title);
         });
     });
 
     $(function () {
         $('#add-item-button').click(function () {
-            $.post("Desktop/addItem", function (data) {
+            $.post("Desktop/AddItem", function (data) {
                 $('body').append(data);
             });
         });
