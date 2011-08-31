@@ -20,11 +20,6 @@ namespace sdcsd.Controllers
             return View(model);
         }
 
-        public ActionResult GetTxt(string id)
-        {
-            return File(id, "text/plain", Server.UrlEncode(id));
-        }
-
         public FilePathResult GetFileFromDisk(string id)
         {
             string path = AppDomain.CurrentDomain.BaseDirectory + "Content/desktopFiles/";
