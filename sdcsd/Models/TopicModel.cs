@@ -6,16 +6,15 @@ using System.Data.Entity;
 
 namespace sdcsd.Models
 {
-    public class Topic
+    public class TopicModel
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Author { get; set; }
+        public int ID { get; set; }
         public string Content { get; set; }
+        public bool IsActive { get; set; }
     }
 
     public class TopicDBContext : DbContext
     {
-        public DbSet<Topic> Topics { get; set; }
+        public DbSet<TopicModel> Topics { get; set; }
     }
 }
