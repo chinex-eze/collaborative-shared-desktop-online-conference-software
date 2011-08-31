@@ -73,12 +73,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\DesktopDB.cs" />
-    <Compile Include="Models\DesktopModel.cs" />
+    <Compile Include="Models\DesktopItemDB.cs" />
+    <Compile Include="Models\DesktopItemModel.cs" />
     <Compile Include="Models\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DesktopItemDB.mdf" />
+    <Content Include="App_Data\DesktopItemDB_log.ldf">
+      <DependentUpon>DesktopItemDB.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Topics.sdf" />
     <Content Include="App_Data\UsersDB.mdf" />
     <Content Include="App_Data\UsersDB_log.LDF">
@@ -92,6 +96,25 @@
     <Content Include="Content\icons\48px_sound.png" />
     <Content Include="Content\icons\48px_txt.png" />
     <Content Include="Content\icons\48px_video.png" />
+    <Content Include="Content\icons\add.png" />
+    <Content Include="Content\icons\animation.png" />
+    <Content Include="Content\icons\app.png" />
+    <Content Include="Content\icons\archive.png" />
+    <Content Include="Content\icons\audio.png" />
+    <Content Include="Content\icons\document.png" />
+    <Content Include="Content\icons\file.png" />
+    <Content Include="Content\icons\image.png" />
+    <Content Include="Content\icons\midi.png" />
+    <Content Include="Content\icons\note.png" />
+    <Content Include="Content\icons\remove.png" />
+    <Content Include="Content\icons\rtf.png" />
+    <Content Include="Content\icons\script.png" />
+    <Content Include="Content\icons\text.png" />
+    <Content Include="Content\icons\url.png" />
+    <Content Include="Content\icons\user.png" />
+    <Content Include="Content\icons\vector.png" />
+    <Content Include="Content\icons\video.png" />
+    <Content Include="Content\icons\web.png" />
     <Content Include="Content\images\carbon.png" />
     <Content Include="Content\Main.css" />
     <Content Include="Global.asax" />

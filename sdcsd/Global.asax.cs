@@ -33,37 +33,36 @@ namespace sdcsd
 
         protected void Application_Start()
         {
-            Database.SetInitializer(new DesktopDBInitializer());
+            //Database.SetInitializer(new DesktopItemDBInitializer());
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }
     }
 
-    public class DesktopDBInitializer : DropCreateDatabaseIfModelChanges<DesktopDB>
+    //Execute this if DesktopItemDB database changes made
+    public class DesktopItemDBInitializer : DropCreateDatabaseIfModelChanges<DesktopItemDB>
     {
-        protected override void Seed(DesktopDB context)
+        protected override void Seed(DesktopItemDB context)
         {
             base.Seed(context);
 
-            context.DesktopModels.Add(new DesktopModel
+            context.DesktopModels.Add(new DesktopItemModel
             {
                 ID = 1,
+                DesktopID = 1,
                 Name = "Minutes2010.txt",
-                Icon = "/../../Content/icons/48px_txt.png",
-                Type = "txt",
-                LocX = "100px",
-                LocY = "250px"
+                LocX = "10%",
+                LocY = "25%"
             });
 
-            context.DesktopModels.Add(new DesktopModel
+            context.DesktopModels.Add(new DesktopItemModel
             {
                 ID = 2,
+                DesktopID = 1,
                 Name = "CorporateInfo.txt",
-                Icon = "/../../Content/icons/48px_document.png",
-                Type = "document",
-                LocX = "150px",
-                LocY = "300px"
+                LocX = "15%",
+                LocY = "30%"
             });
 
             context.SaveChanges();

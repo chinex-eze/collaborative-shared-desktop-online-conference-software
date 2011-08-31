@@ -5,12 +5,11 @@ using System.Web;
 
 namespace sdcsd.Models
 {
-    public class DesktopModel
+    public class DesktopItemModel
     {
         public int ID { get; set; }
+        public int DesktopID { get; set; }
         public String Name { get; set; }
-        public String Icon { get; set; }
-        public String Type { get; set; }
         public String LocX { get; set; }
         public String LocY { get; set; }
     }

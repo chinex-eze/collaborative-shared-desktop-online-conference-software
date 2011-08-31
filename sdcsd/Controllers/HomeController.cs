@@ -11,7 +11,7 @@ namespace sdcsd.Controllers
     {
         public ActionResult Index()
         {
-            DesktopDB _db = new DesktopDB();
+            DesktopItemDB _db = new DesktopItemDB();
             var model = _db.DesktopModels;
             return View(model);
         }

@@ -12,12 +12,17 @@ namespace sdcsd.Controllers
         //
         // GET: /Desktop/
 
-        DesktopDB _db = new DesktopDB(); 
+        DesktopItemDB _db = new DesktopItemDB(); 
 
         public ActionResult Index()
         {
             var model = _db.DesktopModels;
             return View(model);
+        }
+
+        public ActionResult GetPdf(string filename)
+        {
+            return File(filename, "application/pdf", Server.UrlEncode(filename));
         }
 
     }

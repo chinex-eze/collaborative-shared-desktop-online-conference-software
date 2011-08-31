@@ -6,8 +6,8 @@ using System.Data.Entity;
 
 namespace sdcsd.Models
 {
-    public class DesktopDB : DbContext
+    public class DesktopItemDB : DbContext
     {
-        public DbSet<DesktopModel> DesktopModels { get; set; }   
+        public DbSet<DesktopItemModel> DesktopModels { get; set; }   
     }
 }
