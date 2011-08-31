@@ -1,10 +1,15 @@
 ﻿@{Layout = null;}
-<script type="text/javascript">    $('#dialog-background').show();</script>
-    <div id="dialog-small" class="dialog">
-    <h2>Add item</h2>
-    @using (Ajax.BeginForm("Upload", "Dekstop", new AjaxOptions { HttpMethod = "post", UpdateTargetId = "Desktop", InsertionMode = InsertionMode.InsertAfter} ))
+<script type="text/javascript">
+    $('#dialog-background').show();
+</script>
+
+<div id="dialog-small" class="dialog">
+    <h2>Add a file</h2>
+    @using (Ajax.BeginForm("Upload", "Desktop", new AjaxOptions { HttpMethod = "post", UpdateTargetId = "Desktop", InsertionMode = InsertionMode.InsertAfter} ))
     {
         <input type="file" name="file"/>
-        <input type="submit" value="upload"/>
+        <br />
+        <input type="submit" value="Upload"/>
+        <button type="button" onclick="$('#dialog-background').hide(), $('.dialog').remove()">Cancel</button>
     }
 </div>
