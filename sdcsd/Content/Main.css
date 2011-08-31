@@ -165,3 +165,19 @@
     background-color: red;
     z-index: 5;
 }
+
+#user-editor
+{
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    top: 20%;
+    left: 25%;
+    background-color: #aaaaaa;
+    border-radius: 1em;
+    z-index: 20;
+}
+
+#login-box
+{
+}

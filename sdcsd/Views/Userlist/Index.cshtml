@@ -1,2 +1,9 @@
-﻿Users
-@Ajax.ActionLink("Log On", "LogOn", "Account", new AjaxOptions { UpdateTargetId = "header-container", InsertionMode = InsertionMode.Replace })
+﻿@{Layout=null;}
+<script type="text/javascript">
+$('#settings-button').click(function(){
+    $.post("Userlist/Edit", function (data) {
+        $('body').append(data);
+    });
+});
+</script>
+

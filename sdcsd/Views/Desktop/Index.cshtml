@@ -1,4 +1,5 @@
-﻿@model IEnumerable<sdcsd.Models.DesktopItemModel>
+﻿@{Layout=null;}
+@model IEnumerable<sdcsd.Models.DesktopItemModel>
 
 @foreach (var item in Model) {
     <div class="draggable" style="position: absolute; left: @item.LocX; top: @item.LocY; background-color: transparent">
