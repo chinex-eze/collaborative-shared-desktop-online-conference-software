@@ -2,13 +2,12 @@
 {
     position: absolute;
     width: 100%;
-    top: 5%;
-    height: 80%;
+    top: 80px;
+    bottom: 15%;
     margin: 0;
-    background: url(/../../Content/images/carbon.png) repeat;
 }
 
-#desktop-plus-sign
+#settings-button
 {
     position: absolute;
     top: 0%;
@@ -17,14 +16,21 @@
     width: 64px;
     background-image: url('/../../Content/icons/add.png');
 }
+#add-item-button
+{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-image: url(/../../Content/icons/add.png);
+    float: left;
+    margin-top: 5px;
+}
 
 #header-container 
 {
     position: absolute;
     width: 100%;
-    height: 5%;
-    background-color: #aaaaaa;
     margin: 0;
+    height: 80px;
 }
 
 #desktops-container 
@@ -56,7 +62,7 @@
     position: absolute;
     width: 50%;
     bottom: 0;
-    height: 15%;
+    top: 85%;
     margin: 0;
     left: 0;
     
@@ -75,18 +81,54 @@
     background-color: #777777;
 }
 
-#chat-up-button, #chat-down-button, #topics-up-button, #topics-down-button   
+.button 
+{
+    width: 64px;
+    height: 64px;
+    padding: 2px;
+    background-color: #ddddff;
+}
+.button-small
 {
     width: 32px;
     height: 32px;
-    background-color: Red;
+    position: absolute;
+    padding: 4px;
+}
+.button-small, .button
+{
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    top: 0;
+    opacity: 0.7;
+    border: 0;
+}
+.button-small:hover, .button:hover
+{
+    opacity: 1.0;
 }
 
-/*
-#topics-up-button
+#chat-up-button 
 {
-    width: 32px;
-    height: 32px;
-    background-color: Red;
+    left: 0;
+    background-image: url(/../../Content/icons/up_small.png);
 }
-*/
+#chat-down-button 
+{
+    left: 0;
+    background-image: url(/../../Content/icons/down_small.png);
+    display: none;
+}
+#topics-up-button 
+{
+    right: 0;
+    background-image: url(/../../Content/icons/up_small.png);
+}
+#topics-down-button 
+{
+    right: 0;
+    background-image: url(/../../Content/icons/down_small.png);
+    display: none;
+}

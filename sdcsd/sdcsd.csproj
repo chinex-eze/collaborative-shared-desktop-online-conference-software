@@ -89,6 +89,7 @@
       <DependentUpon>UsersDB.mdf</DependentUpon>
     </Content>
     <Content Include="Content\desktopFiles\CorporateInfo.txt" />
+    <Content Include="Content\desktopFiles\kuva.png" />
     <Content Include="Content\desktopFiles\Minutes2010.txt" />
     <Content Include="Content\icons\48px_document.png" />
     <Content Include="Content\icons\48px_html.png" />

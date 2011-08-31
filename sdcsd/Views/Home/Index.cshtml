@@ -1,18 +1,9 @@
 ﻿<div id="header-container">
     @{Html.RenderAction("Index","Header");}
-    <script type="text/javascript">
-        var refreshId = setInterval(function () {
-            $.post("Header/Index", function (data) {
-                $('#header-container').html(data);
-            });
-        }, 5000);
-    </script>
 </div>
 
 <div id="desktop-container">
     @{Html.RenderAction("Index","Desktop");}
-    <div id="desktop-plus-sign">
-    </div>
 </div>
 
 <div id="users-container">
@@ -26,3 +17,11 @@
 <div id="chat-container">
     @{Html.RenderAction("Index","Chat");}
 </div>
+
+<script type="text/javascript">
+    var refreshId = setInterval(function () {
+        $.post("Chat/Index", function (data) {
+            $('#chat-container').html(data);
+        });
+    }, 30000);
+</script>

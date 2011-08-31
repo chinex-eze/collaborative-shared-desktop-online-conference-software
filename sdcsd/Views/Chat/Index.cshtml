@@ -1,17 +1,14 @@
-﻿<div id="chat-up-button"></div>
-<div id="chat-down-button"></div>
+﻿<div id="chat-up-button" class="button-small"></div>
+<div id="chat-down-button" class="button-small"></div>
 <script type="text/javascript">
-    $('#chat-down-button').hide();
-
+    function my_toggle() { $('#chat-up-button').toggle('fast'); $('#chat-down-button').toggle('fast'); }
     $('#chat-up-button').click(function () {
         my_toggle();
         $('#chat-container').css("top", "50%");
     });
 
-        $('#chat-down-button').click(function () {
-            my_toggle();
-            $('#chat-container').css("top", "85%");
-        });
-
-        function my_toggle() { $('#chat-up-button').toggle('slow'); $('#chat-down-button').toggle('slow'); }
+    $('#chat-down-button').click(function () {
+        my_toggle();
+        $('#chat-container').css("top", "85%");
+    });
   </script>
