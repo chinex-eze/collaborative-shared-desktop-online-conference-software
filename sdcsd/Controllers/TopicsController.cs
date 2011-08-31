@@ -20,6 +20,31 @@ namespace sdcsd.Controllers
         {
             return View(db.Topics.ToList());
         }
+
+        public ActionResult SetInactive(int id)
+        {
+            TopicModel topic = db.Topics.Find(id);
+            topic.IsActive = false;
+            db.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public ActionResult AddTopic(string content)
+        {
+            // TODO: validate received data from form
+
+            TopicModel topic = new TopicModel()
+            {
+                Content = content,
+                IsActive = true,
+            };
+
+            db.Topics.Add(topic);
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
+        }
                         
         protected override void Dispose(bool disposing)
         {

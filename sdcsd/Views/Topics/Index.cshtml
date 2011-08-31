@@ -16,3 +16,14 @@
         $('#topics-container').animate({ "top": "85%" }, 'fast'); 
     });
 </script>
+
+<table>
+    @using (Html.BeginForm("AddTopic", "Topics"))
+    {
+        <tr>
+            <td>@Html.TextBox("content")</td>
+            <td><input type="submit" value="add" /></td>
+        </tr>
+    }
+    @Html.Partial("_Topics")
+</table>
