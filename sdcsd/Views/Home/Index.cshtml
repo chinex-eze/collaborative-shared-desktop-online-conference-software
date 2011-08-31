@@ -3,7 +3,7 @@
     @{Html.RenderPartial("_Header");}
     <script type="text/javascript">
         var refreshId = setInterval(function () {
-            $.post("_Header/Update", function (data) {
+            $.post("Header/Update", function (data) {
                 $('#header-container').html(data);
             });
         }, 5000);
