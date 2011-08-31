@@ -8,6 +8,16 @@
     background: url(/../../Content/images/carbon.png) repeat;
 }
 
+#desktop-plus-sign
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 5%;
+    width: 2%;
+    background-color: Gray;
+}
+
 #header-container 
 {
     position: absolute;
