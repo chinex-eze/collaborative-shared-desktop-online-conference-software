@@ -32,7 +32,10 @@ namespace sdcsd.Controllers
             return File(path + fileName, "text/plain", id);
         }
 
-
+        [HttpPost]
+        public ActionResult addItem() {
+            return View();
+        }
 
     }
 }

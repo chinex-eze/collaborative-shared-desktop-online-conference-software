@@ -177,21 +177,31 @@
     background-color: Black;
     filter:alpha(opacity=50);
     z-index: 18;
+    display: none;
 }
 
-#user-editor
+.dialog
 {
     position: absolute;
-    width: 50%;
-    height: 60%;
-    top: 20%;
-    left: 25%;
     background-color: #ffffff;
     border-radius: 1em;
     z-index: 20;
     padding: 2em;
+    
 }
 
-#login-box
+#dialog-large
 {
+    width: 50%;
+    height: 60%;
+    top: 20%;
+    left: 25%;
+}
+
+#dialog-small
+{
+    width: 40%;
+    height: 30%;
+    top: 35%;
+    left: 30%;
 }

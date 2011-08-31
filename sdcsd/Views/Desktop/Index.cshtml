@@ -31,9 +31,12 @@
             window.location.replace("/Desktop/GetFileFromDisk/"+fileName);
         });
     });
+
     $(function () {
         $('#add-item-button').click(function () {
-            alert('Handler for .click() called.');
+            $.post("Desktop/addItem", function (data) {
+                $('body').append(data);
+            });
         });
     });
 </script>
