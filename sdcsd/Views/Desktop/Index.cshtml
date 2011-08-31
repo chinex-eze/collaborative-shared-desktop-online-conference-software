@@ -13,7 +13,11 @@
             containment: '#desktop-container',
             cursor: 'move',
             snap: '#desktop-container',
+            drag: function (event, ui) {
+                this.style.opacity = 0.5
+            },
             stop: function (event, ui) {
+                this.style.opacity = 1.0
                 var left = $(this).position().left;
                 var top = $(this).position().top;
                 $("div#stop").text("Left: " + left + "\nTop: " + top);
