@@ -20,31 +20,7 @@ namespace sdcsd.Controllers
         {
             return View(db.Topics.ToList());
         }
-
-        //
-        // GET: /Topics/Create
-
-        public ActionResult Create()
-        {
-            return View();
-        } 
-
-        //
-        // POST: /Topics/Create
-
-        [HttpPost]
-        public ActionResult Create(TopicModel topic)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Topics.Add(topic);
-                db.SaveChanges();
-                return RedirectToAction("Index", "Home");  
-            }
-
-            return View(topic);
-        }
-        
+                        
         protected override void Dispose(bool disposing)
         {
             db.Dispose();
