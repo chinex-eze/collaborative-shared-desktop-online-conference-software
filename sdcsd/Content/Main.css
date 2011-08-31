@@ -68,9 +68,16 @@
     position: absolute;
     width: 50%;
     bottom: 0;
-    height: 15%;
+    top: 85%;
     margin: 0;
     right: 0;
     
     background-color: #777777;
+}
+
+#chat-up-button 
+{
+    width: 32px;
+    height: 32px;
+    background-color: Red;
 }

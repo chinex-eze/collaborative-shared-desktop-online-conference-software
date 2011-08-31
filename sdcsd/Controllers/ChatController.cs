@@ -16,5 +16,16 @@ namespace sdcsd.Controllers
             return View();
         }
 
+        public string getMessage(int Num)
+        {
+            //List<Category> categories = northwind.GetCategories();
+            ///return View(categories);
+            return "some messages...";
+        }
+
+        public void sendMessage(string message)
+        {
+            
+        }
     }
 }
