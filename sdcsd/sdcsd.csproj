@@ -204,7 +204,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Data\svn-EC86825E" />
     <Content Include="Views\Userlist\Edit.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -224,7 +223,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>2050</DevelopmentServerPort>
+          <DevelopmentServerPort>16688</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

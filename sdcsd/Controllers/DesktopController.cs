@@ -25,5 +25,14 @@ namespace sdcsd.Controllers
             return File(id, "text/plain", Server.UrlEncode(id));
         }
 
+        public FilePathResult GetFileFromDisk(string id)
+        {
+            string path = AppDomain.CurrentDomain.BaseDirectory + "Content/desktopFiles/";
+            string fileName = id;
+            return File(path + fileName, "text/plain", id);
+        }
+
+
+
     }
 }
