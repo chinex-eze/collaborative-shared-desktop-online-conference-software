@@ -12,8 +12,15 @@
 
 <div id="user-list-hover"></div>
 <script type="text/javascript">
-    
-    
+    $("#user-list-hover").hover(
+      function () {
+          $('#users-container').animate({ "right": "0%" }, 'fast');
+      },
+      function () {
+          setTimeout(function () {
+              $('#users-container').animate({ "right": "-4%" }, 'slow');
+          }, 1000);
+      });
 </script>
 
 <div id="topics-container">
