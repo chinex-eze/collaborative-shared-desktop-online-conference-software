@@ -1,2 +1,8 @@
-﻿<script type="text/javascript">    $('#dialog-background').show();</script>
-<div id="dialog-large" class="dialog">Edit stuff or login</div>
+﻿<script type="text/javascript">
+    $('#dialog-background').show();
+</script>
+
+<div id="dialog-large" class="dialog">Edit stuff or login
+    <br />
+    <button type="button" onclick="$('#dialog-background').hide(), $('.dialog').remove()">Cancel</button>
+</div>
