@@ -184,18 +184,6 @@
     <Content Include="Views\Userlist\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Topics\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Topics\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Topics\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Topics\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Topics\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
