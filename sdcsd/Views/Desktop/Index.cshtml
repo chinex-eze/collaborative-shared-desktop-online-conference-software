@@ -2,7 +2,7 @@
 @model IEnumerable<sdcsd.Models.DesktopItemModel>
 
 @foreach (var item in Model) {
-    <div class="draggable" style="position: absolute; left: @item.LocX; top: @item.LocY; background-color: transparent">
+    <div class="draggable" title="@item.Name" style="position: absolute; left: @item.LocX; top: @item.LocY; background-color: transparent">
         <img src="../../Content/icons/text.png" alt="@item.Name" />
     </div>    
 }
@@ -27,7 +27,8 @@
     });
     $(function () {
         $('.draggable').dblclick(function () {
-            window.location.replace("/Desktop/GetFileFromDisk/Minutes2010.txt");
+            var fileName = this.title;
+            window.location.replace("/Desktop/GetFileFromDisk/"+fileName);
         });
     });
     $(function () {
