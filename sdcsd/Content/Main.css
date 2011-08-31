@@ -13,9 +13,9 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    height: 5%;
-    width: 2%;
-    background-color: Gray;
+    height: 64px;
+    width: 64px;
+    background-image: url('/../../Content/icons/add.png');
 }
 
 #header-container 
