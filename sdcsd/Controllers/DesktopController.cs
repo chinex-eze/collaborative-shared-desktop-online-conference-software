@@ -20,9 +20,9 @@ namespace sdcsd.Controllers
             return View(model);
         }
 
-        public ActionResult GetPdf(string filename)
+        public ActionResult GetTxt(string id)
         {
-            return File(filename, "application/pdf", Server.UrlEncode(filename));
+            return File(id, "text/plain", Server.UrlEncode(id));
         }
 
     }

@@ -5,13 +5,19 @@
         <img src="../../Content/icons/text.png" alt="@item.Name" />
     </div>    
 }
+<div id="stop"></div>
 
 <script type="text/javascript">
     $(function () {
         $(".draggable").draggable({
             containment: '#desktop-container',
             cursor: 'move',
-            snap: '#desktop-container'
+            snap: '#desktop-container',
+            stop: function (event, ui) {
+                var left = $(this).position().left;
+                var top = $(this).position().top;
+                $("div#stop").text("Left: " + left + "\nTop: " + top);
+            }
         });
     });
     $(function () {
