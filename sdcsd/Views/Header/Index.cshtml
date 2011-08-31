@@ -1,3 +1,10 @@
 ﻿@{Layout=null;}
 <div id="settings-button" class="button"></div>
 <div id="add-item-button" class="button"></div>
+<script type="text/javascript">
+    $('#settings-button').click(function () {
+        $.post("Userlist/Edit", function (data) {
+            $('body').append(data);
+        });
+    });
+</script>

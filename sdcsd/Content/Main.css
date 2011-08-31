@@ -39,20 +39,17 @@
     height: 80px;
 }
 
-#users-container 
+#user-list-container 
 {
     position: absolute;
-    width: 5%;
-    min-height: 20em;
-    right: -4%;
-    top: 20%;
     margin: 0;
-    
+    margin-left: 99%;
+    left: 0;
+    top: 20%;
     z-index: 15;
-    background-color: #aaaaaa;
 }
 
-#desktops-container 
+#desktop-list-container 
 {
     position: absolute;
     width: 5%;
@@ -103,7 +100,7 @@
     width: 64px;
     height: 64px;
     padding: 2px;
-    background-color: #ddddff;
+    background-color: #777777;
 }
 .button-small
 {
@@ -119,19 +116,18 @@
     background-position: center center;
     display: block;
     top: 0;
-    opacity: 0.7;
     border: 0;
+    background-color: #777777;
 }
 .button-small:hover, .button:hover
 {
-    opacity: 1.0;
+    background-color: #999999;
 }
 
 #chat-up-button 
 {
     left: 0;
     background-image: url(/../../Content/icons/up_small.png);
-    background-color: #cccccc;
     border-bottom-right-radius: 4px;
 }
 #chat-down-button 
@@ -139,14 +135,12 @@
     left: 0;
     background-image: url(/../../Content/icons/down_small.png);
     display: none;
-    background-color: #cccccc;
     border-bottom-right-radius: 4px;
 }
 #topics-up-button 
 {
     right: 0;
     background-image: url(/../../Content/icons/up_small.png);
-    background-color: #cccccc;
     border-bottom-left-radius: 4px;
 }
 #topics-down-button 
@@ -154,18 +148,18 @@
     right: 0;
     background-image: url(/../../Content/icons/down_small.png);
     display: none;
-    background-color: #cccccc;
     border-bottom-left-radius: 4px;
 }
 
 #user-list-hover
 {
-    position: absolute;
-    width: 6%;
+    position: fixed;
+    width: 25px;
     height: 100%;
-    right: 0;
-    /*background-color: red;*/
-    z-index: 20;
+    left: 100%;
+    top: 0;
+    margin-left: -20px;
+    z-index: 14;
 }
 
 #dialog-background
@@ -206,4 +200,35 @@
     height: 30%;
     top: 35%;
     left: 30%;
+}
+
+#user-list
+{
+    margin: 0;
+    padding: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #444444;
+}
+
+.user-list-item
+{
+    background-color: #777777;
+    font-size: 23px;
+    line-height: 16px;
+    list-style: none inside url("../../Content/icons/user_tiny.png");
+    margin: 0;
+    border: 1px solid #505050;
+    padding: 0.4em 1.2em 0.4em 0.4em;
+    color: #aaaaaa;
+    font-family: Arial, Sans-Serif;
+}
+.user-list-item:hover
+{
+    color: #ffffff;
+    border-color: #333333;
+    background-color: #999999;
 }

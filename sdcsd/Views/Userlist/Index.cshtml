@@ -1,9 +1,7 @@
 ﻿@{Layout=null;}
-<script type="text/javascript">
-$('#settings-button').click(function(){
-    $.post("Userlist/Edit", function (data) {
-        $('body').append(data);
-    });
-});
-</script>
-
+<!-- This list should be generated from a list of currently online users-->
+<ul id ="user-list">
+<li class ="user-list-item">korkalainen</li>
+<li class ="user-list-item">petri</li>
+<li class ="user-list-item">ari</li>
+</ul>

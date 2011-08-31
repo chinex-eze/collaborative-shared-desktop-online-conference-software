@@ -6,22 +6,44 @@
     @{Html.RenderAction("Index","Desktop");}
 </div>
 
-<div id="users-container">
+<div id="user-list-container">
     @{Html.RenderAction("Index","Userlist");}
 </div>
 
 <div id="user-list-hover"></div>
 <script type="text/javascript">
 
-    $("#user-list-hover").hover(
-      function () {
-          $('#users-container').animate({ "right": "0%" }, 'fast');
-      },
-      function () {
-              setTimeout(function () {
-                  $('#users-container').animate({ "right": "-4%" }, 'slow');
-              }, 1000);
-      });
+    hover_user_list = 0;
+    visible_user_list = false;
+
+    function hoverUserList() {
+
+        switch (hover_user_list) {
+            case 0:
+                if (visible_user_list === true) {
+                    $('#user-list-container').animate({ "margin-left": "99%" }, 'fast');
+                    visible_user_list = false;
+                }
+                break;
+
+            case 1:
+                if (visible_user_list === false) {
+                    visible_user_list = true;
+                    var left = $('#desktop-container').width() - $('#user-list').width() - 20;
+                    $('#user-list-container').animate({ "margin-left": left + "px" }, 'fast');
+                }
+                setTimeout(function () { hoverUserList(); }, 2000);
+                break;
+
+            default:
+                setTimeout(function () { hoverUserList(); }, 2000);
+        }
+    };
+
+    $("#user-list-hover").mouseenter(function () { hover_user_list++; hoverUserList(); });
+    $("#user-list").mouseenter(function () { hover_user_list++; hoverUserList(); });
+    $("#user-list-hover").mouseleave(function () { hover_user_list--; });
+    $("#user-list").mouseleave(function () { hover_user_list--; });
 </script>
 
 <div id="topics-container">
