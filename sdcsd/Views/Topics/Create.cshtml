@@ -1,4 +1,4 @@
-﻿@model sdcsd.Models.Topic
+﻿@model sdcsd.Models.TopicModel
 
 @{
     ViewBag.Title = "Create";
@@ -13,23 +13,12 @@
     @Html.ValidationSummary(true)
     <fieldset>
         <legend>Topic</legend>
-
         <div class="editor-label">
-            @Html.LabelFor(model => model.Title)
+            @Html.LabelFor(model => model.IsActive)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Title)
-            @Html.ValidationMessageFor(model => model.Title)
+            @Html.EditorFor(model => model.IsActive)
         </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Author)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Author)
-            @Html.ValidationMessageFor(model => model.Author)
-        </div>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.Content)
         </div>

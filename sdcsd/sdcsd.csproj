@@ -75,7 +75,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\DesktopItemDB.cs" />
     <Compile Include="Models\DesktopItemModel.cs" />
-    <Compile Include="Models\Topic.cs" />
+    <Compile Include="Models\TopicModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

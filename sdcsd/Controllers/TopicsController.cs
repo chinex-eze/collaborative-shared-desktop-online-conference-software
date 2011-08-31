@@ -22,15 +22,6 @@ namespace sdcsd.Controllers
         }
 
         //
-        // GET: /Topics/Details/5
-
-        public ViewResult Details(int id)
-        {
-            Topic topic = db.Topics.Find(id);
-            return View(topic);
-        }
-
-        //
         // GET: /Topics/Create
 
         public ActionResult Create()
@@ -42,63 +33,18 @@ namespace sdcsd.Controllers
         // POST: /Topics/Create
 
         [HttpPost]
-        public ActionResult Create(Topic topic)
+        public ActionResult Create(TopicModel topic)
         {
             if (ModelState.IsValid)
             {
                 db.Topics.Add(topic);
                 db.SaveChanges();
-                return RedirectToAction("Index");  
+                return RedirectToAction("Index", "Home");  
             }
 
             return View(topic);
         }
         
-        //
-        // GET: /Topics/Edit/5
- 
-        public ActionResult Edit(int id)
-        {
-            Topic topic = db.Topics.Find(id);
-            return View(topic);
-        }
-
-        //
-        // POST: /Topics/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(Topic topic)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(topic).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(topic);
-        }
-
-        //
-        // GET: /Topics/Delete/5
- 
-        public ActionResult Delete(int id)
-        {
-            Topic topic = db.Topics.Find(id);
-            return View(topic);
-        }
-
-        //
-        // POST: /Topics/Delete/5
-
-        [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
-        {            
-            Topic topic = db.Topics.Find(id);
-            db.Topics.Remove(topic);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

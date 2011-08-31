@@ -1,0 +1,19 @@
+﻿@Ajax.ActionLink("AJAX LINK", "Update", "Header", new AjaxOptions { UpdateTargetId = "header-container", InsertionMode = InsertionMode.Replace})
+
+@model IEnumerable<sdcsd.Models.TopicModel>
+
+@foreach (var item in Model)
+{
+    <!-- we show item only if it's active -->
+    if (item.IsActive)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                @Html.ActionLink("Set inactive", "SetInactive", new { id = item.ID })
+            </td>
+        </tr>
+    }
+}
