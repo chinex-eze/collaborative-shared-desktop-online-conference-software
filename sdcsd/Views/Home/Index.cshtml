@@ -35,7 +35,7 @@
 
             case 1:
                 if (visible_user_list === false) {
-                    var left = $(window).width() - ($('#user-list').width()+20);
+                    var left = $(window).width() - ($('#user-list').width());
                     $('#user-list-container').animate({ "left": left +"px" }, 'fast');
                     visible_user_list = true;
                 }

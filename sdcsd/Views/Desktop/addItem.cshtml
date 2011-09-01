@@ -4,7 +4,7 @@
 </script>
 
 <div id="dialog-small" class="dialog">
-    <h2>Add a file</h2>
+    <h2>Add item</h2>
 
     <script type="text/javascript">
         var uploader = new qq.FileUploader({
@@ -31,6 +31,7 @@
                     //alert(value);
                     $('body').append(value);
                 });
+
             },
             debug: true
         }); 
@@ -38,7 +39,6 @@
 
     <div id="file-uploader">Upload file</div>
     <input type="text" id="file-description"/>
-    <br />
-    <button type="button" onclick="$('#dialog-background').hide(), $('.dialog').remove()">Cancel</button>
     <div class="qq-upload-list"></div>
+    <div class="close-dialog button-small" onclick="$('#dialog-background').hide(), $('.dialog').remove()"></div>
 </div>
