@@ -19,10 +19,10 @@
 
 <script type="text/javascript">
     var refreshId = setInterval(function () {
-        $.post("Topics/RenderTopics", function (data) {
+        $.post("Topics/RenderTopicsHttpPost", function (data) {
             $('#topiclist').html(data);
         });
-    }, 1000);
+    }, 10000);
 </script>
 
 @using (Html.BeginForm("AddTopic", "Topics"))
@@ -34,5 +34,6 @@
 }
 
 <table id="topiclist">
-    
+    @*@{Html.RenderAction("RenderTopics", "Topics");}*@
+    @{Html.RenderPartial("_TopicsList");}    
 </table>
