@@ -28,7 +28,7 @@
     $(document).ready(refreshTopics());
 </script>
 
-@using (Ajax.BeginForm("AddTopic", "Topics", new AjaxOptions {UpdateTargetId="topiclist", InsertionMode=InsertionMode.Replace, HttpMethod="post" }))
+@using (Ajax.BeginForm("AddTopic", "Topics", new AjaxOptions {UpdateTargetId="topiclist", InsertionMode=InsertionMode.Replace, HttpMethod="post", OnSuccess="refreshTopics" }))
 {
     <div id="new-topic-container">
         @Html.TextBox("content", "", new { @class = "topic-input" })
