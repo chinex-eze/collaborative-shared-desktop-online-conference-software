@@ -429,12 +429,14 @@ a:active
 
 .topic
 {
-    background: none repeat scroll 0 0 #F1F1F1;
+    background-color: #F1F1F1;
     box-shadow: 0 0 3px 0 #CCCCCC inset;
-    height: 1.6em;
+    display: block;
     line-height: 1.6em;
     margin: 0 0 0 -2em;
+    min-height: 1.6em;
     padding-left: 3em;
+    word-wrap: break-word;
 }
 .topic:hover
 {
