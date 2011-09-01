@@ -4,10 +4,11 @@
 {
     if (item.IsActive)
     {
-        <tr>
-            <td>@Html.DisplayFor(modelItem => item.Content)</td>
-            <td>@Html.ActionLink("Set inactive", "SetInactive",
-                    new { id = item.ID })</td>
-        </tr>
+        <div class="topic">
+            @Html.DisplayFor(modelItem => item.Content)
+           @* @Ajax.ActionLink("l", "SetInactive","Topics, null,
+            new AjaxOptions {UpdateTargetId="topiclist", InsertionMode=InsertionMode.Replace, HttpMethod="post"},
+            new { id = item.ID, @class="remove-tiny button-tiny" })*@
+        </div>
     }
 }

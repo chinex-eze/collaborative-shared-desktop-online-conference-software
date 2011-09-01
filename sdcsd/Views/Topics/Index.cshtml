@@ -21,20 +21,20 @@
 <script type="text/javascript">
     var refreshId = setInterval(function () {
         $.post("Topics/RenderTopicsHttpPost", function (data) {
-            $('#topiclist').html(data);
+            $('#topic-list').html(data);
         });
-    }, 10000);
+    }, 3000);
 </script>
 
 @using (Ajax.BeginForm("AddTopic", "Topics", new AjaxOptions {UpdateTargetId="topiclist", InsertionMode=InsertionMode.Replace, HttpMethod="post" }))
 {
     <div id="new-topic-container">
-        <div id="topic-input">@Html.TextBox("content", "", new { @class = "text-input" })</div>
-        <input id="topic-submit" class="text-button" type="submit" value="add" />
+        @Html.TextBox("content", "", new { @class = "topic-input" })
+        <input id="topic-submit" class="button-small" type="submit" value="" />
     </div>
 }
 
 <div id="topic-list">
     @*@{Html.RenderAction("RenderTopics", "Topics");}*@
-    @{Html.RenderPartial("_TopicsList");}    
+    @*{Html.RenderPartial("_TopicsList");}*@    
 </div>
