@@ -25,10 +25,15 @@
             });
         }
     var refreshId = setInterval(refreshTopics(), 6000);
+    
     $(document).ready(refreshTopics());
+
+    function clearTopicInput() {
+        $('.topic-input').val("");
+    }
 </script>
 
-@using (Ajax.BeginForm("AddTopic", "Topics", new AjaxOptions {UpdateTargetId="topiclist", InsertionMode=InsertionMode.Replace, HttpMethod="post", OnSuccess="refreshTopics" }))
+@using (Ajax.BeginForm("AddTopic", "Topics", new AjaxOptions {UpdateTargetId="topiclist", InsertionMode=InsertionMode.Replace, HttpMethod="post", OnSuccess="refreshTopics", OnComplete="clearTopicInput" }))
 {
     <div id="new-topic-container">
         @Html.TextBox("content", "", new { @class = "topic-input" })

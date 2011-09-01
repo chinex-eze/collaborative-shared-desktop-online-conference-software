@@ -46,14 +46,17 @@ namespace sdcsd.Controllers
         {
             // TODO: validate received data from form
 
-            TopicModel topic = new TopicModel()
+            if (content.Length > 3)
             {
-                Content = content,
-                IsActive = true,
-            };
+                TopicModel topic = new TopicModel()
+                {
+                    Content = content,
+                    IsActive = true,
+                };
 
-            db.Topics.Add(topic);
-            db.SaveChanges();
+                db.Topics.Add(topic);
+                db.SaveChanges();
+            }
 
             return View("Notification");
         }
