@@ -2,8 +2,8 @@
 
 @foreach (var item in Model)
 {
-    <tr>
-        <td>@Html.DisplayFor(modelItem => item.Sender) : </td>
-        <td>@Html.DisplayFor(modelItem => item.Content)</td>
-    </tr>
+    <p class="chat-message">
+        <span class="chat-sender">@Html.DisplayFor(modelItem => item.Sender) : </span>
+        @Html.DisplayFor(modelItem => item.Content)
+    </p>
 }

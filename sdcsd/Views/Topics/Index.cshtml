@@ -14,7 +14,7 @@
 
     $('#topics-down-button').click(function () {
         topics_toggle();
-        $('#topics-container').animate({ "top": "85%" }, 'fast'); 
+        $('#topics-container').animate({ "top": "75%" }, 'fast'); 
     });
 </script>
 
@@ -24,20 +24,21 @@
                 $('#topic-list').html(data);
             });
         }
-    var refreshId = setInterval(refreshTopics(), 6000);
+
+    var refreshId = setInterval("refreshTopics()", 6000);
     
     $(document).ready(refreshTopics());
 
     function clearTopicInput() {
-        $('.topic-input').val("");
+        $('#topic-input').val("");
     }
 </script>
 
-@using (Ajax.BeginForm("AddTopic", "Topics", new AjaxOptions {UpdateTargetId="topiclist", InsertionMode=InsertionMode.Replace, HttpMethod="post", OnSuccess="refreshTopics", OnComplete="clearTopicInput" }))
+@using (Ajax.BeginForm("AddTopic", "Topics", new AjaxOptions {UpdateTargetId="topic-list", InsertionMode=InsertionMode.InsertAfter, HttpMethod="post", OnSuccess="refreshTopics", OnComplete="clearTopicInput" }))
 {
     <div id="new-topic-container">
-        @Html.TextBox("content", "", new { @class = "topic-input" })
         <input id="topic-submit" class="button-small" type="submit" value="" maxlength="160"/>
+        @Html.TextBox("content", "", new { id = "topic-input" })
     </div>
 }
 

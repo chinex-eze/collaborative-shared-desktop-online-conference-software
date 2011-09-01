@@ -46,8 +46,8 @@ a:active
 {
     position: absolute;
     width: 100%;
-    top: 90px;
-    bottom: 15%;
+    top: 0px;
+    bottom: 25%;
     margin: 0;
 }
 
@@ -72,10 +72,13 @@ a:active
 
 #header-container 
 {
-    position: absolute;
-    width: 100%;
+    background-color: #FFFFFF;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 0 10px 0 #CCCCCC inset;
+    height: 89px;
     margin: 0;
-    height: 90px;
+    position: absolute;
+    width: 164px;
 }
 
 #user-list-container 
@@ -107,7 +110,7 @@ a:active
     position: absolute;
     width: 38.5%;
     bottom: 0;
-    top: 85%;
+    top: 75%;
     margin: 0;
     left: 1%;
     
@@ -125,7 +128,7 @@ a:active
     position: absolute;
     width: 58.5%;
     bottom: 0;
-    top: 85%;
+    top: 75%;
     margin: 0;
     right: 1%;
     
@@ -381,7 +384,7 @@ a:active
 }
 
 
-#new-topic-container
+#new-topic-container, #new-message-container
 {
     position: absolute;
     top: 0;
@@ -391,25 +394,35 @@ a:active
     margin-bottom: 0.5em;
 }
 
-.topic-input
+#topic-input, #chat-input
 {
     background-color: #F6F6F6;
     border: 0 none;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 0 2px 0 #000000 inset;
     height: 2em;
-    left: 2%;
-    margin-right: 2em;
-    padding-left: 0.5em;
+    
     position: relative;
     top: 1em;
-    width: 85%;
+    width: 60%;
+}
+#topic-input
+{
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 0.5em;
+}
+#chat-input
+{
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 0.5em;
 }
 
-#topic-submit
+#topic-submit, #chat-submit
 {
     background-image: url("/../../Content/icons/add_small.png");
-    border-bottom-right-radius: 4px;
+    border-radius: 4px;
     display: inline-block;
     height: 38px;
     margin: 0;
@@ -417,8 +430,17 @@ a:active
     top: 1em;
     width: 38px;
 }
+#topic-submit
+{
+    margin-left: 1em;
+}
+#chat-submit
+{
+    float: left;
+    margin-left: 4em;
+}
 
-#topic-list
+#topic-list, #chat-list
 {
     background-color: #222222;
     border-radius: 5px 5px 5px 5px;
@@ -432,7 +454,7 @@ a:active
     top: 4em;
 }
 
-.topic
+.topic, .chat-message
 {
     background-color: #F1F1F1;
     box-shadow: 0 0 3px 0 #CCCCCC inset;
@@ -461,4 +483,22 @@ a:active
     border: 0 !important;
     outline: 0;
     text-decoration: 0;
+}
+
+.chat-sender
+{
+    font-weight: bold;
+}
+
+.fileItem
+{
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 5px 0 #BBBBBB inset;
+    padding: 3px;
+    background-color: #f0f0f0;
+}
+.fileItem:hover
+{
+    box-shadow: 0 0 3px 0 #dddddd inset;
+    background-color: #f3f3f3;
 }

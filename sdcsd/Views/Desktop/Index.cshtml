@@ -2,11 +2,11 @@
 @model IEnumerable<sdcsd.Models.DesktopItemModel>
 
 @foreach (var item in Model) {
-    if (Session["DesktopID"].Equals(item.DesktopID.ToString()) && (Session["loggedin"] == "true"))
+    if (Session["DesktopID"].Equals(item.DesktopID.ToString()))
     {
         <div class="draggable" title="@item.Name" style="position: absolute;
          left: @item.LocX; top: @item.LocY; background-color: transparent">
-            <img src="../../Content/icons/text.png" alt="@item.Name" />
+            <img src="../../Content/icons/text.png" alt="@item.Name" class="fileItem"/>
         </div>    
     }
 }

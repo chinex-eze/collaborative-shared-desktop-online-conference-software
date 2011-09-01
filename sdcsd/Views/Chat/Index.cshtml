@@ -12,26 +12,34 @@
 
     $('#chat-down-button').click(function () {
         chat_toggle();
-        $('#chat-container').animate({"top": "85%"}, 'fast');
+        $('#chat-container').animate({"top": "75%"}, 'fast');
     });
 </script>
 
 <script type="text/javascript">
-    var refreshId = setInterval(function () {
+    function refreshChat()
+    {
         $.post("Chat/RenderMessagesHttpPost", function (data) {
-            $('#chat-message-list').html(data);
+            $('#chat-list').html(data);
         });
-    }, 10000);
+    }
+
+    var refreshId = setInterval("refreshChat()", 4000);
+    
+    $(document).ready(refreshChat());
+
+    function clearChatInput() {
+        $('#chat-input').val("");
+    }
 </script>
 
-@using (Html.BeginForm("SendMessage", "Chat"))
+@using (Ajax.BeginForm("SendMessage", "Chat", new AjaxOptions {UpdateTargetId="chat-list", InsertionMode=InsertionMode.Replace, HttpMethod="post", OnComplete="clearChatInput" }))
 {
     <div id="chat-add-box">
-        <div id="chat-input">@Html.TextBox("message")</div>
-        <input id="chat-submit" type="submit" value="send" />
+        <input id="chat-submit" class="button-small" type="submit" value="" maxlength="160" />
+        @Html.TextBox("message", " ", new { id="chat-input"})
     </div>
 }
 
-<table id="chat-message-list">
-    @{Html.RenderPartial("_ChatMessageList");}    
-</table>
+<div id="chat-list">
+</div>
