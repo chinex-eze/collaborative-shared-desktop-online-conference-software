@@ -46,7 +46,7 @@ namespace sdcsd.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public void AddNewUserToDb(string userName, string passWord)
+        public ActionResult AddNewUserToDb(string userName, string passWord)
         {
             UserModel user = new UserModel()
             {
@@ -55,6 +55,8 @@ namespace sdcsd.Controllers
                 LastSeen = DateTime.Now,
             };
             db.UsersDB.Add(user);
+
+            return RedirectToAction("Index", "Home");
         }
 
         public ActionResult Edit()

@@ -8,8 +8,8 @@
 @using (Ajax.BeginForm("Login", "User", new AjaxOptions {UpdateTargetId = "site-container", InsertionMode=InsertionMode.Replace, HttpMethod="post", OnSuccess="removeEditors"}))
 {
     <div>
-        <div>@Html.TextBox("username")</div>
-        <div>@Html.TextBox("password")</div>
+        <div><span>Username: </span>@Html.TextBox("username")</div>
+        <div><span>Password: </span>@Html.Password("password")</div>
         <input type="submit" value="Login" />
     </div>
 }

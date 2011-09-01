@@ -6,11 +6,12 @@
 <div id="dialog-large" class="dialog">
     <div class="close-dialog button-small" onclick="removeEditors();"></div>
 
-@using (Html.BeginForm("AddTopic", "Topics"))
+@using (Html.BeginForm("AddNewUserToDb", "User"))
 {
     <div>
-        <div>@Html.TextBox("content")</div>
-        <input type="submit" value="add" />
+        <div><span>Username: </span>@Html.TextBox("userName")</div>
+        <div><span>Password: </span>@Html.Password("passWord")</div>
+        <input type="submit" value="Add User" />
     </div>
 }
 
