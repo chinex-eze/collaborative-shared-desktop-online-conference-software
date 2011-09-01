@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<sdcsd.Models.MessageModel>
 
-@foreach (var item in Model)
+@foreach (var item in Model.Reverse())
 {
     <p class="chat-message">
         <span class="chat-sender">@Html.DisplayFor(modelItem => item.Sender) : </span>

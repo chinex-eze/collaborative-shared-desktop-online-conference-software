@@ -33,7 +33,7 @@
     }
 </script>
 
-@using (Ajax.BeginForm("SendMessage", "Chat", new AjaxOptions {UpdateTargetId="chat-list", InsertionMode=InsertionMode.Replace, HttpMethod="post", OnComplete="clearChatInput" }))
+@using (Ajax.BeginForm("SendMessage", "Chat", new AjaxOptions {UpdateTargetId="chat-list", InsertionMode=InsertionMode.Replace, HttpMethod="post", OnBegin="clearChatInput" }))
 {
     <div id="chat-add-box">
         <input id="chat-submit" class="button-small" type="submit" value="" maxlength="160" />

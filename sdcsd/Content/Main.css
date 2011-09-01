@@ -75,10 +75,10 @@ a:active
     background-color: #FFFFFF;
     border-bottom-right-radius: 20px;
     box-shadow: 0 0 10px 0 #CCCCCC inset;
-    height: 89px;
+    padding-bottom: 0.8em;
+    padding-right: 0.5em;
     margin: 0;
     position: absolute;
-    width: 164px;
 }
 
 #user-list-container 

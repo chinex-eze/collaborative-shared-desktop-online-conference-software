@@ -38,7 +38,8 @@ namespace sdcsd.Controllers
             TopicModel topic = db.Topics.Find(id);
             topic.IsActive = false;
             db.SaveChanges();
-            return View("Notification");
+
+            return PartialView("_TopicsList", db.Topics.ToList());
         }
 
         [HttpPost]
@@ -58,7 +59,7 @@ namespace sdcsd.Controllers
                 db.SaveChanges();
             }
 
-            return View("Notification");
+            return PartialView("_TopicsList", db.Topics.ToList());
         }
 
         [HttpPost]

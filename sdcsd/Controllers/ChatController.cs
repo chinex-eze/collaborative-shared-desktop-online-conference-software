@@ -33,17 +33,19 @@ namespace sdcsd.Controllers
         {
             // TODO: validate received data from form
 
-            MessageModel msg = new MessageModel()
+            if (message.Length > 3 && message.Length < 160)
             {
-                Sender = Session["user"].ToString(),
-                Content = message,
-                TimeSent = DateTime.Now,
-            };
+                MessageModel msg = new MessageModel()
+                {
+                    Sender = Session["user"].ToString(),
+                    Content = message,
+                    TimeSent = DateTime.Now,
+                };
 
-            db.Messages.Add(msg);
-            db.SaveChanges();
-
-            return View("Notification");
+                db.Messages.Add(msg);
+                db.SaveChanges();
+            }
+            return PartialView("_ChatMessageList", db.Messages.ToList());
         }
 
         [HttpPost]

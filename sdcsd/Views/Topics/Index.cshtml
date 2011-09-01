@@ -34,7 +34,7 @@
     }
 </script>
 
-@using (Ajax.BeginForm("AddTopic", "Topics", new AjaxOptions {UpdateTargetId="topic-list", InsertionMode=InsertionMode.InsertAfter, HttpMethod="post", OnSuccess="refreshTopics", OnComplete="clearTopicInput" }))
+@using (Ajax.BeginForm("AddTopic", "Topics", new AjaxOptions {UpdateTargetId="topic-list", InsertionMode=InsertionMode.Replace, HttpMethod="post", OnBegin="clearTopicInput" }))
 {
     <div id="new-topic-container">
         <input id="topic-submit" class="button-small" type="submit" value="" maxlength="160"/>
@@ -43,6 +43,4 @@
 }
 
 <div id="topic-list">
-    @*@{Html.RenderAction("RenderTopics", "Topics");}*@
-    @*{Html.RenderPartial("_TopicsList");}*@    
 </div>
