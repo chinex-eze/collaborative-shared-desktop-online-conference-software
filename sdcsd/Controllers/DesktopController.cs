@@ -45,7 +45,6 @@ namespace sdcsd.Controllers
             {
                 success =  true,
                 complete = true
-
             };
             
             return Json(data, JsonRequestBehavior.AllowGet);

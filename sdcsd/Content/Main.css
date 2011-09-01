@@ -50,6 +50,7 @@
     left: 0;
     top: 20%;
     z-index: 15;
+    cursor: default;
 }
 
 #topics-container 
