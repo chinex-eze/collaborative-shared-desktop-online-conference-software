@@ -10,6 +10,7 @@ namespace sdcsd.Models
     {
         public int ID { get; set; }
         public string UserName { get; set; }
+        public string PassWord { get; set; }
         public DateTime LastSeen { get; set; }
     }
 

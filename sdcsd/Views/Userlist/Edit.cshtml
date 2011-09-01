@@ -4,4 +4,13 @@
 
 <div id="dialog-large" class="dialog">
     <div class="close-dialog button-small" onclick="$('#dialog-background').hide(), $('.dialog').remove()"></div>
+
+@using (Html.BeginForm("AddTopic", "Topics"))
+{
+    <div>
+        <div>@Html.TextBox("content")</div>
+        <input type="submit" value="add" />
+    </div>
+}
+
 </div>
