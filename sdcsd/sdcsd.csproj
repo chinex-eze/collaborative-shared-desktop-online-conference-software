@@ -65,6 +65,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\DesktopController.cs" />
+    <Compile Include="Controllers\DesktoplistController.cs" />
     <Compile Include="Controllers\HeaderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TopicsController.cs" />
@@ -91,6 +92,10 @@
     <Content Include="App_Data\UsersDB_log.LDF">
       <DependentUpon>UsersDB.mdf</DependentUpon>
     </Content>
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\sdcsd.dll" />
+    <Content Include="bin\sdcsd.pdb" />
     <Content Include="Content\desktopFiles\CorporateInfo.txt" />
     <Content Include="Content\desktopFiles\Minutes2010.txt" />
     <Content Include="Content\icons\48px_document.png" />
@@ -123,6 +128,7 @@
     <Content Include="Content\icons\video.png" />
     <Content Include="Content\icons\web.png" />
     <Content Include="Content\images\carbon.png" />
+    <Content Include="Content\images\spaceinvader_100px.jpg" />
     <Content Include="Content\Main.css" />
     <Content Include="Global.asax" />
     <Content Include="obj\Debug\sdcsd.csproj.FileListAbsolute.txt" />
@@ -217,6 +223,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_TopicsList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Desktoplist\Index.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

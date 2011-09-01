@@ -11,6 +11,10 @@
     @{Html.RenderAction("Index","Userlist");}
 </div>
 
+<div id="desktop-list-container">
+    @{Html.RenderAction("Index","Desktoplist");}
+</div>
+
 <div id="user-list-hover"></div>
 <script type="text/javascript">
 
@@ -46,6 +50,44 @@
     $("#user-list-hover").mouseleave(function () { hover_user_list--; });
     $("#user-list").mouseleave(function () { hover_user_list--; });
 </script>
+
+
+<div id="desktop-list-hover"></div>
+<script type="text/javascript">
+
+    hover_desktop_list = 0;
+    visible_desktop_list = false;
+
+    function hoverDesktopList() {
+
+        switch (hover_desktop_list) {
+            case 0:
+                if (visible_desktop_list === true) {
+                    $('#desktop-list-container').animate({ "margin-right": "99%" }, 'fast');
+                    visible_desktop_list = false;
+                }
+                break;
+
+            case 1:
+                if (visible_desktop_list === false) {
+                    visible_desktop_list = true;
+                    var left = $('#desktop-container').width() - $('#desktop-list').width();
+                    $('#desktop-list-container').animate({ "margin-right": left + "px" }, 'fast');
+                }
+                setTimeout(function () { hoverDesktopList(); }, 2000);
+                break;
+
+            default:
+                setTimeout(function () { hoverDesktopList(); }, 2000);
+        }
+    };
+
+    $("#desktop-list-hover").mouseenter(function () { hover_desktop_list++; hoverDesktopList(); });
+    $("#desktop-list").mouseenter(function () { hover_desktop_list++; hoverDesktopList(); });
+    $("#desktop-list-hover").mouseleave(function () { hover_desktop_list--; });
+    $("#desktop-list").mouseleave(function () { hover_desktop_list--; });
+</script>
+
 
 <div id="topics-container">
     @{Html.RenderAction("Index","Topics");}
