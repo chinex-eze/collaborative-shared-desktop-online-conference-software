@@ -49,11 +49,11 @@ namespace sdcsd.Controllers
                 LocX = "50%",
                 LocY = "50%"
             };
-
+            
             _db.DesktopItems.Add(item);
             _db.SaveChanges();
 
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]

@@ -37,8 +37,6 @@ namespace sdcsd.Controllers
             }
             Session["loggedin"] = "true";
             return RedirectToAction("Index","Home");
-
-            return null;
         }
 
         public ActionResult Logout()
