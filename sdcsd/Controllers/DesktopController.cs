@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using sdcsd.Models;
 using System.IO;
+using System.Web.Routing;
 
 namespace sdcsd.Controllers
 {
@@ -36,6 +37,22 @@ namespace sdcsd.Controllers
         [HttpPost]
         public ActionResult AddItem()
         {
+            return View();
+        }
+
+        public ActionResult AddItemToDB(string id, int desktopID)
+        {
+            DesktopItemModel item = new DesktopItemModel()
+            {
+                DesktopID = desktopID, //TODO: get active desktop
+                Name = id,
+                LocX = "50%",
+                LocY = "50%"
+            };
+
+            _db.DesktopItems.Add(item);
+            _db.SaveChanges();
+
             return View();
         }
 
