@@ -6,7 +6,6 @@
         <img src="../../Content/icons/text.png" alt="@item.Name" />
     </div>    
 }
-<div id="stop"></div>
 
 <script type="text/javascript">
     $(function () {
@@ -21,7 +20,6 @@
                 this.style.opacity = 1.0
                 var left = $(this).position().left;
                 var top = $(this).position().top;
-                $("div#stop").text("Left: " + left + "\nTop: " + top);
             }
         });
     });
