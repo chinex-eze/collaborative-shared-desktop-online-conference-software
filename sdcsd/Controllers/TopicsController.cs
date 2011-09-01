@@ -18,11 +18,23 @@ namespace sdcsd.Controllers
 
         public ViewResult Index()
         {
-            return View(db.Topics.ToList());
+            ViewBag.login = false;
+            if (Response.Cookies.Get("loggedin").Value == "true")
+                ViewBag.login = true;
+
+            if (ViewBag.login)
+                return View(db.Topics.ToList());
+            else
+                return null;
+
         }
 
         public ActionResult SetInactive(int id)
         {
+            ViewBag.login = false;
+            if (Response.Cookies.Get("loggedin").Value == "true")
+                ViewBag.login = true;
+
             TopicModel topic = db.Topics.Find(id);
             topic.IsActive = false;
             db.SaveChanges();

@@ -1,9 +1,16 @@
 ﻿@{Layout=null;}
+
 <div id="settings-button" class="button"></div>
-<div id="add-item-button" class="button"></div>
+@{if(ViewBag.login == true)
+  {
+    <div id="add-item-button" class="button"></div>
+
+  }
+}
+
 <script type="text/javascript">
     $('#settings-button').click(function () {
-        $.post("Userlist/Edit", function (result) {
+        $.post("User/Edit", function (result) {
             $('body').append(result);
         });
     });

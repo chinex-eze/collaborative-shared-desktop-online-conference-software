@@ -16,7 +16,16 @@ namespace sdcsd.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Messages.ToList());
+            ViewBag.login = false;
+            if (Response.Cookies.Get("loggedin").Value == "true")
+                ViewBag.login = true;
+
+            if(ViewBag.login)
+            	return View(db.Messages.ToList());
+            else
+            {
+                return null;
+            }
         }
 
         [HttpPost]

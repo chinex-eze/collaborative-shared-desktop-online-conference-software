@@ -16,11 +16,22 @@ namespace sdcsd.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            ViewBag.login = false;
+            if (Response.Cookies.Get("loggedin").Value == "true")
+                ViewBag.login = true;
+
+            if (ViewBag.login)
+                return View();
+            else
+                return null;
         }
 
         public ActionResult Login(string username)
         {
+           ViewBag.login = false;
+            if (Response.Cookies.Get("loggedin").Value == "true")
+                ViewBag.login = true;
+
             foreach (var item in db.UsersDB.ToList())
             {
                 if (item.UserName.Equals(username))
@@ -29,7 +40,8 @@ namespace sdcsd.Controllers
                     return View();
                 }
             }
-            return View("Edit");
+
+            return null;
         }
 
         public void AddNewUserToDb(string userName, string passWord)
@@ -41,6 +53,18 @@ namespace sdcsd.Controllers
                 LastSeen = DateTime.Now,
             };
             db.UsersDB.Add(user);
+        }
+
+        public ActionResult Edit()
+        {
+            ViewBag.login = false;
+            if (Response.Cookies.Get("loggedin").Value == "true")
+                ViewBag.login = true;
+
+            if (ViewBag.login == true)
+                return View();
+            else
+                return View("LoginBox");
         }
     }
 }

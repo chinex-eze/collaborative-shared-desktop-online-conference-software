@@ -13,7 +13,14 @@ namespace sdcsd.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            ViewBag.login = false;
+            if (Response.Cookies.Get("loggedin").Value == "true")
+                ViewBag.login = true;
+
+            if (ViewBag.login)
+                return View();
+            else
+                return null;
         }
 
     }

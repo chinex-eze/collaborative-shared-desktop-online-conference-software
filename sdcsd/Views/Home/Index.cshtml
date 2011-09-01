@@ -1,6 +1,4 @@
-﻿<div id="site-container">
-
-<div id="desktop-container">
+﻿<div id="desktop-container">
     @{Html.RenderAction("Index","Desktop");}
 </div>
 
@@ -16,95 +14,100 @@
     @{Html.RenderAction("Index","Desktoplist");}
 </div>
 
-<div id="user-list-hover"></div>
-<script type="text/javascript">
+@{if (ViewBag.login == true)
+  {
+    <div id="user-list-hover"></div>
+    <script type="text/javascript">
 
-    hover_user_list = 0;
-    visible_user_list = true;
+        hover_user_list = 0;
+        visible_user_list = true;
 
-    function hoverUserList() {
+        function hoverUserList() {
 
-        switch (hover_user_list) {
-            case 0:
-                if (visible_user_list === true) {
-                    var left = $(window).width() - (($('#user-list').width()) * 0.1);
-                    $('#user-list-container').animate({ "left": left + "px" }, 'fast');
-                    visible_user_list = false;
-                }
-                break;
+            switch (hover_user_list) {
+                case 0:
+                    if (visible_user_list === true) {
+                        var left = $(window).width() - (($('#user-list').width()) * 0.1);
+                        $('#user-list-container').animate({ "left": left + "px" }, 'fast');
+                        visible_user_list = false;
+                    }
+                    break;
 
-            case 1:
-                if (visible_user_list === false) {
-                    var left = $(window).width() - ($('#user-list').width());
-                    $('#user-list-container').animate({ "left": left +"px" }, 'fast');
-                    visible_user_list = true;
-                }
-                setTimeout(function () { hoverUserList(); }, 2000);
-                break;
+                case 1:
+                    if (visible_user_list === false) {
+                        var left = $(window).width() - ($('#user-list').width());
+                        $('#user-list-container').animate({ "left": left +"px" }, 'fast');
+                        visible_user_list = true;
+                    }
+                    setTimeout(function () { hoverUserList(); }, 2000);
+                    break;
 
-            default:
-                setTimeout(function () { hoverUserList(); }, 2000);
-        }
-    };
+                default:
+                    setTimeout(function () { hoverUserList(); }, 2000);
+            }
+        };
 
-    $(document).ready(hoverUserList());
+        $(document).ready(hoverUserList());
 
-    $("#user-list-hover").mouseenter(function () { hover_user_list++; hoverUserList(); });
-    $("#user-list").mouseenter(function () { hover_user_list++; hoverUserList(); });
-    $("#user-list-hover").mouseleave(function () { hover_user_list--; });
-    $("#user-list").mouseleave(function () { hover_user_list--; });
-</script>
-
-
-<div id="desktop-list-hover"></div>
-<script type="text/javascript">
-
-    hover_desktop_list = 0;
-    visible_desktop_list = true;
-
-    function hoverDesktopList() {
-
-        switch (hover_desktop_list) {
-            case 0:
-                if (visible_desktop_list === true) {
-                    var right = -($('#desktop-list').width()*0.9);
-                    $('#desktop-list-container').animate({ "left": right + "px" }, 'fast');
-                    visible_desktop_list = false;
-                }
-                break;
-
-            case 1:
-                if (visible_desktop_list === false) {
-                    visible_desktop_list = true;
-                    $('#desktop-list-container').animate({ "left": "0" }, 'fast');
-                }
-                setTimeout(function () { hoverDesktopList(); }, 2000);
-                break;
-
-            default:
-                setTimeout(function () { hoverDesktopList(); }, 2000);
-        }
-    };
-    $(document).ready(hoverDesktopList());
-    $("#desktop-list-hover").mouseenter(function () { hover_desktop_list++; hoverDesktopList(); });
-    $("#desktop-list").mouseenter(function () { hover_desktop_list++; hoverDesktopList(); });
-    $("#desktop-list-hover").mouseleave(function () { hover_desktop_list--; });
-    $("#desktop-list").mouseleave(function () { hover_desktop_list--; });
-</script>
+        $("#user-list-hover").mouseenter(function () { hover_user_list++; hoverUserList(); });
+        $("#user-list").mouseenter(function () { hover_user_list++; hoverUserList(); });
+        $("#user-list-hover").mouseleave(function () { hover_user_list--; });
+        $("#user-list").mouseleave(function () { hover_user_list--; });
+    </script>
 
 
+    <div id="desktop-list-hover"></div>
+    <script type="text/javascript">
+
+        hover_desktop_list = 0;
+        visible_desktop_list = true;
+
+        function hoverDesktopList() {
+
+            switch (hover_desktop_list) {
+                case 0:
+                    if (visible_desktop_list === true) {
+                        var right = -($('#desktop-list').width()*0.9);
+                        $('#desktop-list-container').animate({ "left": right + "px" }, 'fast');
+                        visible_desktop_list = false;
+                    }
+                    break;
+
+                case 1:
+                    if (visible_desktop_list === false) {
+                        visible_desktop_list = true;
+                        $('#desktop-list-container').animate({ "left": "0" }, 'fast');
+                    }
+                    setTimeout(function () { hoverDesktopList(); }, 2000);
+                    break;
+
+                default:
+                    setTimeout(function () { hoverDesktopList(); }, 2000);
+            }
+        };
+        $(document).ready(hoverDesktopList());
+        $("#desktop-list-hover").mouseenter(function () { hover_desktop_list++; hoverDesktopList(); });
+        $("#desktop-list").mouseenter(function () { hover_desktop_list++; hoverDesktopList(); });
+        $("#desktop-list-hover").mouseleave(function () { hover_desktop_list--; });
+        $("#desktop-list").mouseleave(function () { hover_desktop_list--; });
+    </script>
+  }
+}
+
+@{if (ViewBag.login == true){
 <div id="topics-container">
     @{Html.RenderAction("Index","Topics");}
 </div>
+}}
 
+@{if (ViewBag.login == true){
 <div id="chat-container">
     @{Html.RenderAction("Index","Chat");}
 </div>
+}}
 
 <div id="dialog-background"></div>
 
 <script type="text/javascript">
     $('#dialog-background').click(function () { $('#dialog-background').hide(); $('.dialog').remove(); });
 </script>
-
-</div>

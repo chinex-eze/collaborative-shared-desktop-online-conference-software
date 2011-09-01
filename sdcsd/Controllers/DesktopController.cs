@@ -16,8 +16,13 @@ namespace sdcsd.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.login = false;
+            if (Response.Cookies.Get("loggedin").Value == "true")
+                ViewBag.login = true;
+
             var items = _db.DesktopItems.ToList<DesktopItemModel>();
             return View(items);
+
         }
 
         public FilePathResult GetFileFromDisk(string id)
@@ -28,12 +33,13 @@ namespace sdcsd.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddItem() {
+        public ActionResult AddItem()
+        {
             return View();
         }
 
         [HttpPost]
-        public JsonResult Upload(int id, string qqfile)
+        public JsonResult Upload(int? id, string qqfile)
         {
             var data = new
             {
@@ -41,6 +47,7 @@ namespace sdcsd.Controllers
                 complete = true
 
             };
+            
             return Json(data, JsonRequestBehavior.AllowGet);
         }
     }

@@ -14,14 +14,17 @@ namespace sdcsd.Controllers
         //
         // GET: /Userlist/
 
+
         public ActionResult Index()
         {
-            return View(db.UsersDB.ToList());
-        }       
+            ViewBag.login = false;
+            if (Response.Cookies.Get("loggedin").Value == "true")
+                ViewBag.login = true;
 
-        public ActionResult Edit()
-        {
-            return View();
-        }
+            if (ViewBag.login)
+                return View(db.UsersDB.ToList());
+            else
+                return null;
+        }       
     }
 }
