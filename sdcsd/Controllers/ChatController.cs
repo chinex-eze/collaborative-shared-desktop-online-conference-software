@@ -3,29 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using sdcsd.Models;
 
 namespace sdcsd.Controllers
 {
     public class ChatController : Controller
     {
+        private MessageDBContext db = new MessageDBContext();
+
         //
         // GET: /Chat/
 
         public ActionResult Index()
         {
-            return View();
+            return View(db.Messages.ToList());
         }
 
-        public string getMessage(int Num)
+        [HttpPost]
+        public ActionResult SendMessage(string message)
         {
-            //List<Category> categories = northwind.GetCategories();
-            ///return View(categories);
-            return "some messages...";
+            // TODO: validate received data from form
+
+            MessageModel msg = new MessageModel()
+            {
+                Sender = Response.Cookies.Get("user").Value,
+                Content = message,
+                TimeSent = DateTime.Now,
+            };
+
+            db.Messages.Add(msg);
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
         }
 
-        public void sendMessage(string message)
+        [HttpPost]
+        public ActionResult RenderMessagesHttpPost()
         {
-            
+            return PartialView("_ChatMessageList", db.Messages.ToList());
         }
+        
+        // TODO: should override Dispose
     }
 }

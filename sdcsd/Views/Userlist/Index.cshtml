@@ -6,9 +6,6 @@
 <ul id ="user-list">
 @foreach (var item in Model)
 {
-    if (item.LastSeen.AddSeconds(30) > DateTime.Now)
-    {
-        <li class ="user-list-item">@item.UserName</li>
-    }      
+    <li class="user-list-item">@item.UserName</li>
 }
 </ul>

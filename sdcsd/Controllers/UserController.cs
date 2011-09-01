@@ -32,6 +32,15 @@ namespace sdcsd.Controllers
             return View("Edit");
         }
 
-
+        public void AddNewUserToDb(string userName, string passWord)
+        {
+            UserModel user = new UserModel()
+            {
+                UserName = userName,
+                PassWord = passWord,
+                LastSeen = DateTime.Now,
+            };
+            db.UsersDB.Add(user);
+        }
     }
 }

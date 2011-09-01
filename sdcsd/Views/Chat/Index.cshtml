@@ -1,6 +1,7 @@
 ﻿@{Layout = null;}
 <div id="chat-up-button" class="button-small"></div>
 <div id="chat-down-button" class="button-small"></div>
+
 <script type="text/javascript">
     function chat_toggle() { $('#chat-up-button').toggle(); $('#chat-down-button').toggle(); }
 
@@ -14,3 +15,23 @@
         $('#chat-container').animate({"top": "85%"}, 'fast');
     });
 </script>
+
+<script type="text/javascript">
+    var refreshId = setInterval(function () {
+        $.post("Chat/RenderMessagesHttpPost", function (data) {
+            $('#chat-message-list').html(data);
+        });
+    }, 10000);
+</script>
+
+@using (Html.BeginForm("SendMessage", "Chat"))
+{
+    <div id="chat-add-box">
+        <div id="chat-input">@Html.TextBox("message")</div>
+        <input id="chat-submit" type="submit" value="send" />
+    </div>
+}
+
+<table id="chat-message-list">
+    @{Html.RenderPartial("_ChatMessageList");}    
+</table>
