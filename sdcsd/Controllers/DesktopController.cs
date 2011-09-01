@@ -40,11 +40,11 @@ namespace sdcsd.Controllers
             return View();
         }
 
-        public ActionResult AddItemToDB(string id, int desktopID)
+        public ActionResult AddItemToDB(string id)
         {
             DesktopItemModel item = new DesktopItemModel()
             {
-                DesktopID = desktopID, //TODO: get active desktop
+                DesktopID = 1, //TODO: get active desktop
                 Name = id,
                 LocX = "50%",
                 LocY = "50%"
