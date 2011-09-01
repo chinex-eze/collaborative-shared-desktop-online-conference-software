@@ -2,9 +2,13 @@
 @model IEnumerable<sdcsd.Models.DesktopItemModel>
 
 @foreach (var item in Model) {
-    <div class="draggable" title="@item.Name" style="position: absolute; left: @item.LocX; top: @item.LocY; background-color: transparent">
-        <img src="../../Content/icons/text.png" alt="@item.Name" />
-    </div>    
+    if (Session["DesktopID"].Equals(item.DesktopID.ToString()))
+    {
+        <div class="draggable" title="@item.Name" style="position: absolute;
+         left: @item.LocX; top: @item.LocY; background-color: transparent">
+            <img src="../../Content/icons/text.png" alt="@item.Name" />
+        </div>    
+    }
 }
 
 <script type="text/javascript">

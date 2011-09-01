@@ -1,7 +1,19 @@
 ﻿@{Layout=null;}
 <!-- This list should be generated from a list of currently online users-->
 <ul id ="desktop-list" class="side-list">
-<li class ="side-list-item desktop-list-item">Desktop1</li>
-<li class ="side-list-item desktop-list-item">Desktop2</li>
-<li class ="side-list-item desktop-list-item">Desktop3</li>
+    <li id="desktop1" class ="side-list-item desktop-list-item">Desktop1</li>
+    <li id="desktop2" class ="side-list-item desktop-list-item">Desktop2</li>
+    <li id="desktop3" class ="side-list-item desktop-list-item">Desktop3</li>
 </ul>
+
+<script type="text/javascript">
+    $('#desktop1').click(function () {
+        Session["DesktopID"] = "1";
+    });
+    $('#desktop2').click(function () {
+        Session["DesktopID"] = "2";
+    });
+    $('#desktop3').click(function () {
+        Session["DesktopID"] = "3";
+    });
+</script>

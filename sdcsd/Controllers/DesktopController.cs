@@ -24,7 +24,6 @@ namespace sdcsd.Controllers
 
             var items = _db.DesktopItems.ToList<DesktopItemModel>();
             return View(items);
-
         }
 
         public FilePathResult GetFileFromDisk(string id)
@@ -32,12 +31,6 @@ namespace sdcsd.Controllers
             string path = AppDomain.CurrentDomain.BaseDirectory + "Content/desktopFiles/";
             string fileName = id;
             return File(path + fileName, "text/plain", id);
-        }
-
-        [HttpPost]
-        public ActionResult AddItem()
-        {
-            return View();
         }
 
         public ActionResult AddItemToDB(string id)
