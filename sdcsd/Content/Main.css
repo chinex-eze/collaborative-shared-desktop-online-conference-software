@@ -39,8 +39,7 @@
 {
     position: absolute;
     margin: 0;
-    margin-left: 99%;
-    left: 0;
+    left: 90%;
     top: 20%;
     z-index: 15;
 }
@@ -49,9 +48,7 @@
 {
     position: absolute;
     margin: 0;
-    margin-right: 99%;
-    right: 0;
-    /*left: 0;*/
+    left: 0;
     top: 20%;
     z-index: 15;
 }
@@ -233,21 +230,6 @@
     -moz-background-clip: padding-box;
 }
 
-#desktop-list
-{
-    margin: 0;
-    padding: 0;
-    padding-top: 1em;
-    padding-bottom: 1em;
-
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: #222222;
-    box-shadow: 2px 1px 10px 0px #777777;
-    -moz-background-clip: padding-box;
-}
-
-
 .user-list-item
 {
     background-color: #555555;
@@ -271,6 +253,19 @@
     box-shadow:inset 0px 0px 5px 0px #dddddd;
 }
 
+#desktop-list
+{
+    margin: 0;
+    padding: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #222222;
+    box-shadow: 2px 1px 10px 0px #777777;
+    -moz-background-clip: padding-box;
+}
 
 .desktop-list-item
 {

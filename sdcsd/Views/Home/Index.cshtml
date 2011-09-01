@@ -1,4 +1,4 @@
-﻿<div id="site-container>
+﻿<div id="site-container">
 
 <div id="desktop-container">
     @{Html.RenderAction("Index","Desktop");}
@@ -20,23 +20,24 @@
 <script type="text/javascript">
 
     hover_user_list = 0;
-    visible_user_list = false;
+    visible_user_list = true;
 
     function hoverUserList() {
 
         switch (hover_user_list) {
             case 0:
                 if (visible_user_list === true) {
-                    $('#user-list-container').animate({ "margin-left": "99%" }, 'fast');
+                    var left = $(window).width() - (($('#user-list').width()) * 0.1);
+                    $('#user-list-container').animate({ "left": left + "px" }, 'fast');
                     visible_user_list = false;
                 }
                 break;
 
             case 1:
                 if (visible_user_list === false) {
+                    var left = $(window).width() - ($('#user-list').width()+20);
+                    $('#user-list-container').animate({ "left": left +"px" }, 'fast');
                     visible_user_list = true;
-                    var left = $('#desktop-container').width() - $('#user-list').width() - 20;
-                    $('#user-list-container').animate({ "margin-left": left + "px" }, 'fast');
                 }
                 setTimeout(function () { hoverUserList(); }, 2000);
                 break;
@@ -45,6 +46,8 @@
                 setTimeout(function () { hoverUserList(); }, 2000);
         }
     };
+
+    $(document).ready(hoverUserList());
 
     $("#user-list-hover").mouseenter(function () { hover_user_list++; hoverUserList(); });
     $("#user-list").mouseenter(function () { hover_user_list++; hoverUserList(); });
@@ -57,14 +60,15 @@
 <script type="text/javascript">
 
     hover_desktop_list = 0;
-    visible_desktop_list = false;
+    visible_desktop_list = true;
 
     function hoverDesktopList() {
 
         switch (hover_desktop_list) {
             case 0:
                 if (visible_desktop_list === true) {
-                    $('#desktop-list-container').animate({ "margin-right": "99%" }, 'fast');
+                    var right = -($('#desktop-list').width()*0.9);
+                    $('#desktop-list-container').animate({ "left": right + "px" }, 'fast');
                     visible_desktop_list = false;
                 }
                 break;
@@ -72,8 +76,7 @@
             case 1:
                 if (visible_desktop_list === false) {
                     visible_desktop_list = true;
-                    var left = $('#desktop-container').width() - $('#desktop-list').width();
-                    $('#desktop-list-container').animate({ "margin-right": left + "px" }, 'fast');
+                    $('#desktop-list-container').animate({ "left": "0" }, 'fast');
                 }
                 setTimeout(function () { hoverDesktopList(); }, 2000);
                 break;
@@ -82,7 +85,7 @@
                 setTimeout(function () { hoverDesktopList(); }, 2000);
         }
     };
-
+    $(document).ready(hoverDesktopList());
     $("#desktop-list-hover").mouseenter(function () { hover_desktop_list++; hoverDesktopList(); });
     $("#desktop-list").mouseenter(function () { hover_desktop_list++; hoverDesktopList(); });
     $("#desktop-list-hover").mouseleave(function () { hover_desktop_list--; });
