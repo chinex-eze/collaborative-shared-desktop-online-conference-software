@@ -26,10 +26,9 @@
                 $.each(data, function (key, value) {
                     $("#dialog-background").hide();
                     $(".dialog").remove();
-                    //$('body').append(value);
                     id++;
                 });
-
+                window.location.replace("/Desktop/AddItemToDB/" + filename);
             }
         }); 
     </script>
