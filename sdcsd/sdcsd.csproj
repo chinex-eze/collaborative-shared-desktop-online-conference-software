@@ -202,7 +202,7 @@
     <Content Include="Views\Chat\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_Topics.cshtml">
+    <Content Include="Views\Topics\RenderTopics.cshtml">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>

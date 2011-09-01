@@ -17,13 +17,22 @@
     });
 </script>
 
-<table>
-    @using (Html.BeginForm("AddTopic", "Topics"))
-    {
-        <tr>
-            <td>@Html.TextBox("content")</td>
-            <td><input type="submit" value="add" /></td>
-        </tr>
-    }
-    @Html.Partial("_Topics")
+<script type="text/javascript">
+    var refreshId = setInterval(function () {
+        $.post("Topics/RenderTopics", function (data) {
+            $('#topiclist').html(data);
+        });
+    }, 1000);
+</script>
+
+@using (Html.BeginForm("AddTopic", "Topics"))
+{
+    <div id="topics-add-box">
+        <div id="topic-input">@Html.TextBox("content")</div>
+        <input id="topic-submit" type="submit" value="add" />
+    </div>
+}
+
+<table id="topiclist">
+    
 </table>

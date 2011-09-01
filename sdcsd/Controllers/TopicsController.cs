@@ -45,6 +45,12 @@ namespace sdcsd.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpPost]
+        public ActionResult RenderTopics()
+        {
+            return View();
+        }
                         
         protected override void Dispose(bool disposing)
         {
