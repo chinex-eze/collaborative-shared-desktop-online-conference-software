@@ -38,6 +38,7 @@ namespace sdcsd
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }
+
     }
 
     //Execute this if DesktopItemDB database changes made

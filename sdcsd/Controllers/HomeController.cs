@@ -11,9 +11,17 @@ namespace sdcsd.Controllers
     {
         public ActionResult Index()
         {
-            DesktopItemDB _db = new DesktopItemDB();
-            var model = _db.DesktopModels;
-            return View(model);
+            Response.Cookies.Add(new HttpCookie("loggedin", "true") { Expires = DateTime.Now.AddHours(2) });
+            if (Response.Cookies.Get("loggedin").Value == "true")
+            {
+
+                return View();
+            }
+            else
+            {
+                Response.Cookies.Add(new HttpCookie("loggedin", "false") { Expires = DateTime.Now.AddHours(2) });
+                return View("Public");
+            }
         }
     }
 } 
