@@ -32,5 +32,16 @@ namespace sdcsd.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Upload(int id, string qqfile)
+        {
+            var data = new
+            {
+                success = true,
+                content = View().ToString()
+            };
+
+            return Json(data);
+        }
     }
 }

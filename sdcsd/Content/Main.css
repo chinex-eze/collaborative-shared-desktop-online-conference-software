@@ -71,7 +71,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: #222222;
-    box-shadow: 2px 1px 10px 0px #777777;
+    box-shadow: 2px 1px 10px 0px #555555;
     -moz-background-clip: padding-box;
     overflow: hidden;
 }
@@ -90,7 +90,7 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     background-color: #222222;
-    box-shadow: 2px 1px 10px 0px #777777;
+    box-shadow: 2px 1px 10px 0px #555555;
     -moz-background-clip: padding-box;
     overflow: hidden;
 }
@@ -232,7 +232,6 @@
     border: 1px solid #333333;
     padding: 0.4em 1.2em 0.4em 0.4em;
     color: #eeeeee;
-   /* text-shadow: 0px 0px 4px #000000;*/
     font-family: Arial, Sans-Serif;
     box-shadow:inset 0px 0px 1px 0px #000000;
     border-radius: 2px;
