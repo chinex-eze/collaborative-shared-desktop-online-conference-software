@@ -19,11 +19,13 @@
 </script>
 
 <script type="text/javascript">
-    var refreshId = setInterval(function () {
-        $.post("Topics/RenderTopicsHttpPost", function (data) {
-            $('#topic-list').html(data);
-        });
-    }, 3000);
+    function refreshTopics() {
+            $.post("Topics/RenderTopicsHttpPost", function (data) {
+                $('#topic-list').html(data);
+            });
+        }
+    var refreshId = setInterval(refreshTopics(), 10000);
+    $(document).ready(refreshTopics());
 </script>
 
 @using (Ajax.BeginForm("AddTopic", "Topics", new AjaxOptions {UpdateTargetId="topiclist", InsertionMode=InsertionMode.Replace, HttpMethod="post" }))

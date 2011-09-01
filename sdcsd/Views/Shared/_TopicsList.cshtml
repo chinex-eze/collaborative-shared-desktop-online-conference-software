@@ -6,9 +6,9 @@
     {
         <div class="topic">
             @Html.DisplayFor(modelItem => item.Content)
-           @* @Ajax.ActionLink("l", "SetInactive","Topics, null,
+           @Ajax.ActionLink(" ", "SetInactive","Topics", new {id = item.ID},
             new AjaxOptions {UpdateTargetId="topiclist", InsertionMode=InsertionMode.Replace, HttpMethod="post"},
-            new { id = item.ID, @class="remove-tiny button-tiny" })*@
+            new {@class="topic-remove button-tiny" })
         </div>
     }
 }
