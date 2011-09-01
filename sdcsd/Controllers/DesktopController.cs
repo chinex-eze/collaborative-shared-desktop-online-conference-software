@@ -12,12 +12,12 @@ namespace sdcsd.Controllers
         //
         // GET: /Desktop/
 
-        DesktopItemDB _db = new DesktopItemDB(); 
+        private DesktopItemModelDBContext _db = new DesktopItemModelDBContext();
 
         public ActionResult Index()
         {
-            var model = _db.DesktopModels;
-            return View(model);
+            var items = _db.DesktopItems.ToList<DesktopItemModel>();
+            return View(items);
         }
 
         public FilePathResult GetFileFromDisk(string id)

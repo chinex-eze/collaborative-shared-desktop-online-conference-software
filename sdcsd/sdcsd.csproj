@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages" />
     <Reference Include="System.Web.Helpers" />
@@ -76,7 +77,6 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\MessageModel.cs" />
-    <Compile Include="Models\DesktopItemDB.cs" />
     <Compile Include="Models\DesktopItemModel.cs" />
     <Compile Include="Models\DesktopModel.cs" />
     <Compile Include="Models\TopicModel.cs" />
@@ -84,13 +84,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\DesktopItemDB.mdf" />
-    <Content Include="App_Data\DesktopItemDB_log.ldf">
-      <DependentUpon>DesktopItemDB.mdf</DependentUpon>
-    </Content>
+    <Content Include="App_Data\DesktopItemDB.sdf" />
+    <Content Include="App_Data\MessageDB.sdf" />
     <Content Include="App_Data\TopicDB.sdf" />
     <Content Include="App_Data\TopicDB2.sdf" />
     <Content Include="App_Data\Topics.sdf" />
+    <Content Include="App_Data\UserDB2.sdf" />
+    <Content Include="App_Data\UserDB3.sdf" />
     <Content Include="App_Data\UsersDB.mdf" />
     <Content Include="App_Data\UsersDB_log.LDF">
       <DependentUpon>UsersDB.mdf</DependentUpon>
@@ -120,6 +120,7 @@
     <Content Include="Content\icons\midi.png" />
     <Content Include="Content\icons\note.png" />
     <Content Include="Content\icons\remove.png" />
+    <Content Include="Content\icons\remove_small.png" />
     <Content Include="Content\icons\rtf.png" />
     <Content Include="Content\icons\script.png" />
     <Content Include="Content\icons\text.png" />

@@ -42,13 +42,13 @@ namespace sdcsd
     }
 
     //Execute this if DesktopItemDB database changes made
-    public class DesktopItemDBInitializer : DropCreateDatabaseIfModelChanges<DesktopItemDB>
+    public class DesktopItemDBInitializer : DropCreateDatabaseIfModelChanges<DesktopItemModelDBContext>
     {
-        protected override void Seed(DesktopItemDB context)
+        protected override void Seed(DesktopItemModelDBContext context)
         {
             base.Seed(context);
 
-            context.DesktopModels.Add(new DesktopItemModel
+            context.DesktopItems.Add(new DesktopItemModel
             {
                 ID = 1,
                 DesktopID = 1,
@@ -57,7 +57,7 @@ namespace sdcsd
                 LocY = "25%"
             });
 
-            context.DesktopModels.Add(new DesktopItemModel
+            context.DesktopItems.Add(new DesktopItemModel
             {
                 ID = 2,
                 DesktopID = 1,
