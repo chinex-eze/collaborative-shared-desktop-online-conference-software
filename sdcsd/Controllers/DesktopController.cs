@@ -42,8 +42,14 @@ namespace sdcsd.Controllers
                 LocX = "50%",
                 LocY = "50%"
             });
-            
-            _db.SaveChanges();
+
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch
+            {
+            }
 
             return RedirectToAction("Index", "Home");
         }
