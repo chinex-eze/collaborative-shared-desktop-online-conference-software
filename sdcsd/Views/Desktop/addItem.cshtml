@@ -8,36 +8,32 @@
     <h2>Add item</h2>
 
     <script type="text/javascript">
+        id = 0;
         var uploader = new qq.FileUploader({
-            // pass the dom node (e.g. $(selector)[0] for jQuery users)
-            element: $('#file-uploader')[0],//document.getElementById('file-uploader'),
-            // path to server-side upload script
-            action: '/Desktop/Upload/5',
+            element: $('#file-uploader')[0],
+            params: { id: id },
+            action: '/Desktop/Upload/',
             onSubmit: function (id, fileName) {
                 $('.qq-upload-list').hide();
 
-                /*var fileDescription = $('#file-description').val();
 
-                uploader.setParams({
-                    fileDescription: fileDescription
-                });*/
             },
             onProgress: function (fileName, loaded, total) {
                 $('.qq-upload-list').show();
             },
             onComplete: function (id, filename, data) {
                 $('.qq-upload-list').hide();
-                //alert(data['content']);
-                $.each(data, function(key, value){
-                    //alert(value);
-                    $('body').append(value);
+                $.each(data, function (key, value) {
+                    $("#dialog-background").hide();
+                    $(".dialog").remove();
+                    //$('body').append(value);
+                    id++;
                 });
 
-            },
-            debug: true
+            }
         }); 
     </script>
 
-    <div id="file-uploader">Upload file</div>
+    <div id="file-uploader" class="text-button">Upload file</div>
     <div class="qq-upload-list"></div>
 </div>

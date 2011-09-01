@@ -37,7 +37,8 @@ namespace sdcsd.Controllers
         {
             var data = new
             {
-                content =  "<script type=\"text/javascript\">$(\"#dialog-background\").hide(); $(\".dialog\").remove();</script>"
+                success =  true,
+                complete = true
 
             };
             return Json(data, JsonRequestBehavior.AllowGet);
