@@ -33,15 +33,14 @@ namespace sdcsd.Controllers
         }
 
         [HttpPost]
-        public ActionResult Upload(int id, string qqfile)
+        public JsonResult Upload(int id, string qqfile)
         {
             var data = new
             {
-                success = true,
-                content = View().ToString()
-            };
+                content =  "<script type=\"text/javascript\">$(\"#dialog-background\").hide(); $(\".dialog\").remove();</script>"
 
-            return Json(data);
+            };
+            return Json(data, JsonRequestBehavior.AllowGet);
         }
     }
 }

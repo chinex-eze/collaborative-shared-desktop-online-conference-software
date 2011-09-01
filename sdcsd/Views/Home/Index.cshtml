@@ -1,10 +1,11 @@
-﻿<div id="site-container">
-<div id="header-container">
-    @{Html.RenderAction("Index","Header");}
-</div>
+﻿<div id="site-container>
 
 <div id="desktop-container">
     @{Html.RenderAction("Index","Desktop");}
+</div>
+
+<div id="header-container">
+    @{Html.RenderAction("Index","Header");}
 </div>
 
 <div id="user-list-container">
@@ -96,14 +97,6 @@
 <div id="chat-container">
     @{Html.RenderAction("Index","Chat");}
 </div>
-
-<script type="text/javascript">
-    var refreshId = setInterval(function () {
-        $.post("Chat/Index", function (data) {
-            $('#chat-container').html(data);
-        });
-    }, 30000);
-</script>
 
 <div id="dialog-background"></div>
 

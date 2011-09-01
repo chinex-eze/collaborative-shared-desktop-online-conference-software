@@ -8,7 +8,7 @@ namespace sdcsd.Controllers
 {
     public class HeaderController : Controller
     {
-        public ActionResult Index()
+        public ViewResult Index()
         {
             return View();
         }

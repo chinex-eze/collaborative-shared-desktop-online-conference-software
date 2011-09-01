@@ -3,8 +3,8 @@
 <div id="add-item-button" class="button"></div>
 <script type="text/javascript">
     $('#settings-button').click(function () {
-        $.post("Userlist/Edit", function (data) {
-            $('body').append(data);
+        $.post("Userlist/Edit", function (result) {
+            $('body').append(result);
         });
     });
 </script>
