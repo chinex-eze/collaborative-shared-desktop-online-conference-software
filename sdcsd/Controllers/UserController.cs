@@ -55,6 +55,7 @@ namespace sdcsd.Controllers
                 LastSeen = DateTime.Now,
             };
             db.UsersDB.Add(user);
+            db.SaveChanges();
 
             return RedirectToAction("Index", "Home");
         }
