@@ -35,15 +35,14 @@ namespace sdcsd.Controllers
 
         public ActionResult AddItemToDB(string id)
         {
-            DesktopItemModel item = new DesktopItemModel()
+            _db.DesktopItems.Add(new DesktopItemModel()
             {
                 DesktopID = 1, //TODO: get active desktop
                 Name = id,
                 LocX = "50%",
                 LocY = "50%"
-            };
+            });
             
-            _db.DesktopItems.Add(item);
             _db.SaveChanges();
 
             return RedirectToAction("Index", "Home");
