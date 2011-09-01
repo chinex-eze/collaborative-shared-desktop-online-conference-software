@@ -39,6 +39,12 @@ namespace sdcsd
             RegisterRoutes(RouteTable.Routes);
         }
 
+        void OnSessionStart()
+        {
+            Session["loggedin"] = "true";
+            Session["user"] = "guest";
+        }
+
     }
 
     //Execute this if DesktopItemDB database changes made

@@ -13,12 +13,10 @@ namespace sdcsd.Controllers
         {
             ViewBag.login = false;
 
-            Response.Cookies.Add(new HttpCookie("loggedin", "true") { Expires = DateTime.Now.AddHours(2) });
-
-            if (Response.Cookies.Get("loggedin").Value == "true")
+            if (Session["loggedin"] == "true")
             {
                 ViewBag.login = true;
-                Response.Cookies.Add(new HttpCookie("user", "testaaja") { Expires = DateTime.Now.AddHours(2) });
+                Session["user"] = "testaaja";
             }
 
             return View();

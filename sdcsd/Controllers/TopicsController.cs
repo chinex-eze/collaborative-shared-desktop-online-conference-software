@@ -19,7 +19,7 @@ namespace sdcsd.Controllers
         public ViewResult Index()
         {
             ViewBag.login = false;
-            if (Response.Cookies.Get("loggedin").Value == "true")
+            if (Session["loggedin"] == "true")
                 ViewBag.login = true;
 
             if (ViewBag.login)
@@ -32,7 +32,7 @@ namespace sdcsd.Controllers
         public ActionResult SetInactive(int id)
         {
             ViewBag.login = false;
-            if (Response.Cookies.Get("loggedin").Value == "true")
+            if (Session["loggedin"] == "true")
                 ViewBag.login = true;
 
             TopicModel topic = db.Topics.Find(id);

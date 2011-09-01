@@ -4,7 +4,7 @@
 </script>
 
 <div id="dialog-large" class="dialog">
-    <div class="close-dialog button-small" onclick="$('#dialog-background').hide(), $('.dialog').remove()"></div>
+    <div class="close-dialog button-small" onclick="removeEditors();"></div>
 
 @using (Html.BeginForm("AddTopic", "Topics"))
 {
@@ -13,5 +13,7 @@
         <input type="submit" value="add" />
     </div>
 }
+
+@Ajax.ActionLink("Log out","Logout","User", new AjaxOptions{UpdateTargetId="site-container", InsertionMode=InsertionMode.Replace, HttpMethod = "post", OnSuccess="removeEditors"})
 
 </div>

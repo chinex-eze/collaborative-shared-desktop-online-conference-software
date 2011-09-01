@@ -17,7 +17,7 @@ namespace sdcsd.Controllers
         public ActionResult Index()
         {
             ViewBag.login = false;
-            if (Response.Cookies.Get("loggedin").Value == "true")
+            if (Session["loggedin"] == "true")
                 ViewBag.login = true;
 
             if(ViewBag.login)
@@ -35,7 +35,7 @@ namespace sdcsd.Controllers
 
             MessageModel msg = new MessageModel()
             {
-                Sender = Response.Cookies.Get("user").Value,
+                Sender = Session["user"].ToString(),
                 Content = message,
                 TimeSent = DateTime.Now,
             };

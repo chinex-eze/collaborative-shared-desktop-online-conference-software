@@ -5,11 +5,10 @@
 
 <div id="dialog-small" class="dialog">
     <div class="close-dialog button-small" onclick="$('#dialog-background').hide(), $('.dialog').remove()"></div>
-
-@using (Html.BeginForm("Login", "User"))
+@using (Ajax.BeginForm("Login", "User", new AjaxOptions {UpdateTargetId = "site-container", InsertionMode=InsertionMode.Replace, HttpMethod="post", OnSuccess="removeEditors"}))
 {
     <div>
-        <div>@Html.TextBox("name")</div>
+        <div>@Html.TextBox("username")</div>
         <div>@Html.TextBox("password")</div>
         <input type="submit" value="Login" />
     </div>
