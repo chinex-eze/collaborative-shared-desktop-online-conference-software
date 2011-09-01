@@ -5,12 +5,10 @@
 <div id="dialog-large" class="dialog">
     <div class="close-dialog button-small" onclick="$('#dialog-background').hide(), $('.dialog').remove()"></div>
 
-@using (Html.BeginForm("AddTopic", "Topics"))
+@using (Html.BeginForm("Login", "User"))
 {
-    <div>
-        <div>@Html.TextBox("content")</div>
-        <input type="submit" value="add" />
-    </div>
+    @Html.TextBox("content")
+    <input type="submit" value="Login" />  
 }
 
 </div>
