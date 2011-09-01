@@ -49,6 +49,15 @@ namespace sdcsd.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+     
+        public ActionResult AddItem()
+        {
+            if(Session["loggedin"] == "true")
+                return View();
+
+            return null;
+        }
+
         [HttpPost]
         public ActionResult Upload(string qqfile)
         {
