@@ -314,3 +314,16 @@
     margin-left: 0.6em;
     margin-right: 0.4em;
 }
+
+
+#new-topic-container
+{
+    position: relative;
+    margin-right: 4em;
+    top: 1em;
+    left: 2%;
+    background-color: #444444;
+    height: 2em;
+    border-radius: 5px;
+    
+}

@@ -26,15 +26,15 @@
     }, 10000);
 </script>
 
-@using (Html.BeginForm("AddTopic", "Topics"))
+@using (Ajax.BeginForm("AddTopic", "Topics", new AjaxOptions {UpdateTargetId="topiclist", InsertionMode=InsertionMode.Replace, HttpMethod="post" }))
 {
-    <div id="topics-add-box">
-        <div id="topic-input">@Html.TextBox("content")</div>
-        <input id="topic-submit" type="submit" value="add" />
+    <div id="new-topic-container">
+        <div id="topic-input">@Html.TextBox("content", "", new { @class = "text-input" })</div>
+        <input id="topic-submit" class="text-button" type="submit" value="add" />
     </div>
 }
 
-<table id="topiclist">
+<div id="topic-list">
     @*@{Html.RenderAction("RenderTopics", "Topics");}*@
     @{Html.RenderPartial("_TopicsList");}    
-</table>
+</div>
