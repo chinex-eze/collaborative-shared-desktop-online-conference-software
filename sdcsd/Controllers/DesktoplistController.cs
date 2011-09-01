@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace sdcsd.Controllers
 {
-    public class DesktoplistController : Controller
+    public class DesktopListController : Controller
     {
         //
         // GET: /Desktoplist/
