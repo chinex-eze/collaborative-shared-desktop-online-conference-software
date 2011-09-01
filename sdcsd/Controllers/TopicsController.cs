@@ -12,7 +12,7 @@ namespace sdcsd.Controllers
     public class TopicsController : Controller
     {
         private TopicDBContext db = new TopicDBContext();
-
+        
         //
         // GET: /Topics/
 
@@ -38,7 +38,7 @@ namespace sdcsd.Controllers
             TopicModel topic = db.Topics.Find(id);
             topic.IsActive = false;
             db.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return View("Notification");
         }
 
         [HttpPost]
@@ -55,7 +55,7 @@ namespace sdcsd.Controllers
             db.Topics.Add(topic);
             db.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            return View("Notification");
         }
 
         [HttpPost]

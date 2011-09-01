@@ -43,7 +43,7 @@ namespace sdcsd.Controllers
             db.Messages.Add(msg);
             db.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            return View("Notification");
         }
 
         [HttpPost]
