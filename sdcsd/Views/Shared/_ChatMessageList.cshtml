@@ -2,5 +2,8 @@
 
 @foreach (var item in Model)
 {
-    <tr><td>@Html.DisplayFor(modelItem => item.Content)</td></tr>
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.Sender) : </td>
+        <td>@Html.DisplayFor(modelItem => item.Content)</td>
+    </tr>
 }
