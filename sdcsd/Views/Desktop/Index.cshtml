@@ -2,7 +2,7 @@
 @model IEnumerable<sdcsd.Models.DesktopItemModel>
 
 @foreach (var item in Model) {
-    if (Session["DesktopID"].Equals(item.DesktopID.ToString()))
+    if (Session["DesktopID"].Equals(item.DesktopID.ToString()) && (Session["loggedin"] == "true"))
     {
         <div class="draggable" title="@item.Name" style="position: absolute;
          left: @item.LocX; top: @item.LocY; background-color: transparent">
