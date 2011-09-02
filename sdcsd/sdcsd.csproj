@@ -83,18 +83,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\DesktopItemDB.sdf" />
     <Content Include="App_Data\DesktopItemDB2.sdf" />
     <Content Include="App_Data\MessageDB.sdf" />
-    <Content Include="App_Data\TopicDB.sdf" />
     <Content Include="App_Data\TopicDB2.sdf" />
-    <Content Include="App_Data\Topics.sdf" />
-    <Content Include="App_Data\UserDB2.sdf" />
     <Content Include="App_Data\UserDB3.sdf" />
-    <Content Include="App_Data\UsersDB.mdf" />
-    <Content Include="App_Data\UsersDB_log.LDF">
-      <DependentUpon>UsersDB.mdf</DependentUpon>
-    </Content>
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.xml" />
     <Content Include="bin\sdcsd.dll" />
@@ -108,6 +100,7 @@
     <Content Include="Content\icons\48px_txt.png" />
     <Content Include="Content\icons\48px_video.png" />
     <Content Include="Content\icons\add.png" />
+    <Content Include="Content\icons\add_small.png" />
     <Content Include="Content\icons\animation.png" />
     <Content Include="Content\icons\app.png" />
     <Content Include="Content\icons\archive.png" />
@@ -121,6 +114,7 @@
     <Content Include="Content\icons\note.png" />
     <Content Include="Content\icons\remove.png" />
     <Content Include="Content\icons\remove_small.png" />
+    <Content Include="Content\icons\remove_tiny.png" />
     <Content Include="Content\icons\rtf.png" />
     <Content Include="Content\icons\script.png" />
     <Content Include="Content\icons\text.png" />
@@ -132,7 +126,6 @@
     <Content Include="Content\icons\vector.png" />
     <Content Include="Content\icons\video.png" />
     <Content Include="Content\icons\web.png" />
-    <Content Include="Content\images\carbon.png" />
     <Content Include="Content\Main.css" />
     <Content Include="Global.asax" />
     <Content Include="obj\Debug\sdcsd.csproj.FileListAbsolute.txt" />
