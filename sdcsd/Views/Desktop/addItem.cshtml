@@ -4,7 +4,7 @@
 </script>
 
 <div id="dialog-small" class="dialog">
-    <div class="close-dialog button-small" onclick="$('#dialog-background').hide(), $('.dialog').remove()"></div>
+    <div class="close-dialog button-small" onclick="$('.dialog').remove(); $('#dialog-background').hide();"></div>
     <h2>Add item</h2>
 
     <script type="text/javascript">
@@ -23,8 +23,8 @@
                 $('.qq-upload-list').hide();
                 $.each(data, function (key, value) {
                     refreshDesktop();
-                    $("#dialog-background").hide();
                     $(".dialog").remove();
+                    $("#dialog-background").hide();
                     id++;
                 });
             }
