@@ -5,16 +5,16 @@
 
 <div id="dialog-large" class="dialog">
     <div class="close-dialog button-small" onclick="removeEditors();"></div>
-
+    <h2>User settings</h2>
 @using (Html.BeginForm("AddNewUserToDb", "User"))
 {
     <div>
-        <div><span>Username: </span>@Html.TextBox("userName")</div>
-        <div><span>Password: </span>@Html.Password("passWord")</div>
-        <input type="submit" value="Add User" />
+        <div class="login-info"><span>Username: </span>@Html.TextBox("userName", "", new { @class="login-input"})</div>
+        <div class="login-info"><span>Password: </span>@Html.Password("passWord", "", new { @class = "login-input" })</div>
+        <input  class="login-button text-button" type="submit" value="Create" />
     </div>
 }
 
-@Ajax.ActionLink("Log out","Logout","User", new AjaxOptions{UpdateTargetId="site-container", InsertionMode=InsertionMode.Replace, HttpMethod = "post", OnSuccess="removeEditors"})
+@Ajax.ActionLink("Log out", "Logout", "User", new AjaxOptions { UpdateTargetId = "site-container", InsertionMode = InsertionMode.Replace, HttpMethod = "post", OnSuccess = "removeEditors" }, new { @class="logout-button text-button"})
 
 </div>

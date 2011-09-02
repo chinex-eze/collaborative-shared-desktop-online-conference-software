@@ -8,7 +8,12 @@
 @*<div id="desktop-list-container">
     @{Html.RenderAction("Index","Desktoplist");}
 </div>*@
+<script type="text/javascript">
 
+    hover_user_list = 0;
+    visible_user_list = true;
+
+</script>
 @{if (ViewBag.login == true)
   {
       
@@ -20,10 +25,6 @@
     @*<div id="desktop-list-hover"></div>*@
     
 <script type="text/javascript">
-
-    hover_user_list = 0;
-    visible_user_list = true;
-
 
     function refreshUserlist() {
         $.post("Userlist/Index", function (data) {

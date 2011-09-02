@@ -100,7 +100,6 @@ namespace sdcsd.Controllers
                 uusi.LocY = "45%";
                 uusi.Name = qqfile;
                 uusi.DesktopID = 1;
-                uusi.ID = 4;
 
                 _db.DesktopItems.Add(uusi);
                 _db.SaveChanges();

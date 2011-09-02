@@ -5,7 +5,7 @@
 
 <div id="dialog-small" class="dialog">
     <div class="close-dialog button-small" onclick="$('.dialog').remove(); $('#dialog-background').hide();"></div>
-    <h2>Add item</h2>
+    <h2>Add items</h2>
 
     <script type="text/javascript">
         id = 0;
@@ -13,6 +13,7 @@
             element: $('#file-uploader')[0],
             params: { id: id },
             action: '/Desktop/Upload/',
+            allowedExtensions: [],
             onSubmit: function (id, fileName) {
                 $('.qq-upload-list').hide();
             },
@@ -31,6 +32,6 @@
         }); 
     </script>
 
-    <div id="file-uploader" class="text-button">Upload file</div>
+    <div id="file-uploader" class="text-button">Upload</div>
     <div class="qq-upload-list"></div>
 </div>
