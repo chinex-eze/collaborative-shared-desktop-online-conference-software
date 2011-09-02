@@ -57,6 +57,19 @@ namespace sdcsd.Controllers
         }
 
         [HttpPost]
+        public string DeleteItem(string name)
+        {
+            if (_db.DesktopItems.Count(i => i.Name == name) > 0)
+            {
+                DesktopItemModel item = _db.DesktopItems.First(i => i.Name == name);
+                _db.DesktopItems.Remove(item);
+                _db.SaveChanges();
+            }
+
+            return "";
+        }
+
+        [HttpPost]
         public ActionResult Upload(string qqfile)
         {
             var path = Server.MapPath("~/Content/desktopFiles");

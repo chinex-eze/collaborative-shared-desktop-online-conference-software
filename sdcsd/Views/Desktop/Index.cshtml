@@ -45,6 +45,15 @@
             }
         });
     });
+
+    $(function () {
+        $('.draggable').mousedown(function (event) {
+            if (event.which == 2) {
+                $.post("Desktop/DeleteItem/?name=" + $(this).attr("title"), function () { refreshDesktop(); });
+            }
+        });
+    });
+
 </script>
 
   }}
