@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DesktopItemDB.sdf" />
+    <Content Include="App_Data\DesktopItemDB2.sdf" />
     <Content Include="App_Data\MessageDB.sdf" />
     <Content Include="App_Data\TopicDB.sdf" />
     <Content Include="App_Data\TopicDB2.sdf" />
