@@ -9,7 +9,7 @@ namespace sdcsd.Controllers
     public class DesktopListController : Controller
     {
         //
-        // GET: /Desktoplist/
+        // GET: /DesktopList/
 
         public ActionResult Index()
         {
