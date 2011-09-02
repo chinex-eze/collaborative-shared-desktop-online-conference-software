@@ -3,14 +3,7 @@
 @model IEnumerable<sdcsd.Models.UserModel>
 
 <!-- This list should be generated from a list of currently online users-->
-<ul id="user-list" class="side-list">
 @foreach (var item in Model)
 {
     <li class="side-list-item user-list-item">@item.UserName</li>
 }
-</ul>
-
-<script type="text/javascript">
-      $("#user-list").mouseleave(function () { hover_user_list--; });
-      $("#user-list").mouseenter(function () { hover_user_list++; hoverUserList(); });
-</script>
