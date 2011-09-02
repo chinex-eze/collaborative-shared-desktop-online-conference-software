@@ -2,10 +2,14 @@
 
 @model IEnumerable<sdcsd.Models.UserModel>
 
+@{
+    var rand = new Random();
+    var number = rand.Next(1, 50);
+}
+
 <!-- This list should be generated from a list of currently online users-->
 <ul id ="user-list" class="side-list">
-    <li class="side-list-item user-list-item">Testaaja</li>
-    <li class="side-list-item user-list-item">Testaaja</li>
+    <li class="side-list-item user-list-item">@number</li>
 @foreach (var item in Model)
 {
     <li class="side-list-item user-list-item">@item.UserName</li>

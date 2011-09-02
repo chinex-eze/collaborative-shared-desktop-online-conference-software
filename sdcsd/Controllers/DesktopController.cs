@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using sdcsd.Models;
 using System.IO;
 using System.Web.Routing;
+using sdcsd.Models;
 
 namespace sdcsd.Controllers
 {
+
     public class DesktopController : Controller
     {
         //
@@ -88,6 +89,16 @@ namespace sdcsd.Controllers
                 var buffer = new byte[stream.Length];
                 stream.Read(buffer, 0, buffer.Length);
                 System.IO.File.WriteAllBytes(file, buffer);
+
+                DesktopItemModel uusi = new DesktopItemModel();
+                uusi.LocX = "0.5";
+                uusi.LocY = "0.5";
+                uusi.Name = qqfile;
+                uusi.DesktopID = 1;
+                uusi.ID = 4;
+
+                _db.DesktopItems.Add(uusi);
+                _db.SaveChanges();
             }
             catch (Exception ex)
             {

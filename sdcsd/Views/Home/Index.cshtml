@@ -6,8 +6,20 @@
     @{Html.RenderAction("Index","Header");}
 </div>
 
+<script type="text/javascript">
+    function refreshUserlist() {
+        $.post("Userlist/Index", function (data) {
+            $('#user-list-container').html(data);
+        });
+    }
+
+    var refreshId = setInterval("refreshUserlist()", 9000);
+
+    $(document).ready(refreshUserlist());
+</script>
+
 <div id="user-list-container">
-    @{Html.RenderAction("Index","Userlist");}
+    @*@{Html.RenderAction("Index","Userlist");}*@
 </div>
 
 <div id="desktop-list-container">

@@ -28,15 +28,16 @@ namespace sdcsd.Controllers
 
         public ActionResult Login(string username, string password)
         {
-            foreach (var item in db.UsersDB.ToList())
+            Session["loggedin"] = "false";
+            if (db.UsersDB.Count(u => u.UserName == username) > 0)
             {
-                if (item.UserName.Equals(username))
+                if(db.UsersDB.First(u => u.UserName == username).PassWord == password)
                 {
-                    // user is authorized
+                    Session["loggedin"] = "true";
+                    Session["user"] = username;
                 }
             }
-            Session["loggedin"] = "true";
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
 
         public ActionResult Logout()
@@ -48,12 +49,11 @@ namespace sdcsd.Controllers
 
         public ActionResult AddNewUserToDb(string userName, string passWord)
         {
-            UserModel user = new UserModel()
-            {
-                UserName = userName,
-                PassWord = passWord,
-                LastSeen = DateTime.Now,
-            };
+            UserModel user = new UserModel();
+            user.UserName = userName;
+            user.PassWord = passWord;
+            user.LastSeen = System.DateTime.Now;
+
             db.UsersDB.Add(user);
             db.SaveChanges();
 

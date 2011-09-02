@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
 namespace sdcsd.Models
 {
@@ -9,4 +10,5 @@ namespace sdcsd.Models
     {
         public int DesktopID { get; set; }
     }
+
 }
