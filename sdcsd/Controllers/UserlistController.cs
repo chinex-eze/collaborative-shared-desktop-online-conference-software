@@ -22,7 +22,9 @@ namespace sdcsd.Controllers
                 ViewBag.login = true;
 
             if (ViewBag.login)
+            {
                 return View(db.UsersDB.ToList());
+            }
             else
                 return null;
         }       

@@ -16,7 +16,6 @@ namespace sdcsd.Controllers
             if (Session["loggedin"] == "true")
             {
                 ViewBag.login = true;
-                Session["user"] = "testaaja";
             }
 
             return View();

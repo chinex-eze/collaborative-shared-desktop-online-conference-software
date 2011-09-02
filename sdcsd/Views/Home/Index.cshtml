@@ -6,6 +6,9 @@
     @{Html.RenderAction("Index","Header");}
 </div>
 
+<div id="user-list-container">
+</div>
+
 <script type="text/javascript">
     function refreshUserlist() {
         $.post("Userlist/Index", function (data) {
@@ -15,20 +18,51 @@
 
     var refreshId = setInterval("refreshUserlist()", 9000);
 
-    $(document).ready(refreshUserlist());
+    @*$(document).ready(refreshUserlist());*@
 </script>
 
-<div id="user-list-container">
-</div>
 
-<div id="desktop-list-container">
+@*<div id="desktop-list-container">
     @{Html.RenderAction("Index","Desktoplist");}
-</div>
+</div>*@
 
 @{if (ViewBag.login == true)
   {
     <div id="user-list-hover"></div>
-  
+  <script type="text/javascript">
+
+      hover_user_list = 0;
+      visible_user_list = true;
+
+      function hoverUserList() {
+
+          switch (hover_user_list) {
+              case 0:
+                  if (visible_user_list === true) {
+                      var left = $(window).width() - ($('#user-list-container').width() * 0.1);
+                      $('#user-list-container').animate({ "left": left + "px" }, 'fast');
+                      visible_user_list = false;
+                  }
+                  break;
+
+              case 1:
+                  if (visible_user_list === false) {
+                      var left = $(window).width() - ($('#user-list-container').width());
+                      $('#user-list-container').animate({ "left": left + "px" }, 'fast');
+                      visible_user_list = true;
+                  }
+                  setTimeout(function () { hoverUserList(); }, 2000);
+                  break;
+
+              default:
+                  setTimeout(function () { hoverUserList(); }, 2000);
+          }
+      };
+
+      $("#user-list-hover").mouseenter(function () { hover_user_list++; hoverUserList(); });
+      $("#user-list-hover").mouseleave(function () { hover_user_list--; });
+
+    </script>  
 
 
     <div id="desktop-list-hover"></div>
@@ -69,15 +103,17 @@
   }
 }
 
-@{if (ViewBag.login == true){
+@{if (ViewBag.login == true)
+  {
 <div id="topics-container">
-    @{Html.RenderAction("Index","Topics");}
+    @{Html.RenderAction("Index", "Topics");}
 </div>
-}}
+  }}
 
-@{if (ViewBag.login == true){
+@{if (ViewBag.login == true)
+  {
 <div id="chat-container">
-    @{Html.RenderAction("Index","Chat");}
+    @{Html.RenderAction("Index", "Chat");}
 </div>
 }}
 
@@ -85,4 +121,6 @@
 
 <script type="text/javascript">
     $('#dialog-background').click(function () { $('#dialog-background').hide(); $('.dialog').remove(); });
+
+    var desktopRefreshId = setInterval("refreshDesktop()", 10000);
 </script>

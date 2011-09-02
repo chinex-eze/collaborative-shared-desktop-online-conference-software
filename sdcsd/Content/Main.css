@@ -85,7 +85,7 @@ a:active
 {
     position: absolute;
     margin: 0;
-    left: 100%;
+    left: 99%;
     top: 20%;
     z-index: 15;
 }
@@ -363,9 +363,9 @@ a:active
 }
 .user-list-item
 {
-    list-style: none outside url("../../Content/icons/user_tiny.png");
-    padding: 0.4em 1.2em 0.4em 0.4em;
-    margin-left: 0.6em;
+    list-style: none;
+    padding: 0.4em;
+    margin-left: 0.4em;
     margin-right: 1em;
 }
 
@@ -378,8 +378,8 @@ a:active
 .desktop-list-item
 {
     list-style: none;
-    padding: 0.4em 0.8em 0.4em 0.8em;
-    margin-left: 0.6em;
+    padding: 0.4em;
+    margin-left: 0.4em;
     margin-right: 0.4em;
 }
 
@@ -490,15 +490,23 @@ a:active
     font-weight: bold;
 }
 
-.fileItem
+.fileIcon
 {
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0 0 5px 0 #BBBBBB inset;
     padding: 3px;
     background-color: #f0f0f0;
 }
-.fileItem:hover
+.fileIcon:hover
 {
     box-shadow: 0 0 3px 0 #dddddd inset;
     background-color: #f3f3f3;
+}
+
+.fileName
+{
+    margin: 0;
+    padding: 0.3em;
+    background-color: #dddddd;
+    border-radius: 5px;
 }

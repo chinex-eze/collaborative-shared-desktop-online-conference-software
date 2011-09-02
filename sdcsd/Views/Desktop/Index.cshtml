@@ -4,14 +4,20 @@
 @foreach (var item in Model) {
     if (Session["DesktopID"].Equals(item.DesktopID.ToString()))
     {
-        <div class="draggable" title="@item.Name" style="position: absolute;
+        <div class="draggable fileItem" title="@item.Name" style="position: absolute;
          left: @item.LocX; top: @item.LocY; background-color: transparent">
-            <img src="../../Content/icons/text.png" alt="@item.Name" class="fileItem"/>
+            <img src="../../Content/icons/text.png" alt="@item.Name" class="fileIcon"/>
+            <p class="fileName">@item.Name</p>
         </div>    
     }
 }
 
+@{if (ViewBag.login == true)
+  {
 <script type="text/javascript">
+
+
+
     $(function () {
         $(".draggable").draggable({
             containment: '#desktop-container',
@@ -19,25 +25,45 @@
             snap: '#desktop-container',
             drag: function (event, ui) {
                 this.style.opacity = 0.5
+                dragging = true;
             },
             stop: function (event, ui) {
                 this.style.opacity = 1.0
-                var left = $(this).position().left;
-                var top = $(this).position().top;
+
+                var width = $('#desktop-container').width();
+                var height = $('#desktop-container').height();
+                var left = 100 - (width - $(this).position().left) / width * 100;
+                var top = 100 - (height - $(this).position().top) / height * 100;
+
+                var locX = left + "";
+                var locY = top + "";
+                locX = locX.substr(0, 6) + "%";
+                locY = locY.substr(0, 6) + "%";
+                dragging = false;
+
+                $.post("Desktop/UpdateLocation/?name=" + $(this).attr("title") + "&locX=" + locX + "&locY=" + locY, function () {});
             }
         });
     });
+</script>
+
+  }}
+
+ <script type="text/javascript">
+
+     dragging = false;
+
     $(function () {
         $('.draggable').dblclick(function () {
             window.open("/Desktop/GetFileFromDisk/"+this.title);
         });
     });
 
-    $(function () {
-        $('#add-item-button').click(function () {
-            $.post("Desktop/AddItem", function (data) {
-                $('body').append(data);
+    function refreshDesktop() {
+        if (dragging === false) {
+            $.post("Desktop/Index", function (data) {
+                $('#desktop-container').html(data);
             });
-        });
-    });
+        }
+    };
 </script>

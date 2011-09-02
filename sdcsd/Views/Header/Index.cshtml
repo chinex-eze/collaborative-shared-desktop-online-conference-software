@@ -5,6 +5,15 @@
   {
     <div id="add-item-button" class="button"></div>
 
+    <script type="text/javascript">    
+        $(function () {
+            $('#add-item-button').click(function () {
+                $.post("Desktop/AddItem", function (data) {
+                    $('body').append(data);
+                });
+            });
+        });
+    </script>
   }
 }
 

@@ -22,6 +22,7 @@
             onComplete: function (id, filename, data) {
                 $('.qq-upload-list').hide();
                 $.each(data, function (key, value) {
+                    refreshDesktop();
                     $("#dialog-background").hide();
                     $(".dialog").remove();
                     id++;

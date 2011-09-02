@@ -33,35 +33,27 @@ namespace sdcsd.Controllers
             string fileName = id;
             return File(path + fileName, "text/plain", id);
         }
-
-        public ActionResult AddItemToDB(string id)
-        {
-            _db.DesktopItems.Add(new DesktopItemModel()
-            {
-                DesktopID = 1, //TODO: get active desktop
-                Name = id,
-                LocX = "50%",
-                LocY = "50%"
-            });
-
-            try
-            {
-                _db.SaveChanges();
-            }
-            catch
-            {
-            }
-
-            return RedirectToAction("Index", "Home");
-        }
-
-     
+   
         public ActionResult AddItem()
         {
             if(Session["loggedin"] == "true")
                 return View();
 
             return null;
+        }
+
+        [HttpPost]
+        public string UpdateLocation(string name, string locX, string locY)
+        {
+            if (_db.DesktopItems.Count(i => i.Name == name) > 0)
+            {
+                DesktopItemModel item = _db.DesktopItems.First(i => i.Name == name);
+                item.LocX = locX;
+                item.LocY = locY;
+                _db.SaveChanges();
+            }
+
+            return "";
         }
 
         [HttpPost]
@@ -91,8 +83,8 @@ namespace sdcsd.Controllers
                 System.IO.File.WriteAllBytes(file, buffer);
 
                 DesktopItemModel uusi = new DesktopItemModel();
-                uusi.LocX = "0.5";
-                uusi.LocY = "0.5";
+                uusi.LocX = "45%";
+                uusi.LocY = "45%";
                 uusi.Name = qqfile;
                 uusi.DesktopID = 1;
                 uusi.ID = 4;
