@@ -97,7 +97,7 @@ namespace sdcsd.Controllers
                 var stream = Request.InputStream;
                 if (String.IsNullOrEmpty(Request["qqfile"]))
                 {
-                    // IE
+                    //IE
                     HttpPostedFileBase postedFile = Request.Files[0];
                     stream = postedFile.InputStream;
                     file = Path.Combine(path, System.IO.Path.GetFileName(Request.Files[0].FileName));
@@ -112,13 +112,13 @@ namespace sdcsd.Controllers
                 stream.Read(buffer, 0, buffer.Length);
                 System.IO.File.WriteAllBytes(file, buffer);
 
-                DesktopItemModel uusi = new DesktopItemModel();
-                uusi.LocX = "45%";
-                uusi.LocY = "45%";
-                uusi.Name = qqfile;
-                uusi.DesktopID = 1;
+                DesktopItemModel newItem = new DesktopItemModel();
+                newItem.DesktopID = 1;
+                newItem.Name = qqfile;
+                newItem.LocX = "45%";
+                newItem.LocY = "45%";
 
-                _db.DesktopItems.Add(uusi);
+                _db.DesktopItems.Add(newItem);
                 _db.SaveChanges();
             }
             catch (Exception ex)

@@ -74,19 +74,16 @@
         }
     };
 
-
     refreshUserlist();
     hoverUserList();
 
     var refreshUserListId = setInterval("refreshUserlist()", 9000);
-
-
-
-      $("#user-list").mouseleave(function () { hover_user_list--; });
-      $("#user-list").mouseenter(function () { hover_user_list++; hoverUserList(); });
-      $("#user-list-hover").mouseenter(function () { hover_user_list++; hoverUserList(); });
-      $("#user-list-hover").mouseleave(function () { hover_user_list--; });
-      </script>
+      
+    $("#user-list").mouseleave(function () { hover_user_list--; });
+    $("#user-list").mouseenter(function () { hover_user_list++; hoverUserList(); });
+    $("#user-list-hover").mouseenter(function () { hover_user_list++; hoverUserList(); });
+    $("#user-list-hover").mouseleave(function () { hover_user_list--; });
+    </script>
   }
 }
 
