@@ -1,5 +1,5 @@
 ﻿/***********************************************************************
- * Copyright (C) 2011 Ari Rokosa, Eze Chinedu, Johannes Virtanen,
+ * Copyright (C) 2011 Ari Rokosa, Chinedu Eze, Johannes Virtanen,
  *                    Petri Tuononen, Timo Korkalainen
  * 
  * This program is free software: you can redistribute it and/or modify

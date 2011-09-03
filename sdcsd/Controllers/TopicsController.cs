@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (C) 2011 Ari Rokosa, Eze Chinedu, Johannes Virtanen,
+﻿/***********************************************************************
+ * Copyright (C) 2011 Ari Rokosa, Chinedu Eze, Johannes Virtanen,
  *                    Petri Tuononen, Timo Korkalainen
  * 
  * This program is free software: you can redistribute it and/or modify
@@ -14,7 +14,7 @@
  * 
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
+ ***********************************************************************/
 using System;
 using System.Collections.Generic;
 using System.Data;
