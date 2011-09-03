@@ -62,7 +62,7 @@
 
     $(function () {
         $('.draggable').mousedown(function (event) {
-            if (event.which == 2) {
+            if (event.which == 2) { //middle mouse button
                 $.post("Desktop/DeleteItem/?name=" + $(this).attr("title"), function () { refreshDesktop(); });
             }
         });
@@ -83,7 +83,7 @@
     });
 
     function refreshDesktop() {
-        if (dragging === false) {
+        if (dragging == false) {
             $.post("Desktop/Index", function (data) {
                 $('#desktop-container').html(data);
             });

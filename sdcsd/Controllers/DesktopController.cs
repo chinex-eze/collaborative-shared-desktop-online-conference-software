@@ -83,6 +83,15 @@ namespace sdcsd.Controllers
                 _db.SaveChanges();
             }
 
+            var path = Server.MapPath("~/Content/desktopFiles/"+name);
+            try
+            {
+                System.IO.File.Delete(path);
+            }
+            catch
+            {
+            }
+
             return "";
         }
 
