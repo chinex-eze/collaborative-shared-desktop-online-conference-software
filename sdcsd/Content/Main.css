@@ -126,6 +126,12 @@ a:active
     user-select: none;
 }
 
+.draggable
+{
+    position: absolute;
+    background-color: transparent;
+}
+
 #topics-container 
 {
     position: absolute;

@@ -25,13 +25,24 @@
 
 <script type="text/javascript">
     $('#desktop1').click(function () {
+        $(this).css("background-color", "#79a6d9");
+        $('#desktop2').css("background-color", "#555555");
+        $('#desktop3').css("background-color", "#555555");
         Session["DesktopID"] = "1";
+        //$.post('Home/Index');
     });
     $('#desktop2').click(function () {
+        $('#desktop1').css("background-color", "#555555");
+        $(this).css("background-color", "#79a6d9");
+        $('#desktop3').css("background-color", "#555555");
         Session["DesktopID"] = "2";
         //$.post('Home/Index');
     });
     $('#desktop3').click(function () {
+        $('#desktop1').css("background-color", "#555555");
+        $('#desktop2').css("background-color", "#555555");
+        $(this).css("background-color", "#79a6d9");
         Session["DesktopID"] = "3";
+        //$.post('Home/Index');
     });
 </script>

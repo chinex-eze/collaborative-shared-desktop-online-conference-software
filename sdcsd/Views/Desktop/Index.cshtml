@@ -21,9 +21,9 @@
 @foreach (var item in Model) {
     if (Session["DesktopID"].Equals(item.DesktopID.ToString()))
     {
-        <div class="draggable fileItem" title="@item.Name" style="position: absolute;
-         left: @item.LocX; top: @item.LocY; background-color: transparent">
-            <img src="../../Content/icons/text.png" alt="@item.Name" class="fileIcon"/>
+        <div class="draggable" title="@item.Name" style="
+         left: @item.LocX; top: @item.LocY">
+            <img class="fileIcon" src="../../Content/icons/text.png" alt="@item.Name"/>
             <p class="fileName">@item.Name</p>
         </div>    
     }
