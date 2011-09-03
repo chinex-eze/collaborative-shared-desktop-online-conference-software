@@ -77,6 +77,18 @@ namespace sdcsd.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public ActionResult DeleteUser(string userName)
+        {
+            if (db.UsersDB.Count(i => i.UserName == userName) > 0)
+            {
+                UserModel item = db.UsersDB.First(i => i.UserName == userName);
+                db.UsersDB.Remove(item);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public ActionResult Edit()
         {
             ViewBag.login = false;

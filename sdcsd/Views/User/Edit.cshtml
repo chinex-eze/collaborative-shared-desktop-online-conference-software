@@ -16,6 +16,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 @{Layout = null;}
+
 <script type="text/javascript">
     $('#dialog-background').show();
 </script>
@@ -23,15 +24,34 @@
 <div id="dialog-large" class="dialog">
     <div class="close-dialog button-small" onclick="removeEditors();"></div>
     <h2>User settings</h2>
-@using (Html.BeginForm("AddNewUserToDb", "User"))
-{
-    <div>
-        <div class="login-info"><span>Username: </span>@Html.TextBox("userName", "", new { @class="login-input"})</div>
-        <div class="login-info"><span>Password: </span>@Html.Password("passWord", "", new { @class = "login-input" })</div>
-        <input  class="login-button text-button" type="submit" value="Create" />
-    </div>
-}
 
-@Ajax.ActionLink("Log out", "Logout", "User", new AjaxOptions { UpdateTargetId = "site-container", InsertionMode = InsertionMode.Replace, HttpMethod = "post", OnSuccess = "removeEditors" }, new { @class="logout-button text-button"})
+    <div>
+        <div class="login-info"><span>Username: </span><input type="text" class = "login-input" id="user"/></div>
+        <div class="login-info"><span>Password: </span><input type="password" class = "login-input" id="pass"/></div>
+        <div class="login-info"><span>Password: </span><input type="password" class = "login-input" id="pass2"/></div>
+        <input class="login-button text-button" id="create" type="submit" value="Create" />
+        <input class="login-button text-button" id="delete" type="submit" value="Delete" />
+        <script type="text/javascript">
+            $('#create').click(function () {
+                if (document.getElementById("pass").value == document.getElementById("pass2").value) {
+                    $.post("User/AddNewUserToDb?userName=" + document.getElementById("user").value + "&passWord=" + document.getElementById("pass").value, function () {
+                        $('#dialog-large').remove();
+                        $('#dialog-background').hide();
+                    });
+                }
+                else {
+                    alert('Password fields do not match.');
+                }
+            });
+            $('#delete').click(function () {
+                $.post("User/DeleteUser?userName=" + document.getElementById("user").value, function () {
+                    $('#dialog-large').remove();
+                    $('#dialog-background').hide();
+                });
+            });
+       </script>
+    </div>
+
+@Ajax.ActionLink("Log out", "Logout", "User", new AjaxOptions { UpdateTargetId = "site-container", InsertionMode = InsertionMode.Replace, HttpMethod = "post", OnSuccess = "removeEditors" }, new { @class = "logout-button text-button" })
 
 </div>
