@@ -16,13 +16,15 @@
     width: 100%;
     height: 100%;
     display: block;
-  position: fixed;
+    position: fixed;
 }
+
 a
 {
     text-decoration: none;
     border: 0;
 }
+
 h2 {
     font-size: 25pt;
     margin: 0 0 0.75em;
@@ -31,6 +33,7 @@ h2 {
     text-shadow: 0 0 10px #888888;
     width: 50%;
 }
+
 /*
 a:link
 {
@@ -39,22 +42,26 @@ a:link
     text-decoration: none;
     border-bottom: 1px #0000ff dotted;
 }
+
 a:visited
 {
     color: #00aaaa;
 }
+
 a:hover
 {
     color: #0000aa;
     border-bottom: 1px #0000aa solid;
     
 }
+
 a:active
 {
     color: #008080;
     border-bottom: 0;
 }
 */
+
 #desktop-container 
 {
     position: absolute;
@@ -75,6 +82,7 @@ a:active
     float: left;
     background-image: url('/../../Content/icons/user.png');
 }
+
 #add-item-button
 {
     background-image: url(/../../Content/icons/add.png);
@@ -171,6 +179,7 @@ a:active
     text-transform: uppercase;
     vertical-align: middle;
 }
+
 .text-button:hover
 {
     color: #333333;
@@ -189,6 +198,7 @@ a:active
     border-radius: 10px;
     z-index: 30;
 }
+
 .button-small
 {
     width: 32px;
@@ -199,6 +209,7 @@ a:active
     -moz-background-clip: padding-box;
     border-radius: 2px;
 }
+
 .button-tiny
 {
     width: 16px;
@@ -219,16 +230,19 @@ a:active
     border: 0;
     background-color: #555555;
 }
+
 .button:hover
 {
     background-color: #ffffff;
     box-shadow: -1px 2px 10px 0px #777777, inset 0px 0px 25px 0px #c0c0c0;
 }
+
 .button-small:hover
 {
     background-color: #ffffff;
     box-shadow: -1px 2px 10px 0px #777777, inset 0px 0px 10px 0px #aaaaaa;
 }
+
 .button-tiny:hover
 {
     background-color: #ffffff;
@@ -250,6 +264,7 @@ a:active
     background-image: url(/../../Content/icons/up_small.png);
     border-bottom-right-radius: 4px;
 }
+
 #chat-down-button 
 {
     left: -4px;
@@ -258,6 +273,7 @@ a:active
     display: none;
     border-bottom-right-radius: 4px;
 }
+
 #topics-up-button 
 {
     right: -4px;
@@ -265,6 +281,7 @@ a:active
     background-image: url(/../../Content/icons/up_small.png);
     border-bottom-left-radius: 4px;
 }
+
 #topics-down-button 
 {
     right: -4px;
@@ -358,7 +375,9 @@ a:active
     font-family: Arial, Sans-Serif;
     box-shadow:inset 0px 0px 5px 0px #000000;
     border-radius: 3px;
+    cursor:default;
 }
+
 .side-list-item:hover
 {
     color: #222222;
@@ -374,12 +393,14 @@ a:active
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+
 .user-list-item
 {
     list-style: none;
     padding: 0.4em;
     margin-left: 0.4em;
     margin-right: 1em;
+    cursor:default;
 }
 
 #desktop-list
@@ -388,6 +409,7 @@ a:active
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
 .desktop-list-item
 {
     list-style: none;
@@ -395,7 +417,6 @@ a:active
     margin-left: 0.4em;
     margin-right: 0.4em;
 }
-
 
 #new-topic-container, #new-message-container
 {
@@ -419,12 +440,14 @@ a:active
     top: 1em;
     width: 60%;
 }
+
 #topic-input
 {
     margin-left: 1em;
     margin-right: 1em;
     padding-left: 0.5em;
 }
+
 #chat-input
 {
     margin-left: 1em;
@@ -443,10 +466,12 @@ a:active
     top: 1em;
     width: 38px;
 }
+
 #topic-submit
 {
     margin-left: 1em;
 }
+
 #chat-submit
 {
     float: left;
@@ -478,10 +503,12 @@ a:active
     padding-left: 3em;
     word-wrap: break-word;
 }
+
 .topic:hover
 {
     background-color: #e1e1e1;
 }
+
 .topic-remove
 {
     background-image: url("/../../Content/icons/remove_tiny.png");

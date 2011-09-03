@@ -31,7 +31,6 @@ namespace sdcsd.Controllers
         //
         // GET: /Userlist/
 
-
         public ActionResult Index()
         {
             ViewBag.login = false;
@@ -46,4 +45,5 @@ namespace sdcsd.Controllers
                 return null;
         }       
     }
+
 }
