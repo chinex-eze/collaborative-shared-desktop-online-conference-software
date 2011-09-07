@@ -34,10 +34,16 @@
         <script type="text/javascript">
             $('#create').click(function () {
                 if (document.getElementById("pass").value == document.getElementById("pass2").value) {
-                    $.post("User/AddNewUserToDb?userName=" + document.getElementById("user").value + "&passWord=" + document.getElementById("pass").value, function () {
-                        $('#dialog-large').remove();
-                        $('#dialog-background').hide();
-                    });
+                    if (new String(document.getElementById("pass").value).length > 4) {
+                        $.post("User/AddNewUserToDb?userName=" + document.getElementById("user").value
+                            + "&passWord=" + document.getElementById("pass").value, function () {
+                                $('#dialog-large').remove();
+                                $('#dialog-background').hide();
+                            });
+                    }
+                    else {
+                        alert('Password must be longer than 4 symbols');
+                    }
                 }
                 else {
                     alert('Password fields do not match.');
@@ -52,6 +58,8 @@
        </script>
     </div>
 
-@Ajax.ActionLink("Log out", "Logout", "User", new AjaxOptions { UpdateTargetId = "site-container", InsertionMode = InsertionMode.Replace, HttpMethod = "post", OnSuccess = "removeEditors" }, new { @class = "logout-button text-button" })
+@Ajax.ActionLink("Log out", "Logout", "User", new AjaxOptions { UpdateTargetId = "site-container",
+    InsertionMode = InsertionMode.Replace, HttpMethod = "post", OnSuccess = "removeEditors" },
+    new { @class = "logout-button text-button" })
 
 </div>
