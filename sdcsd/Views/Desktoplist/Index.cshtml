@@ -16,7 +16,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 @{Layout=null;}
-<!-- This list should be generated from a list of currently online users-->
 <ul id ="desktop-list" class="side-list">
     <li id="desktop1" class ="side-list-item desktop-list-item">Desktop1</li>
     <li id="desktop2" class ="side-list-item desktop-list-item">Desktop2</li>
@@ -29,20 +28,28 @@
         $('#desktop2').css("background-color", "#555555");
         $('#desktop3').css("background-color", "#555555");
         Session["DesktopID"] = "1";
-        //$.post('Home/Index');
+        refreshDesktop();
     });
     $('#desktop2').click(function () {
         $('#desktop1').css("background-color", "#555555");
         $(this).css("background-color", "#79a6d9");
         $('#desktop3').css("background-color", "#555555");
         Session["DesktopID"] = "2";
-        //$.post('Home/Index');
+        refreshDesktop();
     });
     $('#desktop3').click(function () {
         $('#desktop1').css("background-color", "#555555");
         $('#desktop2').css("background-color", "#555555");
         $(this).css("background-color", "#79a6d9");
         Session["DesktopID"] = "3";
-        //$.post('Home/Index');
+        refreshDesktop();
     });
+
+    function refreshDesktop() {
+        if (dragging == false) {
+            $.post("Desktop/Index", function (data) {
+                $('#desktop-container').html(data);
+            });
+        }
+    };
 </script>

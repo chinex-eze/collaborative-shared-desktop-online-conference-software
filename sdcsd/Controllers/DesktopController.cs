@@ -116,7 +116,7 @@ namespace sdcsd.Controllers
                     //Webkit, Mozilla
                     file = Path.Combine(path, qqfile);
                 }
-
+                
                 var buffer = new byte[stream.Length];
                 stream.Read(buffer, 0, buffer.Length);
                 System.IO.File.WriteAllBytes(file, buffer);

@@ -23,7 +23,40 @@
     {
         <div class="draggable" title="@item.Name" style="
          left: @item.LocX; top: @item.LocY">
-            <img class="fileIcon" src="../../Content/icons/text.png" alt="@item.Name"/>
+            <img class="fileIcon" src="../../Content/icons/text.png" onload="getImgUrl(@item.Name, this)" alt="@item.Name"/>
+            <script type="text/javascript">
+                //TODO: Make this working
+                function getImgUrl(fileName, img) {
+                    var imgSrc;
+                    var dir = "../../Content/icons/";
+                    var ext = fileName.split('.').pop();
+                    if (ext == "txt") {
+                        imgSrc = dir + "text.png"
+                    }
+                    else if (ext == "doc" || ext == "docx" || ext == "xls" || ext == "xlsx") {
+                        imgSrc = dir + "document.png"
+                    }
+                    else if (ext == "zip" || ext == "tar.gz" || ext == "rar") {
+                        imgSrc = dir + "archive.png"
+                    }
+                    else if (ext == "mp3" || ext == "wmv") {
+                        imgSrc = dir + "audio.png"
+                    }
+                    else if (ext == "png" || ext == "jpg" || ext == "jpeg" || ext == "bmp" || ext == "gif") {
+                        imgSrc = dir + "image.png"
+                    }
+                    else if (ext == "mpeg" || ext == "avi") {
+                        imgSrc = dir + "video.png"
+                    }
+                    else {
+                        imgSrc = dir + "text.png"
+                    }
+
+                    if (img.src != imgSrc) { //avoid endless loop
+                        img.src = imgSrc;
+                    }
+                };
+            </script>
             <p class="fileName">@item.Name</p>
         </div>    
     }

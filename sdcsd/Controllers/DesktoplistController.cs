@@ -23,10 +23,10 @@ using System.Web.Mvc;
 
 namespace sdcsd.Controllers
 {
-    public class DesktopListController : Controller
+    public class DesktoplistController : Controller
     {
         //
-        // GET: /DesktopList/
+        // GET: /Desktoplist/
 
         public ActionResult Index()
         {
