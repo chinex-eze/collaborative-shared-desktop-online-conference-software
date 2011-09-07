@@ -66,15 +66,23 @@ namespace sdcsd.Controllers
 
         public ActionResult AddNewUserToDb(string userName, string passWord)
         {
-            UserModel user = new UserModel();
-            user.UserName = userName;
-            user.PassWord = passWord;
-            user.LastSeen = System.DateTime.Now;
+            //check if user name is already in the database
+            if (db.UsersDB.Count(i => i.UserName == userName) > 0)
+            {
+                return View();
+            }
+            else
+            {
+                UserModel user = new UserModel();
+                user.UserName = userName;
+                user.PassWord = passWord;
+                user.LastSeen = System.DateTime.Now;
 
-            db.UsersDB.Add(user);
-            db.SaveChanges();
+                db.UsersDB.Add(user);
+                db.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         public ActionResult DeleteUser(string userName)

@@ -33,20 +33,25 @@
         <input class="login-button text-button" id="delete" type="submit" value="Delete" />
         <script type="text/javascript">
             $('#create').click(function () {
-                if (document.getElementById("pass").value == document.getElementById("pass2").value) {
-                    if (new String(document.getElementById("pass").value).length > 4) {
-                        $.post("User/AddNewUserToDb?userName=" + document.getElementById("user").value
+                if (new String(document.getElementById("user").value).length > 2) {
+                    if (document.getElementById("pass").value == document.getElementById("pass2").value) {
+                        if (new String(document.getElementById("pass").value).length > 4) {
+                            $.post("User/AddNewUserToDb?userName=" + document.getElementById("user").value
                             + "&passWord=" + document.getElementById("pass").value, function () {
                                 $('#dialog-large').remove();
                                 $('#dialog-background').hide();
                             });
+                        }
+                        else {
+                            alert('Password must be longer than 4 symbols');
+                        }
                     }
                     else {
-                        alert('Password must be longer than 4 symbols');
+                        alert('Password fields do not match.');
                     }
                 }
                 else {
-                    alert('Password fields do not match.');
+                    alert('User name must be longer than 2 symbols');
                 }
             });
             $('#delete').click(function () {
