@@ -40,5 +40,11 @@ namespace sdcsd.Controllers
                 return null;
         }
 
+        public ActionResult Refresh(string desktopID)
+        {
+            Session["DesktopID"] = desktopID;
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }

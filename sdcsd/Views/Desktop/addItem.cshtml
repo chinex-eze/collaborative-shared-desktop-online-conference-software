@@ -40,13 +40,12 @@
             onComplete: function (id, filename, data) {
                 $('.qq-upload-list').hide();
                 $.each(data, function (key, value) {
-                    refreshDesktop();
                     $(".dialog").remove();
-                    $("#dialog-background").hide();
+                    $('#dialog-background').hide();
                     id++;
                 });
             }
-        }); 
+        });
     </script>
 
     <div id="file-uploader" class="text-button">Upload</div>

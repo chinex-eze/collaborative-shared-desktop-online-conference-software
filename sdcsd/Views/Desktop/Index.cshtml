@@ -23,10 +23,10 @@
     {
         <div class="draggable" title="@item.Name" style="
          left: @item.LocX; top: @item.LocY">
-            <img class="fileIcon" src="../../Content/icons/text.png" onload="getImgUrl(@item.Name, this)" alt="@item.Name"/>
+            <img class="fileIcon" src="../../Content/icons/text.png" onload="getImgUrl(this)" alt="@item.Name"/>
             <script type="text/javascript">
-                //TODO: Make this working
-                function getImgUrl(fileName, img) {
+                function getImgUrl(img) {
+                    var fileName = img.alt;
                     var imgSrc;
                     var dir = "../../Content/icons/";
                     var ext = fileName.split('.').pop();

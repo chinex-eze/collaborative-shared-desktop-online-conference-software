@@ -27,29 +27,24 @@
         $(this).css("background-color", "#79a6d9");
         $('#desktop2').css("background-color", "#555555");
         $('#desktop3').css("background-color", "#555555");
-        Session["DesktopID"] = "1";
-        refreshDesktop();
+        refreshDesktop("1");
     });
     $('#desktop2').click(function () {
         $('#desktop1').css("background-color", "#555555");
         $(this).css("background-color", "#79a6d9");
         $('#desktop3').css("background-color", "#555555");
-        Session["DesktopID"] = "2";
-        refreshDesktop();
+        refreshDesktop("2");
     });
     $('#desktop3').click(function () {
         $('#desktop1').css("background-color", "#555555");
         $('#desktop2').css("background-color", "#555555");
         $(this).css("background-color", "#79a6d9");
-        Session["DesktopID"] = "3";
-        refreshDesktop();
+        refreshDesktop("3");
     });
 
-    function refreshDesktop() {
-        if (dragging == false) {
-            $.post("Desktop/Index", function (data) {
-                $('#desktop-container').html(data);
-            });
-        }
+    function refreshDesktop(id) {
+        $.post("DesktopList/Refresh?desktopID="+id, function (data) {
+            $('#desktop-container').html(data);
+        });
     };
 </script>

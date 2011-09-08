@@ -122,7 +122,7 @@ namespace sdcsd.Controllers
                 System.IO.File.WriteAllBytes(file, buffer);
 
                 DesktopItemModel newItem = new DesktopItemModel();
-                newItem.DesktopID = 1;
+                newItem.DesktopID = 1; //reflect to desktop which was active when item added
                 newItem.Name = qqfile;
                 newItem.LocX = "45%";
                 newItem.LocY = "45%";
