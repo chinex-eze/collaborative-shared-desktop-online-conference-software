@@ -23,10 +23,11 @@
     {
         <div class="draggable" title="@item.Name" style="
          left: @item.LocX; top: @item.LocY">
-            <img class="fileIcon" src="../../Content/icons/text.png" onload="getImgUrl(this)" alt="@item.Name"/>
+            <img class="fileIcon" src="../../Content/icons/text.png" name="@item.Name" alt="@item.Name"/>
             <script type="text/javascript">
-                function getImgUrl(img) {
-                    var fileName = img.alt;
+                document.getElementsByName("@item.Name")[0].src = getImgUrl("@item.Name");
+
+                function getImgUrl(fileName) {
                     var imgSrc;
                     var dir = "../../Content/icons/";
                     var ext = fileName.split('.').pop();
@@ -51,10 +52,7 @@
                     else {
                         imgSrc = dir + "text.png"
                     }
-
-                    if (img.src != imgSrc) { //avoid endless loop
-                        img.src = imgSrc;
-                    }
+                    return imgSrc;
                 };
             </script>
             <p class="fileName">@item.Name</p>
