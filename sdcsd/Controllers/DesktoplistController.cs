@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using sdcsd.Models;
 
 namespace sdcsd.Controllers
 {
@@ -27,6 +28,8 @@ namespace sdcsd.Controllers
     {
         //
         // GET: /Desktoplist/
+
+        private DesktopDBContext _db = new DesktopDBContext();
 
         public ActionResult Index()
         {
@@ -40,10 +43,30 @@ namespace sdcsd.Controllers
                 return null;
         }
 
-        public ActionResult Refresh(string desktopID)
+        [HttpPost]
+        public ActionResult Refresh(int desktopID)
         {
-            Session["DesktopID"] = desktopID;
+            string user = Session["user"].ToString();
+            if (_db.Desktops.Count(i => i.UserName == user) > 0)
+            {
+                DesktopModel item = _db.Desktops.First(i => i.UserName == user);
+                item.DesktopID = desktopID;
+                _db.SaveChanges();
+            }
             return RedirectToAction("Index", "Home");
+        }
+
+        public JsonResult GetActiveDesktop()
+        {
+            int active = 1; //default
+            string user = Session["user"].ToString();
+            if (_db.Desktops.Count(i => i.UserName == user) > 0)
+            {
+                DesktopModel item = _db.Desktops.First(i => i.UserName == user);
+                active = item.DesktopID;
+            }
+
+            return this.Json(active);
         }
 
     }

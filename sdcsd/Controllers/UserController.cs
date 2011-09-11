@@ -26,7 +26,8 @@ namespace sdcsd.Controllers
 {
     public class UserController : Controller
     {
-        private UserDBContext db = new UserDBContext();
+        private UserDBContext userDB = new UserDBContext();
+        private DesktopDBContext desktopDB = new DesktopDBContext();
 
         //
         // GET: /UserLogin/
@@ -46,9 +47,9 @@ namespace sdcsd.Controllers
         public ActionResult Login(string username, string password)
         {
             Session["loggedin"] = "false";
-            if (db.UsersDB.Count(u => u.UserName == username) > 0)
+            if (userDB.UsersDB.Count(u => u.UserName == username) > 0)
             {
-                if(db.UsersDB.First(u => u.UserName == username).PassWord == password)
+                if(userDB.UsersDB.First(u => u.UserName == username).PassWord == password)
                 {
                     Session["loggedin"] = "true";
                     Session["user"] = username;
@@ -67,7 +68,7 @@ namespace sdcsd.Controllers
         public ActionResult AddNewUserToDb(string userName, string passWord)
         {
             //check if user name is already in the database
-            if (db.UsersDB.Count(i => i.UserName == userName) > 0)
+            if (userDB.UsersDB.Count(i => i.UserName == userName) > 0)
             {
                 return View();
             }
@@ -78,8 +79,15 @@ namespace sdcsd.Controllers
                 user.PassWord = passWord;
                 user.LastSeen = System.DateTime.Now;
 
-                db.UsersDB.Add(user);
-                db.SaveChanges();
+                userDB.UsersDB.Add(user);
+                userDB.SaveChanges();
+
+                DesktopModel dm = new DesktopModel();
+                dm.DesktopID = 1; //default desktop
+                dm.UserName = userName;
+
+                desktopDB.Desktops.Add(dm);
+                desktopDB.SaveChanges();
 
                 return RedirectToAction("Index", "Home");
             }
@@ -87,11 +95,23 @@ namespace sdcsd.Controllers
 
         public ActionResult DeleteUser(string userName)
         {
-            if (db.UsersDB.Count(i => i.UserName == userName) > 0)
+            if (userDB.UsersDB.Count(i => i.UserName == userName) > 0)
             {
-                UserModel item = db.UsersDB.First(i => i.UserName == userName);
-                db.UsersDB.Remove(item);
-                db.SaveChanges();
+                UserModel item = userDB.UsersDB.First(i => i.UserName == userName);
+                userDB.UsersDB.Remove(item);
+                userDB.SaveChanges();
+
+                DesktopModel desktop = desktopDB.Desktops.First(i => i.UserName == userName);
+                desktopDB.Desktops.Remove(desktop);
+                desktopDB.SaveChanges();
+
+                //log off if user deleted his/her own account
+                if (Session["user"] == userName)
+                {
+                    Session["loggedin"] = "false";
+                    ViewBag.login = false;
+                    return View("LoginBox");
+                }
             }
 
             return RedirectToAction("Index", "Home");

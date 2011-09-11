@@ -27,19 +27,19 @@
         $(this).css("background-color", "#79a6d9");
         $('#desktop2').css("background-color", "#555555");
         $('#desktop3').css("background-color", "#555555");
-        refreshDesktop("1");
+        refreshDesktop(1);
     });
     $('#desktop2').click(function () {
         $('#desktop1').css("background-color", "#555555");
         $(this).css("background-color", "#79a6d9");
         $('#desktop3').css("background-color", "#555555");
-        refreshDesktop("2");
+        refreshDesktop(2);
     });
     $('#desktop3').click(function () {
         $('#desktop1').css("background-color", "#555555");
         $('#desktop2').css("background-color", "#555555");
         $(this).css("background-color", "#79a6d9");
-        refreshDesktop("3");
+        refreshDesktop(3);
     });
 
     function refreshDesktop(id) {

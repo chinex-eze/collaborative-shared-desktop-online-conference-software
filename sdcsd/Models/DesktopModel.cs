@@ -25,7 +25,14 @@ namespace sdcsd.Models
 {
     public class DesktopModel
     {
+        public int ID { get; set; }
         public int DesktopID { get; set; }
+        public String UserName { get; set; }
+    }
+
+    public class DesktopDBContext : DbContext
+    {
+        public DbSet<DesktopModel> Desktops { get; set; }
     }
 
 }

@@ -43,7 +43,6 @@ namespace sdcsd.Controllers
                 return View(db.Topics.ToList());
             else
                 return null;
-
         }
 
         public ActionResult SetInactive(int id)
@@ -82,13 +81,11 @@ namespace sdcsd.Controllers
         [HttpPost]
         public ActionResult RenderTopicsHttpPost()
         {
-            //return View(db.Topics.ToList());
             return PartialView("_TopicsList", db.Topics.ToList());
         }
 
         public ActionResult RenderTopics()
         {
-            //return View(db.Topics.ToList());
             return PartialView("_TopicsList", db.Topics.ToList());
         }
                         
