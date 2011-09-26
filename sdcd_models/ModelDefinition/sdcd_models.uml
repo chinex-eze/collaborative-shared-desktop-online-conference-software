@@ -1,0 +1,1840 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="b4c7687c-7d35-4691-8f3e-9473b31c78c7"
+  name="sdcd_models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <useCase
+        Id="4f72c7b0-b738-45c3-94d1-da4e37472bfa"
+        name="Add a new desktop item"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="13b1bbfc-9f11-4517-b477-8281ad9485b5">
+            <useCaseMoniker
+              Id="0553719c-b4fd-48d2-a599-03460916653a"
+              LastKnownName="Refresh desktop"
+              LastKnownLocation="sdcd_models.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="d3b7e362-df07-4420-9630-affc3c33dcdb"
+        name="User (logged in)"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="63ad97cf-9b13-42ca-8aa4-b42567946998"
+            isDerived="false"
+            sourceEndRoleName="User (logged in)"
+            targetEndRoleName="Send a chat message"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c897efc0-7533-44fd-ba76-9dcbc2bca524"
+              LastKnownName="Send a chat message"
+              LastKnownLocation="sdcd_models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="12a61f1c-7826-43dc-8d34-0f54bb1128cd"
+                  name="User (logged in)"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="82d4af98-735d-490a-ad48-7d5d8e573c61"
+                  name="Send a chat message"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="786bd601-5428-4818-b79a-b153b1834c79"
+            isDerived="false"
+            sourceEndRoleName="User (logged in)"
+            targetEndRoleName="Delete topic"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ee86fadd-4996-4e1e-beca-12532b2f5c69"
+              LastKnownName="Delete topic"
+              LastKnownLocation="sdcd_models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3f65ec88-0812-485b-983c-7f22fd552ea2"
+                  name="User (logged in)"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="293dd00b-95b7-4be1-a0d0-44bc4249af1a"
+                  name="Delete topic"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="dc29f72d-9bbd-4930-9ba3-d07e89f234c6"
+            isDerived="false"
+            sourceEndRoleName="User (logged in)"
+            targetEndRoleName="Create a new topic"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="60239641-95f6-478a-8246-be1806c9dcf5"
+              LastKnownName="Create a new topic"
+              LastKnownLocation="sdcd_models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c82d9bd5-5620-49c6-99e5-e694aa6cfab0"
+                  name="User (logged in)"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="81019532-6ff4-4693-a459-9a5554394715"
+                  name="Create a new topic"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="767ee9ce-44a1-40f9-88b1-4927aae7c4b0"
+            isDerived="false"
+            sourceEndRoleName="User (logged in)"
+            targetEndRoleName="Access user settings"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="90303a7d-7661-4005-aa9c-6ad03fde10ee"
+              LastKnownName="Access user settings"
+              LastKnownLocation="sdcd_models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ee7d1a31-6fdd-4af2-ae08-7c48c872ae83"
+                  name="User (logged in)"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3d66fc48-e414-4f86-858c-8459de009621"
+                  name="Access user settings"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0b6c436a-b335-4ade-adb8-5ebe9db78039"
+            isDerived="false"
+            sourceEndRoleName="User (logged in)"
+            targetEndRoleName="Change active desktop"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="59f36983-db88-428d-934b-bc83d26d8c59"
+              LastKnownName="Change active desktop"
+              LastKnownLocation="sdcd_models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f12c983d-e50a-4217-9293-6ac2d6a4b1a7"
+                  name="User (logged in)"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="875a5ce5-4d71-4c1b-bdb5-33eeaa093105"
+                  name="Change active desktop"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="92e5878c-0e0a-48db-a5fd-90f3a20c99b9"
+            isDerived="false"
+            sourceEndRoleName="User (logged in)"
+            targetEndRoleName="Add a new desktop item"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4f72c7b0-b738-45c3-94d1-da4e37472bfa"
+              LastKnownName="Add a new desktop item"
+              LastKnownLocation="sdcd_models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e5a3ef7d-7668-497f-9930-e9b8ae14645d"
+                  name="User (logged in)"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d703179a-24dd-437c-9053-3010117eb9c2"
+                  name="Add a new desktop item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c2dc8e68-334c-4796-8f9c-0db871e95203"
+            isDerived="false"
+            sourceEndRoleName="User (logged in)"
+            targetEndRoleName="Move desktop item"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6f8cf9de-394b-413c-a190-0cd8772d31ba"
+              LastKnownName="Move desktop item"
+              LastKnownLocation="sdcd_models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0d28c4fb-61a2-4c3f-bde2-7298514f9d10"
+                  name="User (logged in)"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d2e0112c-7d30-4243-a733-348865c90daa"
+                  name="Move desktop item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8d0a5ff0-6bc8-46b9-8b3d-3d90ebd6e337"
+            isDerived="false"
+            sourceEndRoleName="User (logged in)"
+            targetEndRoleName="Remove a desktop item"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2ed2e823-3cbc-40cd-8df6-1ae40ce247af"
+              LastKnownName="Remove a desktop item"
+              LastKnownLocation="sdcd_models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="35b05872-7d9f-4f5f-a772-1cb10aa0c613"
+                  name="User (logged in)"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c4ef591d-f23c-4de6-9918-50c202cfa8c6"
+                  name="Remove a desktop item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="37205adc-6b4c-436d-b86f-2fd065c4aa23"
+            isDerived="false"
+            sourceEndRoleName="User (logged in)"
+            targetEndRoleName="Open a desktop item"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0e215b77-206d-4f01-bb18-cfe12413bb07"
+              LastKnownName="Open a desktop item"
+              LastKnownLocation="sdcd_models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e99f221c-5a02-4890-b53b-ccede94cc532"
+                  name="User (logged in)"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="255d06b7-7fae-4855-87a8-7a4b8cf9045c"
+                  name="Open a desktop item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="60239641-95f6-478a-8246-be1806c9dcf5"
+        name="Create a new topic"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c897efc0-7533-44fd-ba76-9dcbc2bca524"
+        name="Send a chat message"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ee86fadd-4996-4e1e-beca-12532b2f5c69"
+        name="Delete topic"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6f8cf9de-394b-413c-a190-0cd8772d31ba"
+        name="Move desktop item"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="fe3a1252-b745-466a-94cb-86383d010baa">
+            <useCaseMoniker
+              Id="0553719c-b4fd-48d2-a599-03460916653a"
+              LastKnownName="Refresh desktop"
+              LastKnownLocation="sdcd_models.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="59f36983-db88-428d-934b-bc83d26d8c59"
+        name="Change active desktop"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9d983141-2cd4-4213-9249-b4d644899193">
+            <useCaseMoniker
+              Id="0553719c-b4fd-48d2-a599-03460916653a"
+              LastKnownName="Refresh desktop"
+              LastKnownLocation="sdcd_models.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0e215b77-206d-4f01-bb18-cfe12413bb07"
+        name="Open a desktop item"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2ed2e823-3cbc-40cd-8df6-1ae40ce247af"
+        name="Remove a desktop item"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="bf8ed526-c94f-4b15-9cae-0f13a16f8eea">
+            <useCaseMoniker
+              Id="0553719c-b4fd-48d2-a599-03460916653a"
+              LastKnownName="Refresh desktop"
+              LastKnownLocation="sdcd_models.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7f0fc51c-03b7-42b3-a06c-8ec56b91e4ac"
+        name="Create a new user"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2e450bff-e40c-47dd-a4ac-4473fd6be77d"
+        name="Delete a user"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="90303a7d-7661-4005-aa9c-6ad03fde10ee"
+        name="Access user settings"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="335bab60-0806-41aa-afe7-de8163d0c760">
+            <useCaseMoniker
+              Id="7f0fc51c-03b7-42b3-a06c-8ec56b91e4ac"
+              LastKnownName="Create a new user"
+              LastKnownLocation="sdcd_models.uml" />
+          </include>
+          <include
+            Id="de72a31e-a7e1-4ca9-9cca-140199a69477">
+            <useCaseMoniker
+              Id="2e450bff-e40c-47dd-a4ac-4473fd6be77d"
+              LastKnownName="Delete a user"
+              LastKnownLocation="sdcd_models.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0553719c-b4fd-48d2-a599-03460916653a"
+        name="Refresh desktop"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="62c0fc09-1b0e-4c72-8dc7-cf172bdd6bbc"
+        name="User (unlogged)"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="36461544-6ed4-471f-84ff-950b0b2c0399"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="d3b7e362-df07-4420-9630-affc3c33dcdb"
+              LastKnownName="User (logged in)"
+              LastKnownLocation="sdcd_models.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="14e5f3df-dec1-4e21-a7ef-612a80697e83"
+            isDerived="false"
+            sourceEndRoleName="User (unlogged)"
+            targetEndRoleName="Access user settings"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="90303a7d-7661-4005-aa9c-6ad03fde10ee"
+              LastKnownName="Access user settings"
+              LastKnownLocation="sdcd_models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ef8f9014-22db-4d34-b208-f976e7363d0c"
+                  name="User (unlogged)"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fd75b7fe-59c9-4298-868f-ab65f1fca6ad"
+                  name="Access user settings"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="7032a263-c88a-4e39-94a0-f9b419545be5"
+        name="SequenceDiagram"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="6ee54624-5ea4-4544-9618-a41185f7ac03"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="92b16ba8-a3bc-483c-ba84-1dfc84b9c810"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="sdcd_models.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="4dde121f-377b-4033-9dc3-f947ae778884"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="sdcd_models.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="33c9ab88-13aa-4135-a7cc-380b7fa484c2"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="sdcd_models.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="4dde121f-377b-4033-9dc3-f947ae778884"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="7cf13729-3837-4d9f-b52c-fe9ca10eb832"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="33c9ab88-13aa-4135-a7cc-380b7fa484c2"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8416a958-a6ff-47ef-a247-946db5236f6f"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="8cfbf799-2aaa-4e62-9782-1025bffa82fd"
+                LastKnownName="User"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="92b16ba8-a3bc-483c-ba84-1dfc84b9c810"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="14d2a035-ad9b-4113-82fa-4259cb43b7fb"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="6c3e66d1-9fdc-4d74-8c39-747e460d5088"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="bac1daa2-1658-431b-aef3-9cc36a655e69"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="sdcd_models.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="dd22364c-970e-4419-b5a7-2a8109a8115b"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="sdcd_models.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f7afbe9f-453a-45bf-a0d6-69a641f4b196"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="1c0b389b-01b5-4a01-b266-b7f9bba0ce66"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="bd5365c4-0cac-4a41-95af-c3bafb3b3b89"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7c382173-9ade-4cfd-a91d-07434e63cd1b"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="sdcd_models.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="dd22364c-970e-4419-b5a7-2a8109a8115b"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="bf69d907-f921-46a7-9a98-5add9f1c9f7a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="78283280-5f81-418b-b978-01dbc2035c04"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f7afbe9f-453a-45bf-a0d6-69a641f4b196"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="34d44dae-9cbd-49ff-a8f5-a673147da8c1"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="44a60046-d083-47b2-952d-5cc1926cc0fb"
+                LastKnownName="MessageDB"
+                LastKnownLocation="sdcd_models.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2166980f-87f6-4624-b4bf-fd3c115d0e19"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="sdcd_models.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="f0e32f77-953d-40bd-a07a-311d95a3c619"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="sdcd_models.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ba40e0b1-0424-4cc8-a942-d25ee9905b24"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="19e5fa2f-8157-44ba-861d-bc32565ee35e"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="sdcd_models.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="f0e32f77-953d-40bd-a07a-311d95a3c619"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="77dfef0f-b662-4ae2-bb3b-6b8f9a3ef67b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="44a60046-d083-47b2-952d-5cc1926cc0fb"
+                LastKnownName="MessageDB"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1c0b389b-01b5-4a01-b266-b7f9bba0ce66"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ba40e0b1-0424-4cc8-a942-d25ee9905b24"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="44a60046-d083-47b2-952d-5cc1926cc0fb"
+                LastKnownName="MessageDB"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="bd5365c4-0cac-4a41-95af-c3bafb3b3b89"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="19e5fa2f-8157-44ba-861d-bc32565ee35e"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="44a60046-d083-47b2-952d-5cc1926cc0fb"
+                LastKnownName="MessageDB"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2166980f-87f6-4624-b4bf-fd3c115d0e19"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3a0b72ab-6e1a-45a0-b55d-5cfa0a890aa1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="44a60046-d083-47b2-952d-5cc1926cc0fb"
+                LastKnownName="MessageDB"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7c382173-9ade-4cfd-a91d-07434e63cd1b"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d1aefcc7-aedf-40ca-9adf-ff0b60790daa"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="bac1daa2-1658-431b-aef3-9cc36a655e69"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2400e6a8-421e-4531-8d15-12a7bcd06886"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="53669614-281a-4100-a2ff-c803307ea2b0"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="d760923a-ed74-4c4e-b5a4-518d4b4f16ed"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="e9679b49-f184-4a23-a04e-d071fc3b6e18"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="sdcd_models.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="1a9014a8-956f-45b2-885a-41c029ff9d6e"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="sdcd_models.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="4a68706f-1609-4343-a502-9dcb5f3257b8"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="sdcd_models.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="1a9014a8-956f-45b2-885a-41c029ff9d6e"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e2d50341-a007-49fd-bdfa-b3222f28257f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4a68706f-1609-4343-a502-9dcb5f3257b8"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="e9679b49-f184-4a23-a04e-d071fc3b6e18"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="56e1fed9-d38d-44e4-b182-c598de6fe473"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="53ddc4bc-2cee-49fc-8933-3549e6509f96"
+            name="BehaviorExecutionSpecification9">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="43b2d1f7-9d4e-4dbe-b4d5-6f3b993b2e8c"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="sdcd_models.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="5ce1eda1-8aef-4add-ab90-8ddfc932b462"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="sdcd_models.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="a1842287-dfdf-4f40-9aca-48b51b79d9c5"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="5885d32a-30d7-4ff1-b77a-22c67247fc3d"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2aefcf1f-2fb8-483b-b1cc-7127b0f5a948"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a9786b8c-bdb6-4bcc-9fdd-a11c17a25721"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="sdcd_models.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="5ce1eda1-8aef-4add-ab90-8ddfc932b462"
+            name="ExecutionOccurrenceSpecification17">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="337f4732-c513-4de1-9b7a-2a851de229f8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f7849c84-2888-40a3-986b-f244cd19e595"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a1842287-dfdf-4f40-9aca-48b51b79d9c5"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="46a1f725-2ba4-47c8-9c16-33283cef5ba3"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="44a60046-d083-47b2-952d-5cc1926cc0fb"
+                LastKnownName="MessageDB"
+                LastKnownLocation="sdcd_models.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="85fb5280-b557-4dad-a231-7143282de9bb"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="sdcd_models.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="2d2c30bc-294e-4e25-bd06-38142c3592f2"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="sdcd_models.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e650aaa6-7f1f-4309-afa7-ade4cb5e2d46"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="0a5f4986-b33f-4742-83f3-bd655783ed95"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="sdcd_models.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="2d2c30bc-294e-4e25-bd06-38142c3592f2"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2dbf6591-0264-422e-9cf8-ff0d31ca2ccd"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="44a60046-d083-47b2-952d-5cc1926cc0fb"
+                LastKnownName="MessageDB"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e650aaa6-7f1f-4309-afa7-ade4cb5e2d46"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="44a60046-d083-47b2-952d-5cc1926cc0fb"
+                LastKnownName="MessageDB"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5885d32a-30d7-4ff1-b77a-22c67247fc3d"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2aefcf1f-2fb8-483b-b1cc-7127b0f5a948"
+            name="MessageOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0a5f4986-b33f-4742-83f3-bd655783ed95"
+            name="MessageOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="44a60046-d083-47b2-952d-5cc1926cc0fb"
+                LastKnownName="MessageDB"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="85fb5280-b557-4dad-a231-7143282de9bb"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="04a55707-88d7-44cb-81bf-1e092490b461"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="44a60046-d083-47b2-952d-5cc1926cc0fb"
+                LastKnownName="MessageDB"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="60d67f32-7df0-44db-93d1-0cce61207db0"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a9786b8c-bdb6-4bcc-9fdd-a11c17a25721"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="43b2d1f7-9d4e-4dbe-b4d5-6f3b993b2e8c"
+            name="ExecutionOccurrenceSpecification18">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d0c69987-9baf-47b4-bf04-700735b905dc"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+                LastKnownName="ChatController"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0c5bfa20-5e8a-49b8-8e74-cd71caff8481"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="b0f4855c-a70f-4bda-b8b9-e7813ea64114"
+            name="BehaviorExecutionSpecification11">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="a843ddbc-9964-4876-a733-3393156a2479"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="sdcd_models.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="ad514652-10b0-4c3c-b5bd-0bc3a709986d"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="sdcd_models.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="6bdd6d9d-e2c7-4c6a-8ba8-b25c51b35c92"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="sdcd_models.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="ad514652-10b0-4c3c-b5bd-0bc3a709986d"
+            name="ExecutionOccurrenceSpecification21">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8dfe6536-2785-42d9-bf57-e0f5b89b50f1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6bdd6d9d-e2c7-4c6a-8ba8-b25c51b35c92"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="a843ddbc-9964-4876-a733-3393156a2479"
+            name="ExecutionOccurrenceSpecification22">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="18337c76-92b0-4b02-93a0-af1d3e507387"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="d7cf1db7-a129-4db0-ba75-b85aed87a2f5"
+            name="BehaviorExecutionSpecification12">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="8cfbf799-2aaa-4e62-9782-1025bffa82fd"
+                LastKnownName="User"
+                LastKnownLocation="sdcd_models.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="32b83421-2faa-4be8-99ce-60860573c932"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="sdcd_models.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="73611ac6-a046-49b2-bfb6-76c88db2120f"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="sdcd_models.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f8d4513e-d59a-4400-8aad-58a23639aa76"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="sdcd_models.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="73611ac6-a046-49b2-bfb6-76c88db2120f"
+            name="ExecutionOccurrenceSpecification23">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e5809bdb-6af9-4c3e-91dc-edcc1178f499"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8cfbf799-2aaa-4e62-9782-1025bffa82fd"
+                LastKnownName="User"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f8d4513e-d59a-4400-8aad-58a23639aa76"
+            name="MessageOccurrenceSpecification34">
+            <covered>
+              <lifelineMoniker
+                Id="8cfbf799-2aaa-4e62-9782-1025bffa82fd"
+                LastKnownName="User"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1a6158c4-6add-4fc6-9155-c9f608af0e13"
+            name="MessageOccurrenceSpecification33">
+            <covered>
+              <lifelineMoniker
+                Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+                LastKnownName="ChatView"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="32b83421-2faa-4be8-99ce-60860573c932"
+            name="ExecutionOccurrenceSpecification24">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="34396cd5-113f-4c97-ac9d-be1b16393207"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="sdcd_models.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8cfbf799-2aaa-4e62-9782-1025bffa82fd"
+                LastKnownName="User"
+                LastKnownLocation="sdcd_models.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="8cfbf799-2aaa-4e62-9782-1025bffa82fd"
+            name="User"
+            isActor="false"
+            lifelineDisplayName="User">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="8416a958-a6ff-47ef-a247-946db5236f6f"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="73611ac6-a046-49b2-bfb6-76c88db2120f"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="32b83421-2faa-4be8-99ce-60860573c932"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="sdcd_models.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="5c4386b1-da5c-4d2b-a66b-4078776e5d07"
+            name="ChatView"
+            isActor="false"
+            lifelineDisplayName="ChatView">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="4dde121f-377b-4033-9dc3-f947ae778884"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="92b16ba8-a3bc-483c-ba84-1dfc84b9c810"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="78283280-5f81-418b-b978-01dbc2035c04"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d1aefcc7-aedf-40ca-9adf-ff0b60790daa"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="53669614-281a-4100-a2ff-c803307ea2b0"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="1a9014a8-956f-45b2-885a-41c029ff9d6e"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e9679b49-f184-4a23-a04e-d071fc3b6e18"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f7849c84-2888-40a3-986b-f244cd19e595"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="60d67f32-7df0-44db-93d1-0cce61207db0"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="0c5bfa20-5e8a-49b8-8e74-cd71caff8481"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ad514652-10b0-4c3c-b5bd-0bc3a709986d"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a843ddbc-9964-4876-a733-3393156a2479"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="sdcd_models.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="1a6158c4-6add-4fc6-9155-c9f608af0e13"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="sdcd_models.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="f22c5a44-7bca-4e5c-b913-7aebaadcf809"
+            name="ChatController"
+            isActor="false"
+            lifelineDisplayName="ChatController">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="dd22364c-970e-4419-b5a7-2a8109a8115b"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="bac1daa2-1658-431b-aef3-9cc36a655e69"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5ce1eda1-8aef-4add-ab90-8ddfc932b462"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="43b2d1f7-9d4e-4dbe-b4d5-6f3b993b2e8c"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="sdcd_models.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="44a60046-d083-47b2-952d-5cc1926cc0fb"
+            name="MessageDB"
+            isActor="false"
+            lifelineDisplayName="MessageDB">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="f0e32f77-953d-40bd-a07a-311d95a3c619"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2166980f-87f6-4624-b4bf-fd3c115d0e19"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2d2c30bc-294e-4e25-bd06-38142c3592f2"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="sdcd_models.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="85fb5280-b557-4dad-a231-7143282de9bb"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="sdcd_models.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="0e936324-17d4-4f36-9f53-ea78c0eb1990"
+            name="Type a message"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8416a958-a6ff-47ef-a247-946db5236f6f"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="33c9ab88-13aa-4135-a7cc-380b7fa484c2"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="743f40c6-2e2b-443c-95c0-14cf5429bcda"
+            name="Submit message"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="78283280-5f81-418b-b978-01dbc2035c04"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f7afbe9f-453a-45bf-a0d6-69a641f4b196"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="971bda9e-26d5-488f-a243-d2e499f4a8a0"
+            name="Record message to database"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1c0b389b-01b5-4a01-b266-b7f9bba0ce66"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ba40e0b1-0424-4cc8-a942-d25ee9905b24"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="e6cdf98b-6b62-4c4b-b424-5327b1a6cfbb"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="19e5fa2f-8157-44ba-861d-bc32565ee35e"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="bd5365c4-0cac-4a41-95af-c3bafb3b3b89"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="d0055984-8c08-4d20-8de7-815f2ad5a2e2"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7c382173-9ade-4cfd-a91d-07434e63cd1b"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d1aefcc7-aedf-40ca-9adf-ff0b60790daa"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="a69836e1-5ab2-48b1-8710-14116d7aa6ff"
+            name="Clear chat input"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="53669614-281a-4100-a2ff-c803307ea2b0"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4a68706f-1609-4343-a502-9dcb5f3257b8"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="eb689d4f-7ee0-47d7-b4d6-157af1ee635f"
+            name="Refresh"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f7849c84-2888-40a3-986b-f244cd19e595"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a1842287-dfdf-4f40-9aca-48b51b79d9c5"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="de5b3e01-4f21-409c-8cac-246518f5582c"
+            name="Get messages"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5885d32a-30d7-4ff1-b77a-22c67247fc3d"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e650aaa6-7f1f-4309-afa7-ade4cb5e2d46"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="570ac29a-3d4e-4248-a44f-67202431f45e"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0a5f4986-b33f-4742-83f3-bd655783ed95"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2aefcf1f-2fb8-483b-b1cc-7127b0f5a948"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5ed075a0-1582-482f-b33f-d15f05b224d0"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a9786b8c-bdb6-4bcc-9fdd-a11c17a25721"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="60d67f32-7df0-44db-93d1-0cce61207db0"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="27b875af-e807-43c1-af79-5e3522331ea4"
+            name="Show messages"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0c5bfa20-5e8a-49b8-8e74-cd71caff8481"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6bdd6d9d-e2c7-4c6a-8ba8-b25c51b35c92"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="66748df1-6ce5-4fad-987b-983056e0fef7"
+            name="Read messages"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1a6158c4-6add-4fc6-9155-c9f608af0e13"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="sdcd_models.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f8d4513e-d59a-4400-8aad-58a23639aa76"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="sdcd_models.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="7cf13729-3837-4d9f-b52c-fe9ca10eb832"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="14d2a035-ad9b-4113-82fa-4259cb43b7fb"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="bf69d907-f921-46a7-9a98-5add9f1c9f7a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2400e6a8-421e-4531-8d15-12a7bcd06886"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="77dfef0f-b662-4ae2-bb3b-6b8f9a3ef67b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3a0b72ab-6e1a-45a0-b55d-5cfa0a890aa1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e2d50341-a007-49fd-bdfa-b3222f28257f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="56e1fed9-d38d-44e4-b182-c598de6fe473"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="337f4732-c513-4de1-9b7a-2a851de229f8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d0c69987-9baf-47b4-bf04-700735b905dc"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2dbf6591-0264-422e-9cf8-ff0d31ca2ccd"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="04a55707-88d7-44cb-81bf-1e092490b461"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8dfe6536-2785-42d9-bf57-e0f5b89b50f1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="18337c76-92b0-4b02-93a0-af1d3e507387"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e5809bdb-6af9-4c3e-91dc-edcc1178f499"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="34396cd5-113f-4c97-ac9d-be1b16393207"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

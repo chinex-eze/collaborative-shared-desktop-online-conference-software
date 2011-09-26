@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sdcsd", "sdcsd\sdcsd.csproj", "{D3AE8BFA-4DC3-440E-A701-A207B53762AD}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "sdcd_models", "sdcd_models\sdcd_models.modelproj", "{F4BAEF38-2AE0-49A1-8070-B7794E93CC07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{D3AE8BFA-4DC3-440E-A701-A207B53762AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3AE8BFA-4DC3-440E-A701-A207B53762AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3AE8BFA-4DC3-440E-A701-A207B53762AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4BAEF38-2AE0-49A1-8070-B7794E93CC07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4BAEF38-2AE0-49A1-8070-B7794E93CC07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4BAEF38-2AE0-49A1-8070-B7794E93CC07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4BAEF38-2AE0-49A1-8070-B7794E93CC07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

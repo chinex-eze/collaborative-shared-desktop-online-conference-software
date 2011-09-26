@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d3bab61d-7b32-4471-92d0-c20dad75f641" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="a1c12e26-c034-420e-9db1-aed115228a69" name="Databases">
+      <childLayers>
+        <layer Id="1d027942-53eb-4642-bb19-2728d488f257" name="DesktopDB" />
+        <layer Id="d95d42e9-0ecf-46e0-920d-fc40fbb3ce8f" name="DesktopItemDB" />
+        <layer Id="60fc6d45-dd8e-4c38-b553-ddcf72b2fb32" name="MessageDB" />
+        <layer Id="d29209ab-688f-4992-a539-a613889c42b3" name="TopicDB" />
+        <layer Id="cd6ed6d2-c4fe-4317-8ccb-7e39b5849a57" name="UserDB" />
+      </childLayers>
+    </layer>
+    <layer Id="631eb79a-98e4-4dbb-b238-4169d34b727b" name="Controllers">
+      <childLayers>
+        <layer Id="eeb2c75c-658f-4aa1-b28d-9c8413e6c038" name="ChatController" />
+        <layer Id="350da759-f904-4168-a312-cecbd563934f" name="DesktopController" />
+        <layer Id="2fdd5c73-68d8-48f4-89b6-917b826958e0" name="DesktopListController" />
+        <layer Id="8420458a-542c-430f-9cc0-6b0761dc693e" name="HeaderController" />
+        <layer Id="8125ce06-b3b8-4cfc-893e-bfcbf6449ace" name="HomeController" />
+        <layer Id="bafb6187-db74-4076-af8e-e5ae96a0bd2b" name="TopicsController" />
+        <layer Id="64828f37-1c6f-4d7f-b405-cf57c74ca23b" name="UserController" />
+        <layer Id="db1ffb92-d095-4696-bc44-ba1b6ebd09a6" name="UserListController" />
+      </childLayers>
+    </layer>
+    <layer Id="68d8aa3f-b727-479a-b661-8ebb3e58cdf8" name="Models">
+      <childLayers>
+        <layer Id="7c6ea387-0aaa-401e-b374-1c710ef4bacc" name="AccountModel" />
+        <layer Id="fceeecd6-243c-4183-a9a1-f6403f313ca9" name="DesktopItemModel" />
+        <layer Id="dda92ced-f1ad-4b0d-9982-84eff3aebe20" name="DesktopModel" />
+        <layer Id="c19fff16-dd7f-41c0-8bb7-959083ab0a3d" name="MessageModel" />
+        <layer Id="3c17a6ca-ea46-4fc1-90c0-a7caffe8655d" name="TopicModel" />
+        <layer Id="a2de8c13-468f-44d6-9bb3-c44afee94365" name="UserModel" />
+      </childLayers>
+    </layer>
+    <layer Id="73134723-c34d-40e1-b3d7-52be5f404f89" name="Views">
+      <childLayers>
+        <layer Id="2a9779dd-ae3f-4b3f-a63c-86b8c8dea476" name="Chat">
+          <childLayers>
+            <layer Id="099532b6-ba69-4bab-a165-cfd53ef7419c" name="Index" />
+          </childLayers>
+        </layer>
+        <layer Id="c184756b-acf3-4490-887e-1ce6888016e3" name="Desktop">
+          <childLayers>
+            <layer Id="caacb133-f5b7-4434-89b1-50ce45e68e52" name="AddItem" />
+            <layer Id="41da5cfb-12e4-40cf-a231-2c663b8458c7" name="Index" />
+            <layer Id="5c21e45f-353d-4557-853c-b45cdc31de15" name="Upload" />
+          </childLayers>
+        </layer>
+        <layer Id="ff4b4558-e539-471b-afc7-e4eb527b6ec6" name="Header">
+          <childLayers>
+            <layer Id="e90a74d1-4146-4eda-98bb-be5867d50334" name="Index" />
+          </childLayers>
+        </layer>
+        <layer Id="d51b6687-f97d-4425-9f0b-67b0530595b1" name="Home">
+          <childLayers>
+            <layer Id="e9a90715-25c2-45a8-bfd1-6a0ea9a6c83e" name="Index" />
+          </childLayers>
+        </layer>
+        <layer Id="2eda5467-3648-4591-914f-8f28b4b7e986" name="Shared">
+          <childLayers>
+            <layer Id="8945d3bb-02fd-4aeb-b2be-e4ead01d9ce5" name="_ChatMessageList" />
+            <layer Id="5fd202ff-8273-422b-870d-94a4d82ed441" name="_Layout" />
+            <layer Id="ad07ef78-1659-4f4c-8a1b-d81897c947a8" name="_LogOnPartial" />
+            <layer Id="05fa0b53-89f1-4081-8d1e-2babc541a912" name="_TopicsLst" />
+          </childLayers>
+        </layer>
+        <layer Id="cfcdce79-5bff-4355-8807-87ea4e6c0b14" name="Topics">
+          <childLayers>
+            <layer Id="ff6a37ee-8c60-4797-b80c-cffc96f5d626" name="Index" />
+            <layer Id="74e3342e-be7b-49c8-9ea1-fa62f455f831" name="RenderTopics" />
+          </childLayers>
+        </layer>
+        <layer Id="503cb0dc-3235-4f8a-a87a-2dad93e54e2f" name="User">
+          <childLayers>
+            <layer Id="0dcd4db3-94b7-4c5b-92b4-90dd2f48b9cb" name="Edit" />
+            <layer Id="e0bb2177-6000-4c33-b2c0-cd6f733e61d0" name="Login" />
+            <layer Id="a3c5678d-4372-4d8e-ace3-4891098b4560" name="LoginBox" />
+          </childLayers>
+        </layer>
+        <layer Id="d5112e8f-a064-4eb0-98e9-142b9859ca0f" name="Userlist">
+          <childLayers>
+            <layer Id="9716e3f2-541d-401e-bde9-f91ef36f0660" name="Index" />
+          </childLayers>
+        </layer>
+        <layer Id="99d587c9-3f9f-4a7a-bad3-d10eea37d5c3" name="Desktoplist">
+          <childLayers>
+            <layer Id="b2ad5ced-b67d-41fb-a9a4-fdf880f2c85e" name="Index" />
+          </childLayers>
+        </layer>
+        <layer Id="21372c3f-1a63-47c7-a003-ccb1cc38de20" name="_ViewStart" />
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

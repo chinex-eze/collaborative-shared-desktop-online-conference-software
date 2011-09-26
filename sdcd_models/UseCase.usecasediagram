@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="323d0e86-8917-4696-ae2c-4437322f5130" name="UMLUseCaseDiagram1" linkedPackageId="5ec14769-fab4-4480-8515-5d59878655f1" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="22210a79-4c0a-4fe1-b456-d3d93712154a">
+      <profileInstance Id="b7990f78-22c2-4917-88bd-bec79b8f16dd" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="468eb87c-664e-4855-8dc6-ab133fd29700">
+      <profileInstance Id="65128209-48c1-4efa-910e-97d32cc41aeb" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="a0bcba2d-4b8b-42df-954c-30da9239de6a" name="User (logged in)" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d3b7e362-df07-4420-9630-affc3c33dcdb" />
+        <targetEnds>
+          <association Id="443c2307-f6ff-4d8e-91a6-27e6509f4573" isDerived="false" sourceEndRoleName="User (logged in)" targetEndRoleName="Send a chat message" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="97b1a869-12d8-4290-9f57-dd49624c764a" LastKnownName="Send a chat message" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="69f2d4df-5edc-43b2-87b5-d7c98ac6f547" name="User (logged in)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="12a61f1c-7826-43dc-8d34-0f54bb1128cd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bf0cf3a7-255e-4831-a74c-4be828193c1c" name="Send a chat message" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="82d4af98-735d-490a-ad48-7d5d8e573c61" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="63ad97cf-9b13-42ca-8aa4-b42567946998" />
+          </association>
+          <association Id="eaff484a-5297-4cdb-b6a4-d8885af42e3a" isDerived="false" sourceEndRoleName="User (logged in)" targetEndRoleName="Delete topic" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e6f1302c-d441-4e65-bba9-1e232480813c" LastKnownName="Delete topic" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="34c9bb53-cde4-4880-9c46-dc74cc43e86b" name="User (logged in)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3f65ec88-0812-485b-983c-7f22fd552ea2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="893f960b-b88f-45ff-93d6-a502d27e781c" name="Delete topic" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="293dd00b-95b7-4be1-a0d0-44bc4249af1a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="786bd601-5428-4818-b79a-b153b1834c79" />
+          </association>
+          <association Id="b5675fce-ae1f-4db9-9766-7a8278b84ea8" isDerived="false" sourceEndRoleName="User (logged in)" targetEndRoleName="Create a new topic" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="41e376b3-7b6e-49f5-8865-efa2c0a8dd66" LastKnownName="Create a new topic" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="965224cf-1d4e-40cd-88b1-bce39c9c3a8d" name="User (logged in)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c82d9bd5-5620-49c6-99e5-e694aa6cfab0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c8845c8c-8f31-495e-9729-67c670748e60" name="Create a new topic" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="81019532-6ff4-4693-a459-9a5554394715" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dc29f72d-9bbd-4930-9ba3-d07e89f234c6" />
+          </association>
+          <association Id="2d70b92e-ec1c-4909-a374-fc0c1a8ffa2b" isDerived="false" sourceEndRoleName="User (logged in)" targetEndRoleName="Access user settings" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8d7dfc7d-f9a4-4ab0-a22a-a891f63f57b4" LastKnownName="Access user settings" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="87018f67-389f-496c-80ed-104c15387539" name="User (logged in)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ee7d1a31-6fdd-4af2-ae08-7c48c872ae83" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0dc8fb55-566d-4ac6-bf64-422614dab82b" name="Access user settings" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3d66fc48-e414-4f86-858c-8459de009621" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="767ee9ce-44a1-40f9-88b1-4927aae7c4b0" />
+          </association>
+          <association Id="29e35652-b72e-47c6-8f99-98c78812b336" isDerived="false" sourceEndRoleName="User (logged in)" targetEndRoleName="Change active desktop" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2f5b25cd-7f72-4dda-b94f-5863d80d708e" LastKnownName="Change active desktop" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2ead8d8a-1e6d-48b7-8fa3-b792e77f268c" name="User (logged in)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f12c983d-e50a-4217-9293-6ac2d6a4b1a7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b830ace-614b-49ea-b4b1-1572988ab9dd" name="Change active desktop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="875a5ce5-4d71-4c1b-bdb5-33eeaa093105" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0b6c436a-b335-4ade-adb8-5ebe9db78039" />
+          </association>
+          <association Id="aaf06bd4-205c-4059-9189-525bc5c7513e" isDerived="false" sourceEndRoleName="User (logged in)" targetEndRoleName="Add a new desktop item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bb199286-4a00-4be2-8dca-c959bac919d6" LastKnownName="Add a new desktop item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f090a7df-b598-482c-92c5-c2a2b7052235" name="User (logged in)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e5a3ef7d-7668-497f-9930-e9b8ae14645d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8e2c0e54-0fe0-409f-acef-17b0f4a9106b" name="Add a new desktop item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d703179a-24dd-437c-9053-3010117eb9c2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="92e5878c-0e0a-48db-a5fd-90f3a20c99b9" />
+          </association>
+          <association Id="a1a6332c-f422-4c77-9b44-f0d3a2a36c36" isDerived="false" sourceEndRoleName="User (logged in)" targetEndRoleName="Move desktop item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9eef6b66-6e23-42fa-91e0-560db1d0fd46" LastKnownName="Move desktop item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c53f1fae-0aad-4653-b52b-fe39de499d6c" name="User (logged in)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0d28c4fb-61a2-4c3f-bde2-7298514f9d10" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="245389ac-1139-4541-9fe0-bb42617ad99c" name="Move desktop item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d2e0112c-7d30-4243-a733-348865c90daa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c2dc8e68-334c-4796-8f9c-0db871e95203" />
+          </association>
+          <association Id="bc53a5c6-7a29-43d8-ac4e-c2835eb0d8c1" isDerived="false" sourceEndRoleName="User (logged in)" targetEndRoleName="Remove a desktop item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="16c4831d-4785-42ea-8c8b-21222bf7192a" LastKnownName="Remove a desktop item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="542836a1-4f7b-463a-82c6-1249e3fea556" name="User (logged in)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="35b05872-7d9f-4f5f-a772-1cb10aa0c613" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb8613dc-9bb4-425b-805a-daa574531d06" name="Remove a desktop item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c4ef591d-f23c-4de6-9918-50c202cfa8c6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8d0a5ff0-6bc8-46b9-8b3d-3d90ebd6e337" />
+          </association>
+          <association Id="4f2a2349-f6cd-401a-a685-d79162cfd97b" isDerived="false" sourceEndRoleName="User (logged in)" targetEndRoleName="Open a desktop item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9657b495-833a-45b1-9dc2-bb811cd94c00" LastKnownName="Open a desktop item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2639ecbf-db90-4829-a3e7-31f38d3a58d1" name="User (logged in)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e99f221c-5a02-4890-b53b-ccede94cc532" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="523e513a-15b7-4d88-b5cf-7c7e737b8392" name="Open a desktop item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="255d06b7-7fae-4855-87a8-7a4b8cf9045c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="37205adc-6b4c-436d-b86f-2fd065c4aa23" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8d7dfc7d-f9a4-4ab0-a22a-a891f63f57b4" name="Access user settings" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="90303a7d-7661-4005-aa9c-6ad03fde10ee" />
+        <additions>
+          <include Id="a07e76b1-2caf-4d7c-88cc-d6dda20fc920">
+            <useCaseMoniker Id="f72e4fbb-8ea3-4347-94e3-9b559de36e4f" LastKnownName="Create a new user" />
+            <elementDefinition Id="335bab60-0806-41aa-afe7-de8163d0c760" />
+          </include>
+          <include Id="9c8db87e-b373-4564-a4fe-dad9248dd843">
+            <useCaseMoniker Id="683bbd04-15ac-4641-a266-cf2c6360a24a" LastKnownName="Delete a user" />
+            <elementDefinition Id="de72a31e-a7e1-4ca9-9cca-140199a69477" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bb199286-4a00-4be2-8dca-c959bac919d6" name="Add a new desktop item" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4f72c7b0-b738-45c3-94d1-da4e37472bfa" />
+        <additions>
+          <include Id="ac9508f3-5d07-41d3-92ec-3315cc17e9e3">
+            <useCaseMoniker Id="df4d3433-b757-4e24-b8b3-ae7d819bf5e7" LastKnownName="Refresh desktop" />
+            <elementDefinition Id="13b1bbfc-9f11-4517-b477-8281ad9485b5" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2f5b25cd-7f72-4dda-b94f-5863d80d708e" name="Change active desktop" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="59f36983-db88-428d-934b-bc83d26d8c59" />
+        <additions>
+          <include Id="5b09f081-165a-4ccf-87f7-b59fa46fe06b">
+            <useCaseMoniker Id="df4d3433-b757-4e24-b8b3-ae7d819bf5e7" LastKnownName="Refresh desktop" />
+            <elementDefinition Id="9d983141-2cd4-4213-9249-b4d644899193" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="683bbd04-15ac-4641-a266-cf2c6360a24a" name="Delete a user" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2e450bff-e40c-47dd-a4ac-4473fd6be77d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f72e4fbb-8ea3-4347-94e3-9b559de36e4f" name="Create a new user" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7f0fc51c-03b7-42b3-a06c-8ec56b91e4ac" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9eef6b66-6e23-42fa-91e0-560db1d0fd46" name="Move desktop item" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6f8cf9de-394b-413c-a190-0cd8772d31ba" />
+        <additions>
+          <include Id="cb0c261b-9d0f-4704-a128-8731d4345104">
+            <useCaseMoniker Id="df4d3433-b757-4e24-b8b3-ae7d819bf5e7" LastKnownName="Refresh desktop" />
+            <elementDefinition Id="fe3a1252-b745-466a-94cb-86383d010baa" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="97b1a869-12d8-4290-9f57-dd49624c764a" name="Send a chat message" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c897efc0-7533-44fd-ba76-9dcbc2bca524" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="16c4831d-4785-42ea-8c8b-21222bf7192a" name="Remove a desktop item" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2ed2e823-3cbc-40cd-8df6-1ae40ce247af" />
+        <additions>
+          <include Id="09964ccd-767e-46ed-883e-4ab5632e52ba">
+            <useCaseMoniker Id="df4d3433-b757-4e24-b8b3-ae7d819bf5e7" LastKnownName="Refresh desktop" />
+            <elementDefinition Id="bf8ed526-c94f-4b15-9cae-0f13a16f8eea" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="41e376b3-7b6e-49f5-8865-efa2c0a8dd66" name="Create a new topic" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="60239641-95f6-478a-8246-be1806c9dcf5" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e6f1302c-d441-4e65-bba9-1e232480813c" name="Delete topic" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ee86fadd-4996-4e1e-beca-12532b2f5c69" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9657b495-833a-45b1-9dc2-bb811cd94c00" name="Open a desktop item" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0e215b77-206d-4f01-bb18-cfe12413bb07" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="df4d3433-b757-4e24-b8b3-ae7d819bf5e7" name="Refresh desktop" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0553719c-b4fd-48d2-a599-03460916653a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="dcdee977-39f8-4267-9d2e-5601f3220532" name="User (unlogged)" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="62c0fc09-1b0e-4c72-8dc7-cf172bdd6bbc" />
+        <generalsInternal>
+          <generalization Id="9d2cb7e3-5167-4fff-aa99-7aa4989826a1" isSubstitutable="false">
+            <actorMoniker Id="a0bcba2d-4b8b-42df-954c-30da9239de6a" LastKnownName="User (logged in)" />
+            <elementDefinition Id="36461544-6ed4-471f-84ff-950b0b2c0399" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="41b3abaa-a78f-41b4-816e-3070b4b1fcc8" isDerived="false" sourceEndRoleName="User (unlogged)" targetEndRoleName="Access user settings" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8d7dfc7d-f9a4-4ab0-a22a-a891f63f57b4" LastKnownName="Access user settings" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="de4f61f7-0a5f-4f09-8279-ac6f649a220b" name="User (unlogged)" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ef8f9014-22db-4d34-b208-f976e7363d0c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="04a21124-19cc-4ff0-89af-1639c0a7e8c5" name="Access user settings" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fd75b7fe-59c9-4298-868f-ab65f1fca6ad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="14e5f3df-dec1-4e21-a7ef-612a80697e83" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="5ec14769-fab4-4480-8515-5d59878655f1" name="sdcd_models">
+    <elementDefinition Id="b4c7687c-7d35-4691-8f3e-9473b31c78c7" />
+  </package>
+</useCaseModelRoot>
