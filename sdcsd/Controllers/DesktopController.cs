@@ -33,12 +33,15 @@ namespace sdcsd.Controllers
         // GET: /Desktop/
 
         private DesktopItemModelDBContext _db = new DesktopItemModelDBContext();
+        private DesktopDBContext _dbDesktop = new DesktopDBContext();
 
         public ActionResult Index()
         {
             ViewBag.login = false;
             if (Session["loggedin"] == "true")
                 ViewBag.login = true;
+
+            ViewBag.ActiveDesktop = GetActiveDesktop();
 
             var items = _db.DesktopItems.ToList<DesktopItemModel>();
             return View(items);
@@ -136,6 +139,27 @@ namespace sdcsd.Controllers
             }
 
             return Json(new { success = true }, "text/html");
+        }
+
+        public int GetActiveDesktop()
+        {
+            try
+            {
+                if (Session["loggedin"] == "false")
+                    return 1; //return default
+
+                string user = Session["user"].ToString();
+                if (_dbDesktop.Desktops.Count(i => i.UserName == user) > 0)
+                {
+                    DesktopModel item = _dbDesktop.Desktops.First(i => i.UserName == user);
+                    return item.DesktopID;
+                }
+                return 1;
+            }
+            catch
+            {
+                return 1;
+            }
         }
 
     }

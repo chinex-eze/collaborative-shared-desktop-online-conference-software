@@ -15,30 +15,24 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-@{Layout=null;}
+@{Layout=null;}
 <ul id ="desktop-list" class="side-list">
-    <li id="desktop1" class ="side-list-item desktop-list-item">Desktop1</li>
-    <li id="desktop2" class ="side-list-item desktop-list-item">Desktop2</li>
-    <li id="desktop3" class ="side-list-item desktop-list-item">Desktop3</li>
+    <li id="desktop1" class="side-list-item desktop-list-item ui-state-default">Desktop1</li>
+    <li id="desktop2" class="side-list-item desktop-list-item ui-state-default">Desktop2</li>
+    <li id="desktop3" class="side-list-item desktop-list-item ui-state-default">Desktop3</li>
 </ul>
 
 <script type="text/javascript">
     $('#desktop1').click(function () {
-        $(this).css("background-color", "#79a6d9");
-        $('#desktop2').css("background-color", "#555555");
-        $('#desktop3').css("background-color", "#555555");
+        //TODO:
         refreshDesktop(1);
     });
     $('#desktop2').click(function () {
-        $('#desktop1').css("background-color", "#555555");
-        $(this).css("background-color", "#79a6d9");
-        $('#desktop3').css("background-color", "#555555");
+        //TODO:
         refreshDesktop(2);
     });
     $('#desktop3').click(function () {
-        $('#desktop1').css("background-color", "#555555");
-        $('#desktop2').css("background-color", "#555555");
-        $(this).css("background-color", "#79a6d9");
+        //TODO:
         refreshDesktop(3);
     });
 

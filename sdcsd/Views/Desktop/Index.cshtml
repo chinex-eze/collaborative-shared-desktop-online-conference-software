@@ -22,7 +22,7 @@
 @model IEnumerable<sdcsd.Models.DesktopItemModel>
 
 @foreach (var item in Model) {
-    if (Session["DesktopID"].Equals(item.DesktopID.ToString()))
+    if (ViewBag.ActiveDesktop == item.DesktopID)
     {
         <div class="draggable" title="@item.Name" style="
          left: @item.LocX; top: @item.LocY">
@@ -101,12 +101,6 @@
             }
         });
     });
-
-    //$(function GetActiveDesktop() {
-        //$.getJSON("/DesktopList/GetActiveDesktop", null, function (data) {
-            //TODO: 
-        //});
-    //});
 
 </script>
 

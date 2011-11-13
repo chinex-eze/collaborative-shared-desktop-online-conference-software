@@ -56,18 +56,5 @@ namespace sdcsd.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public JsonResult GetActiveDesktop()
-        {
-            int active = 1; //default
-            string user = Session["user"].ToString();
-            if (_db.Desktops.Count(i => i.UserName == user) > 0)
-            {
-                DesktopModel item = _db.Desktops.First(i => i.UserName == user);
-                active = item.DesktopID;
-            }
-
-            return this.Json(active);
-        }
-
     }
 }
