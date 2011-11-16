@@ -25,38 +25,10 @@
     if (ViewBag.ActiveDesktop == item.DesktopID)
     {
         <div class="draggable" title="@item.Name" style="
-         left: @item.LocX; top: @item.LocY">
+         left: @item.LocX; top: @item.LocY">`
             <img class="fileIcon" src="../../Content/icons/text.png" name="@item.Name" alt="@item.Name"/>
             <script type="text/javascript">
                 document.getElementsByName("@item.Name")[0].src = getImgUrl("@item.Name");
-
-                function getImgUrl(fileName) {
-                    var imgSrc;
-                    var dir = "../../Content/icons/";
-                    var ext = fileName.split('.').pop();
-                    if (ext == "txt") {
-                        imgSrc = dir + "text.png"
-                    }
-                    else if (ext == "doc" || ext == "docx" || ext == "xls" || ext == "xlsx") {
-                        imgSrc = dir + "document.png"
-                    }
-                    else if (ext == "zip" || ext == "tar.gz" || ext == "rar") {
-                        imgSrc = dir + "archive.png"
-                    }
-                    else if (ext == "mp3" || ext == "wmv") {
-                        imgSrc = dir + "audio.png"
-                    }
-                    else if (ext == "png" || ext == "jpg" || ext == "jpeg" || ext == "bmp" || ext == "gif") {
-                        imgSrc = dir + "image.png"
-                    }
-                    else if (ext == "mpeg" || ext == "avi") {
-                        imgSrc = dir + "video.png"
-                    }
-                    else {
-                        imgSrc = dir + "text.png"
-                    }
-                    return imgSrc;
-                };
             </script>
             <p class="fileName">@item.Name</p>
         </div>    
@@ -89,7 +61,7 @@
                 locY = locY.substr(0, 6) + "%";
                 dragging = false;
 
-                $.post("Desktop/UpdateLocation/?name=" + $(this).attr("title") + "&locX=" + locX + "&locY=" + locY, function () {});
+                $.post("Desktop/UpdateLocation/?name=" + $(this).attr("title") + "&locX=" + locX + "&locY=" + locY, function () { });
             }
         });
     });
@@ -110,17 +82,47 @@
 
      dragging = false;
 
-    $(function () {
-        $('.draggable').dblclick(function () {
-            window.open("/Desktop/GetFileFromDisk/"+this.title);
-        });
-    });
+     $(function () {
+         $('.draggable').dblclick(function () {
+             window.open("/Desktop/GetFileFromDisk/" + this.title);
+         });
+     });
 
-    function refreshDesktop() {
-        if (dragging == false) {
-            $.post("Desktop/Index", function (data) {
-                $('#desktop-container').html(data);
-            });
+     function refreshDesktop() {
+         if (dragging == false) {
+             $.post("Desktop/Index", function (data) {
+                 $('#desktop-container').html(data);
+             });
+         }
+     };
+</script>
+
+<script type="text/javascript">
+    function getImgUrl(fileName) {
+        var imgSrc;
+        var dir = "../../Content/icons/";
+        var ext = fileName.split('.').pop();
+        if (ext == "txt") {
+            imgSrc = dir + "text.png"
         }
+        else if (ext == "doc" || ext == "docx" || ext == "xls" || ext == "xlsx") {
+            imgSrc = dir + "document.png"
+        }
+        else if (ext == "zip" || ext == "tar.gz" || ext == "rar") {
+            imgSrc = dir + "archive.png"
+        }
+        else if (ext == "mp3" || ext == "wmv") {
+            imgSrc = dir + "audio.png"
+        }
+        else if (ext == "png" || ext == "jpg" || ext == "jpeg" || ext == "bmp" || ext == "gif") {
+            imgSrc = dir + "image.png"
+        }
+        else if (ext == "mpeg" || ext == "avi") {
+            imgSrc = dir + "video.png"
+        }
+        else {
+            imgSrc = dir + "text.png"
+        }
+        return imgSrc;
     };
 </script>
