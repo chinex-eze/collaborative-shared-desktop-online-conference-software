@@ -61,7 +61,7 @@
                 locY = locY.substr(0, 6) + "%";
                 dragging = false;
 
-                $.post("Desktop/UpdateLocation/?name=" + $(this).attr("title") + "&locX=" + locX + "&locY=" + locY, function () { });
+                $.post("Desktop/UpdateLocation?name=" + $(this).attr("title") + "&locX=" + locX + "&locY=" + locY, function () { });
             }
         });
     });
@@ -69,7 +69,7 @@
     $(function () {
         $('.draggable').mousedown(function (event) {
             if (event.which == 2) { //middle mouse button
-                $.post("Desktop/DeleteItem/?name=" + $(this).attr("title"), function () { refreshDesktop(); });
+                $.post("Desktop/DeleteItem?name=" + $(this).attr("title"), function () { refreshDesktop(); });
             }
         });
     });
