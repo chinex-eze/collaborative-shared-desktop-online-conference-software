@@ -1,6 +1,0 @@
-C:\Users\Pepe\Projects\collaborative-shared-desktop-online-conference-software\sdcsd\bin\sdcsd.dll
-C:\Users\Pepe\Projects\collaborative-shared-desktop-online-conference-software\sdcsd\bin\sdcsd.pdb
-C:\Users\Pepe\Projects\collaborative-shared-desktop-online-conference-software\sdcsd\bin\EntityFramework.xml
-C:\Users\Pepe\Projects\collaborative-shared-desktop-online-conference-software\sdcsd\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Pepe\Projects\collaborative-shared-desktop-online-conference-software\sdcsd\obj\Debug\sdcsd.dll
-C:\Users\Pepe\Projects\collaborative-shared-desktop-online-conference-software\sdcsd\obj\Debug\sdcsd.pdb
